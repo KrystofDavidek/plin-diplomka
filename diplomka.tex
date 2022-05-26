@@ -98,38 +98,21 @@
 	\clearpage
 	\pagenumbering{gobble}
 
-
+	\begin{titlepage}
 		\begin{center}
 			{\Large\uppercase{Masarykova univerzita}}
 
-			\vspace{2em}
+			\vspace{1em}
 
 			{\Large Filozofická fakulta}
 
-			\vspace{20em}
+			\vspace{1em}
 
-			{\LARGE Bakalářská práce}
+			{\large Ústav českého jazyka}
 
-			\vfill
-			    {\LARGE 2021}
-			    \hfill
-            	{\LARGE Kryštof Davídek}
-		\end{center}
+			\vspace{1em}
 
-		\begin{center}
-			{\Large\uppercase{Masarykova univerzita}}
-
-			\vspace{2em}
-
-			{\Large Filozofická fakulta}
-
-			\vspace{5em}
-
-			{\Large\bf Katedra informačních studií a knihovnictví}
-
-			\vspace{2em}
-
-			{\Large Informační studia a knihovnictví}
+			{\large Český jazyk se specializací počítačová lingvistika}
 
 			\vspace{11em}
 
@@ -137,28 +120,29 @@
 			
 			\vspace{3em}
 			
-			{\LARGE\bf Návrh a implementace online kurzu pro výuku datové analytiky}
+			{\LARGE\bf Elektronický slovník s definicemi založenými na derivačních rysech slovotvorně motivovaných slov}
 
 			\vspace{1.5em}
 
-			{\Large Bakalářská práce}
+			{\Large Bakalářská diplomová práce}
 
 			\vfill
 			\vspace{3em}
-			{\large Vedoucí práce: RNDr. Michal Černý}
-			\vspace{1em}
+			Vedoucí práce: Mgr. Adriana Válková
 			
-			{\large 2021}
+			2019
 		\end{center}
-		
-\newpage
+	\end{titlepage}
+
+
+\cleardoublepage
 
 \par
 \par\vspace*{\fill}
 	\pagestyle{plain}
 \pagenumbering{roman}
 \begin{flushright}
-	Prohlašuji, že jsem předkládanou práci zpracoval samostatně a~použil jen uvedené prameny a~literaturu. Současně dávám svolení k~tomu, aby elektronická verze této práce byla zpřístupněna přes informační systém Masarykovy univerzity.
+	Prohlašuji, že jsem bakalářskou diplomovou práci vypracoval samostatně s~využitím uvedených pramenů a~literatury.
 
 	\vspace{3em}
 
@@ -174,35 +158,30 @@
 \par
 \par\vspace*{\fill}
 
-Děkuji svému vedoucímu práce doktoru Michalovi Černému za nápomocné rady, poznatky a~připomínky po celou dobu psaní a~vždy vstřícnou a~rychlou komunikaci.
+Na tomto místě bych rád poděkoval své vedoucí práce Adrianě Válkové za veškeré rady a poznatky, které mi ochotně poskytovala po celou dobu psaní této práce.
 
 \clearpage
 
-\section*{Bibliografický záznam}
-
-DAVÍDEK, Kryštof. \textit{Návrh a implementace online kurzu pro výuku datové analytiky} [online]. Brno. Dostupné z: https://is.muni.cz/th/xzmyx/. Bakalářská práce. Masarykova univerzita, Filozofická fakulta. Vedoucí práce Michal ČERNÝ.
-
-\section*{Anotace}
-
-Předkládaná bakalářská práce si klade za cíl navrhnout a implementovat online vzdělávací kurz, který se zaměřuje na výuku základů datové analytiky. Práce se dělí do dvou hlavních částí – teoretické a praktické. V první částí je představen koncept datové analytiky v kontextu datové a digitální gramotnosti a popsán kompetenční rámec, kterým lze tuto oblast zarámovat. Druhou složkou teoretické části je přehledová studie existujících online kurzů zaměřených na témata související s datovou analytikou. Jejím cílem je zmapovat aktuální stav online kurzů vzniklých primárně v zahraničním prostředí a prostřednictvím předem jasně definovaných parametrů tyto kurzy klasifikovat. Praktická část se následně skládá z popisu vlastního e-learningového řešení z hlediska konceptuálního a obsahového. Implementace kurzu probíhala za spolupráce s firmou Digiskills a pro zpracování online kurzu byly využity interní firemní webové šablony.
-
-\section*{Klíčová slova}
- 
-Datová analytika, datová gramotnost, e-learning, implementace online kurzu, přehledová studie.
-
-\clearpage
+\section*{Abstrakt}
+  
+Předkládaná bakalářská práce si klade za cíl navrhnout mobilní aplikaci, jež umožňuje využívat derivačních rysů při osvojování češtiny jako druhého jazyka. Aplikace má podobu elektronického slovníku, v němž jsou definice založeny na strukturním významu slovotvorně motivovaných slov. Pro vytváření slovotvorných definic jsou využita volně přístupná data z derivační sítě DeriNet a pro vývoj aplikace byl zvolen framework Ionic.
 
 \section*{Abstract}
 
-The aim of this bachelor thesis is to design and implement an educational online course focused on teaching the basics of data analytics. The thesis is divided into two main parts – theoretical and practical. The first part introduces the concept of data analytics in the context of data and digital literacy and describes the competence framework by which this area can be framed. The second section of the theoretical part is an overview study of existing online courses focused on topics related to data analytics. It aims to map the current state of online courses created primarily in a foreign environment and to classify these courses using clearly defined parameters. The practical part then consists of a conceptual and content description of the e-learning solution. The course was implemented in cooperation with Digiskills and internal company web templates were used to develop the online course.
+The aim of this bachelor thesis is to design a mobile application that enables to use the derivation features in acquiring Czech as a second language. The application is in the form of an electronic dictionary in which definitions are based on the structural meaning of motivated words. For creating word-forming definitions, freely accessible data of the derivation network DeriNet are used and the Ionic framework was chosen for application development.
+
+\section*{Klíčová slova}
+
+slovotvorba, derivace, derivační morfologie, mobilní aplikace, DeriNet, Ionic, Angular
 
 \section*{Keywords}
 
-Data analytics, data literacy, e-learning, implementation of an online course, overview study.
+word formation, derivation, derivational morpohology, mobile application, DeriNet, Ionic, Angular
 
 \clearpage
 
 \tableofcontents
+
 
 \cleardoublepage
 \pagenumbering{gobble}
@@ -217,9 +196,9 @@ Data analytics, data literacy, e-learning, implementation of an online course, o
 
 \pagestyle{plain}
 
-\addcontentsline{toc}{chapter}{Seznam použitých zdrojů}
+\addcontentsline{toc}{chapter}{Seznam literatury}
 \begin{spacing}{1.05}
-\printbibliography[title={Seznam použitých zdrojů}]
+\printbibliography[title={Seznam literatury}]
 \end{spacing}
 
 \end{document}
