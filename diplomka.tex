@@ -1,0 +1,225 @@
+%!TEX program = xelatex
+\documentclass[a4paper,12pt,openany,twoside]{book} % twoside
+\usepackage[inner=3.5cm,outer=2.5cm, top=2.5cm]{geometry} %showframe
+
+\usepackage{url}
+\usepackage{fontspec}
+\usepackage{lmodern}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[rgb]{xcolor}
+\graphicspath{ {assets/} }
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage{chngcntr}
+\usepackage[czech]{babel}
+\usepackage[pagestyles,medium]{titlesec}
+\usepackage{setspace}
+\usepackage{emptypage}
+\usepackage{xpatch}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{ragged2e}
+\usepackage{pbox}
+\usepackage{rotating}
+\usepackage{float}
+\usepackage{afterpage}
+\usepackage{tipa}
+\usepackage{array}
+\usepackage{wrapfig}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\usepackage{lscape}
+\usepackage{bashful}
+
+\usepackage[hidelinks]{hyperref}
+
+\usepackage{mdframed}
+\usepackage{framed}
+\def\tightlist{}
+
+\xpatchcmd{\part}{\thispagestyle{plain}}{\thispagestyle{empty}}{}{}
+
+
+\newcommand\exmp{\textsf}
+
+\counterwithout{figure}{chapter}
+\counterwithout{footnote}{chapter}
+
+
+\newpagestyle{sensible}{
+	\headrule\sethead{}{}{\MakeUppercase{\chaptertitle}}
+	\setfoot{}{\thepage}{}
+}
+
+\setlength\emergencystretch{1em}
+\setlength\headheight{14pt}
+\setstretch{1.1}
+\setcounter{secnumdepth}{4}
+
+\widowpenalty10000
+\clubpenalty10000
+
+\hyphenation{выпа-дений}
+
+\setmainfont[Ligatures=TeX]{CMU Serif Roman}
+
+\usepackage[backend=biber, style=iso-authoryear, sortlocale=cs\_CZ, uniquelist=false, autocite=footnote, maxcitenames=2, maxbibnames=99, minnames=1, urldate=long, spacecolon=false,bibencoding=UTF8
+]{biblatex}
+\let\oldmultinamedelim\multinamedelim
+\let\oldfinalnamedelim\finalnamedelim
+\renewcommand*{\multinamedelim}{~a~}
+\renewcommand*{\finalnamedelim}{~a~}
+\renewcommand*{\nameyeardelim}{~}
+\AtBeginBibliography{%
+  \renewcommand*{\multinamedelim}{~--\space}%
+  \renewcommand*{\finalnamedelim}{~--\space}%
+}
+\DefineBibliographyStrings{czech}{%
+  mathesis = {Bakalářská diplomová práce},
+  editors = {eds.}
+}
+
+\addbibresource{bibliography.bib}
+
+\newcommand{\sign}[1]{%      
+  \begin{tabular}[t]{@{}r@{}}
+  \makebox[2.5in]{\dotfill}\\
+  \strut#1\strut
+  \end{tabular}%
+}
+
+
+\begin{document}
+	\clearpage
+	\pagenumbering{gobble}
+
+
+		\begin{center}
+			{\Large\uppercase{Masarykova univerzita}}
+
+			\vspace{2em}
+
+			{\Large Filozofická fakulta}
+
+			\vspace{20em}
+
+			{\LARGE Bakalářská práce}
+
+			\vfill
+			    {\LARGE 2021}
+			    \hfill
+            	{\LARGE Kryštof Davídek}
+		\end{center}
+
+		\begin{center}
+			{\Large\uppercase{Masarykova univerzita}}
+
+			\vspace{2em}
+
+			{\Large Filozofická fakulta}
+
+			\vspace{5em}
+
+			{\Large\bf Katedra informačních studií a knihovnictví}
+
+			\vspace{2em}
+
+			{\Large Informační studia a knihovnictví}
+
+			\vspace{11em}
+
+			{\large Kryštof Davídek }
+			
+			\vspace{3em}
+			
+			{\LARGE\bf Návrh a implementace online kurzu pro výuku datové analytiky}
+
+			\vspace{1.5em}
+
+			{\Large Bakalářská práce}
+
+			\vfill
+			\vspace{3em}
+			{\large Vedoucí práce: RNDr. Michal Černý}
+			\vspace{1em}
+			
+			{\large 2021}
+		\end{center}
+		
+\newpage
+
+\par
+\par\vspace*{\fill}
+	\pagestyle{plain}
+\pagenumbering{roman}
+\begin{flushright}
+	Prohlašuji, že jsem předkládanou práci zpracoval samostatně a~použil jen uvedené prameny a~literaturu. Současně dávám svolení k~tomu, aby elektronická verze této práce byla zpřístupněna přes informační systém Masarykovy univerzity.
+
+	\vspace{3em}
+
+	    \makebox[2.5in][r]{\dotfill}
+	    
+	    Kryštof Davídek
+
+	    \par
+
+\end{flushright}
+\clearpage
+
+\par
+\par\vspace*{\fill}
+
+Děkuji svému vedoucímu práce doktoru Michalovi Černému za nápomocné rady, poznatky a~připomínky po celou dobu psaní a~vždy vstřícnou a~rychlou komunikaci.
+
+\clearpage
+
+\section*{Bibliografický záznam}
+
+DAVÍDEK, Kryštof. \textit{Návrh a implementace online kurzu pro výuku datové analytiky} [online]. Brno. Dostupné z: https://is.muni.cz/th/xzmyx/. Bakalářská práce. Masarykova univerzita, Filozofická fakulta. Vedoucí práce Michal ČERNÝ.
+
+\section*{Anotace}
+
+Předkládaná bakalářská práce si klade za cíl navrhnout a implementovat online vzdělávací kurz, který se zaměřuje na výuku základů datové analytiky. Práce se dělí do dvou hlavních částí – teoretické a praktické. V první částí je představen koncept datové analytiky v kontextu datové a digitální gramotnosti a popsán kompetenční rámec, kterým lze tuto oblast zarámovat. Druhou složkou teoretické části je přehledová studie existujících online kurzů zaměřených na témata související s datovou analytikou. Jejím cílem je zmapovat aktuální stav online kurzů vzniklých primárně v zahraničním prostředí a prostřednictvím předem jasně definovaných parametrů tyto kurzy klasifikovat. Praktická část se následně skládá z popisu vlastního e-learningového řešení z hlediska konceptuálního a obsahového. Implementace kurzu probíhala za spolupráce s firmou Digiskills a pro zpracování online kurzu byly využity interní firemní webové šablony.
+
+\section*{Klíčová slova}
+ 
+Datová analytika, datová gramotnost, e-learning, implementace online kurzu, přehledová studie.
+
+\clearpage
+
+\section*{Abstract}
+
+The aim of this bachelor thesis is to design and implement an educational online course focused on teaching the basics of data analytics. The thesis is divided into two main parts – theoretical and practical. The first part introduces the concept of data analytics in the context of data and digital literacy and describes the competence framework by which this area can be framed. The second section of the theoretical part is an overview study of existing online courses focused on topics related to data analytics. It aims to map the current state of online courses created primarily in a foreign environment and to classify these courses using clearly defined parameters. The practical part then consists of a conceptual and content description of the e-learning solution. The course was implemented in cooperation with Digiskills and internal company web templates were used to develop the online course.
+
+\section*{Keywords}
+
+Data analytics, data literacy, e-learning, implementation of an online course, overview study.
+
+\clearpage
+
+\tableofcontents
+
+\cleardoublepage
+\pagenumbering{gobble}
+
+% \newgeometry{top=2.5cm}
+
+\pagenumbering{arabic}
+\include{tex/uvod}
+\include{tex/1-datova-analytika}
+\include{tex/zaver}
+\clearpage
+
+\pagestyle{plain}
+
+\addcontentsline{toc}{chapter}{Seznam použitých zdrojů}
+\begin{spacing}{1.05}
+\printbibliography[title={Seznam použitých zdrojů}]
+\end{spacing}
+
+\end{document}
