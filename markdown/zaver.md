@@ -1,3 +1,3 @@
 # Závěr
 
-Tohle je zaver k diplomce
+Tohle je závěr

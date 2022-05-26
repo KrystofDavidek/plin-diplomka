@@ -1,3 +1,3 @@
 # Úvod
 
-Tohle je uvod k diplomce
+Tohle je úvod
