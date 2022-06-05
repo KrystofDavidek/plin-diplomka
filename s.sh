@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-cd /Users/kry.davidek/Documents/vysoka-skola/plin-diplomka/plin-diplomka
+cd /Users/kry.davidek/Documents/vysoka-skola/plin-diplomova-prace/plin-diplomka
 
 echo -e "\n\n### Converting Markdown to LaTeX ###\n\n"
 
