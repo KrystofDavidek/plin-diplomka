@@ -33,9 +33,9 @@ echo -e "\n\n### Commiting to git ###\n\n"
 git add *
 git commit -m 'Change'
 
-echo -e "\n\n### Pushing to GitHub ###\n\n"
+echo -e "\n\n### Force pushing to GitHub ###\n\n"
 
-git push
+git push -f origin main
 
 
 
