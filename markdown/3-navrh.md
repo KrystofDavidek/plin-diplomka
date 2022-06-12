@@ -1,5 +1,5 @@
 \part{Praktická část}
 
-# První kapitola
+# Třetí kapitola
 
-Tohle je první kapitola \parencite{nespor05}
+Tohle je třetí kapitola \parencite{Nespor2005}
