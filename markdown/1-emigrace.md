@@ -2,7 +2,9 @@
 
 # České vystěhovalectví
 
-Ústředním tématem této magisterské diplomové práce jsou komunity českých krajanů v Evropě a ve světě. V první kapitole si proto nejprve představíme základní pojmosloví vztahující se k této problematice a popíšeme si fenomén českého vystěhovalectví, který je důležitý pro pochopení vzniku českých diaspor ve světě. Současně nám tato obecnější část poslouží jednak jako pevný teoretický základ pro charakteristiku významnějších komunit českých krajanů, tak i pro popis některých částí návrhu a implementace webové aplikace v praktické části této diplomové práce.
+Ústředním tématem této magisterské diplomové práce jsou komunity českých krajanů v Evropě a ve světě. V první kapitole si proto nejprve představíme základní pojmosloví vztahující se k této problematice a popíšeme si fenomén českého vystěhovalectví, který je důležitý pro pochopení vzniku českých diaspor ve světě. V závěru kapitoly se v krátkosti zaměříme na téma enklávy českého jazyka a jazykových ostrovů, které tuto látku rozšiřují o lingvistický kontext.
+
+Tato obecnější část tak poslouží jednak jako pevný teoretický základ pro charakteristiku významnějších komunit českých krajanů, tak i pro popis některých částí návrhu a implementace webové aplikace v praktické části této diplomové práce.
 
 ## Krajanství
 
@@ -32,10 +34,12 @@ Tuto problematiku lze studovat ze dvou možných pohledů v závislosti na směr
 
 Pokud se ale migranti po prvotní, tedy primární migraci rozhodnou přesunout do další země, jako se například vydala část banátských Čechů do Bulharska na přelomu 19. a 20. století, jedná se pak o sekundární migraci. Při opakovaných migračních pohybech v rámci dvou stejných oblastí (s tím že jedna z nich je země původu) tento proces nazýváme transmigrací\footnote{Jedná se například o migrační systém současných ukrajinských pracovníků v České republice. \parencite{Nespor2005} }. \parencite{Nespor2005}
 
-Jev transmigrace začal být ve vědecké obci více reflektován na konci 20. století, a to hlavně z důvodu masové migrace způsobené globalizací, kdy jsou zahraniční migranti díky novým technologiím neustále v kontaktu se svojí zemí původu. Pro akademické potřeby tak vznikl koncept *transnacionální migrace*, jenž se zaměřuje na proces, při němž imigranti vytváří a udržují vzájemné sociální vazby se společností původní země. \parencite{Kralova2013} Jak je z definice patrné, tento přístup je spíše aplikovatelný na migrační systémy 20.–21. století., nicméně lze některá jeho východisek aplikovat i na historický vývoj některých krajanských komunit.
+Jev transmigrace začal být ve vědecké obci více reflektován na konci 20. století, a to hlavně z důvodu masové migrace způsobené globalizací, kdy jsou zahraniční migranti díky novým technologiím neustále v kontaktu se svojí zemí původu. Pro akademické potřeby tak vznikl koncept *transnacionální migrace*, jenž se zaměřuje na proces, při němž imigranti vytváří a udržují vzájemné sociální vazby se společností původní země. \parencite{Kralova2013} Jak je z definice patrné, tento přístup je spíše aplikovatelný na migrační systémy 20.–21. století., nicméně lze některá z jeho východisek aplikovat i na historický vývoj některých krajanských komunit.
 
-Proces migrace ovlivňuje skladbu obyvatelstva obou lokalit (zvláštně pokud se jedná o hromadné, ne-li organizované přesuny) a následné změny významně působí nejen na strukturu místní populace, ale i na předpoklady jejího dalšího vývoje. Proto historicky existovaly snahy tyto procesy přímo nebo nepřímo regulovat, a to ať už částečným nebo úplným zákazem stěhování/přistěhování obyvatelstva. Typickým důsledkem těchto opatření bývá nelegální imigrace, jíž se snaží na globální úrovni řešit na zvláštní orgánu při OSN (Vysoký komisař OSN pro uprchlíky), nicméně i tak má mnoho hospodářsky vyspělých zemí vlastní migrační politiku, prostřednictvím které se snaží masovou imigraci určitým způsobem ovlivňovat. \parencite{Fialova2017a}
+Také je zapotřebí dodat, že proces migrace ovlivňuje skladbu obyvatelstva obou lokalit (zvláštně pokud se jedná o hromadné, ne-li organizované přesuny) a následné změny významně působí nejen na strukturu místní populace, ale i na předpoklady jejího dalšího vývoje. Proto historicky existovaly snahy tyto procesy přímo nebo nepřímo regulovat, a to ať už částečným nebo úplným zákazem vystěhování či přistěhování obyvatelstva. Typickým důsledkem těchto opatření bývá nelegální imigrace, jíž se snaží na globální úrovni řešit na zvláštní orgánu při OSN (Vysoký komisař OSN pro uprchlíky), nicméně i tak má mnoho hospodářsky vyspělých zemí vlastní migrační politiku, prostřednictvím které se snaží masovou imigraci určitým způsobem ovlivňovat. \parencite{Fialova2017a}
 
 ## České vystěhovalectví
 
-V následující podkapitole si zevrubněji představíme problematiku české emigrace s odkazy na...
+V následující podkapitole si zevrubněji představíme problematiku české emigrace s odkazy
+
+## Enkláva českého jazyka
