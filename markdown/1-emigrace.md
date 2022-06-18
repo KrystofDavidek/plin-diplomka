@@ -38,12 +38,14 @@ Jev transmigrace začal být ve vědecké obci více reflektován na konci 20. s
 
 Také je zapotřebí dodat, že proces migrace ovlivňuje skladbu obyvatelstva obou lokalit (zvláštně pokud se jedná o hromadné, ne-li organizované přesuny) a následné změny významně působí nejen na strukturu místní populace, ale i na předpoklady jejího dalšího vývoje. Proto historicky existovaly snahy tyto procesy přímo nebo nepřímo regulovat, a to ať už částečným nebo úplným zákazem vystěhování či přistěhování obyvatelstva. Typickým důsledkem těchto opatření bývá nelegální imigrace, jíž se snaží na globální úrovni řešit na zvláštní orgánu při OSN (Vysoký komisař OSN pro uprchlíky), nicméně i tak má mnoho hospodářsky vyspělých zemí vlastní migrační politiku, prostřednictvím které se snaží masovou imigraci určitým způsobem ovlivňovat \parencite{Fialova2017a}.
 
-## Česká emigrace
+## Česká emigrace a reemigrace
 
-České vystěhovalectví má dlouhou historii sahající až do 16. století. Jelikož v průběhu doby existovaly různé příčiny české emigrace, lze tohle téma rozdělit do tří částí, z nichž každá mapuje odlišné období a popisuje tak hlavní charakteristiky vzniku jednotlivých krajanských komunit.
+Migrace obyvatelstva, které pocházelo z českého území, má dlouhou historii sahající až do 16. století. Jelikož v průběhu doby existovaly různé příčiny (náboženská, hospodářská a politická) české emigrace a reemigrace, lze tohle téma rozdělit do tří částí\footnote{Každopádně důvody pro emigraci nebyly vždy pouze jedné konkrétní povahy, ale vzájemně se ovlivňovaly. Například náboženská emigrace často souvisela se sociálními a politickými aspekty dané doby \parencite{Vaculik2009a}.}, z nichž každá mapuje odlišné období a popisuje tak hlavní charakteristiky vzniku jednotlivých krajanských komunit.
 
 ### Náboženská emigrace
 
-Náboženská emigrace...
+Za první hromadný odliv Čechů za hranice se považuje českobratrská emigrace do Polska po porážce stavovského odboje v roce 1547, kdy dal Ferdinand I. Habsburský příslušníkům Jednoty bratrské na vybranou, a to buď konvertovat k utrakvismu, anebo emigrovat. \parencite{Vaculik2009a}
+
+Druhou důležitou události, která způsobila významné vystěhování českého obyvatelstva, byla bitva na Bílé hoře v roce 1620, kdy v prvních třech desetiletí po porážce českých stavů odešlo několik tisíc šlechtických a měšťanských rodin se strachu před perzekucemi a tresty za účast v českém stavovském povstání. Tito převážně evangeličtí vystěhovalci odcházeli nejvíce do německých evangelických státu, primárně do Saska a Braniborska. Menší množství exulantů pak zůstalo ve Slezsku, či v Uhrách, kde nebyl vliv Habsburků tak omezující. U těchto skupin došlo k úspěšně asimilaci\footnote{Asimilací v sociologickém kontextu myslíme proces, prostřednictvím kterého se migrující, často minoritní skupina stává součástí skupiny majoritní a dochází tak k integraci kulturních znaků z jednoho kulturního systému do druhého \parencite{Petrusek2017}.} s původním obyvatelstvem a po méně než 2–3 generací volně splynuly s daným prostředím \parencite{Vaculik2002}.
 
 ## Enkláva českého jazyka
