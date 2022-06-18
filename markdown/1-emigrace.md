@@ -38,8 +38,12 @@ Jev transmigrace začal být ve vědecké obci více reflektován na konci 20. s
 
 Také je zapotřebí dodat, že proces migrace ovlivňuje skladbu obyvatelstva obou lokalit (zvláštně pokud se jedná o hromadné, ne-li organizované přesuny) a následné změny významně působí nejen na strukturu místní populace, ale i na předpoklady jejího dalšího vývoje. Proto historicky existovaly snahy tyto procesy přímo nebo nepřímo regulovat, a to ať už částečným nebo úplným zákazem vystěhování či přistěhování obyvatelstva. Typickým důsledkem těchto opatření bývá nelegální imigrace, jíž se snaží na globální úrovni řešit na zvláštní orgánu při OSN (Vysoký komisař OSN pro uprchlíky), nicméně i tak má mnoho hospodářsky vyspělých zemí vlastní migrační politiku, prostřednictvím které se snaží masovou imigraci určitým způsobem ovlivňovat \parencite{Fialova2017a}.
 
-## České vystěhovalectví
+## Česká emigrace
 
-V následující podkapitole si zevrubněji představíme problematiku české emigrace s odkazy
+České vystěhovalectví má dlouhou historii sahající až do 16. století. Jelikož v průběhu doby existovaly různé příčiny české emigrace, lze tohle téma rozdělit do tří částí, z nichž každá mapuje odlišné období a popisuje tak hlavní charakteristiky vzniku jednotlivých krajanských komunit.
+
+### Náboženská emigrace
+
+Náboženská emigrace...
 
 ## Enkláva českého jazyka
