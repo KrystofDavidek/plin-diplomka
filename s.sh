@@ -28,18 +28,22 @@ for FILE in markdown/*.md; do
 # Remove from TOC repeated subsections
     sed -ie 's/\\subsection{Historie}\\label{historie}/'\
 '\\subsection\*{Historie}\\label{historie}/g' "${FILE%.md}.tex"
-  sed -ie 's/\\subsection{Současný stav}\\label{souux10dasnuxfd-stav}/'\
-'\\subsection\*{Současný stav}\\label{souux10dasnuxfd-stav}/g' "${FILE%.md}.tex"
-  sed -ie 's/\\subsection{Jazyk}\\label{jazyk}/'\
-'\\subsection\*{Jazyk}\\label{jazyk}/g' "${FILE%.md}.tex"
-
 
   sed -ie 's/\\subsection{Historie}\\label{historie-\([[:digit:]]\)}/'\
 '\\subsection\*{Historie}\\label{historie-\1}/g' "${FILE%.md}.tex"
-  sed -ie 's/\\subsection{Současný stav}\\label{souux10dasnuxfd-stav-\([[:digit:]]\)}/'\
-'\\subsection\*{Současný stav}\\label{souux10dasnuxfd-stav-\1}/g' "${FILE%.md}.tex"
-  sed -ie 's/\\subsection{Jazyk}\\label{jazyk-\([[:digit:]]\)}/'\
-'\\subsection\*{Jazyk}\\label{jazyk-\1}/g' "${FILE%.md}.tex"
+
+
+
+#   sed -ie 's/\\subsection{Současný stav}\\label{souux10dasnuxfd-stav}/'\
+# '\\subsection\*{Současný stav}\\label{souux10dasnuxfd-stav}/g' "${FILE%.md}.tex"
+#   sed -ie 's/\\subsection{Jazyk}\\label{jazyk}/'\
+# '\\subsection\*{Jazyk}\\label{jazyk}/g' "${FILE%.md}.tex"
+
+
+#   sed -ie 's/\\subsection{Současný stav}\\label{souux10dasnuxfd-stav-\([[:digit:]]\)}/'\
+# '\\subsection\*{Současný stav}\\label{souux10dasnuxfd-stav-\1}/g' "${FILE%.md}.tex"
+#   sed -ie 's/\\subsection{Jazyk}\\label{jazyk-\([[:digit:]]\)}/'\
+# '\\subsection\*{Jazyk}\\label{jazyk-\1}/g' "${FILE%.md}.tex"
 
   rm "${FILE%.md}.texe"
   rename 's/^markdown(.*)/tex$1/' "${FILE%.md}.tex"

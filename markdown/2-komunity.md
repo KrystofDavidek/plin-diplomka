@@ -4,7 +4,7 @@ V následující kapitole si představíme několik význačných krajanských k
 
 ## Banát
 
-### Historie
+### Historický vývoj
 
 Rumunský Banát se nachází na jihozápadě Rumunska a do roku 1552 byl součástí uherské říše, než byl dobyt Turky. Po vyhnání tureckých sil v roce 1718 se z oblasti stala zpustošená krajina, jejíž jižní část zůstala z velké části neobydlena. Právě tohle území se stalo pro české emigranty cílovou destinací, jelikož nabízelo zlepšení tehdejších životních podmínek. Kolonizátorům byla od majitele pozemků nabídnuta půda, dřevo na stavbu domů spolu s nářadím a dalšími nutnostmi k založení osad \parencite{Secka1995}.
 
@@ -25,8 +25,6 @@ Větší odliv emigrantů způsobila až druhá světová válka, po níž reemi
 Díky těžko přístupnému terénu a nepříliš úrodné půdě byly české osady do velké míry izolovány i za komunistického režimu, jenž plnil politiku kontrolovaného hospodářství. Vesnice sice platily daně, ale vyhnuly se větším perzekucím ze strany státu \parencite{Frnochova2012}.
 
 Český jazyk se nadále v komunitách udržel, protože po roce 1945 do Rumunska přicházeli učitele z Československa. Dokonce byla v roce 1972 v nedalekém městě Nadlaku otevřena přípravka pro budoucí slovenské a české učitele, kteří už v roce 1976 nastupovali do škol v jednotlivých vesnicích. Dalším činitelem, který významně přispěl k zachování českého jazyka a české kultury obecně, byly duchovní akce \parencite{Vaculik2009b}.
-
-### Současný stav
 
 ### Jazyk
 
