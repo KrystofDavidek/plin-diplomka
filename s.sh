@@ -24,16 +24,25 @@ for FILE in markdown/*.md; do
 '\\chapter\*{Úvod}\\label{uvod}\\addcontentsline{toc}{chapter}{Úvod}/g' "${FILE%.md}.tex"
   sed -ie 's/\\chapter{Závěr}\\label{zuxe1vux11br}/'\
 '\\chapter\*{Závěr}\\label{zaver}\\addcontentsline{toc}{chapter}{Závěr}/g' "${FILE%.md}.tex"
+
+# Remove from TOC repeated subsections
+  sed -ie 's/\\subsection{Historie}\\label{historie-\([[:digit:]]\)}/'\
+'\\subsection\*{Historie}\\label{historie-\1}/g' "${FILE%.md}.tex"
+  sed -ie 's/\\subsection{Současný stav}\\label{souux10dasnuxfd-stav-\([[:digit:]]\)}/'\
+'\\subsection\*{Současný stav}\\label{souux10dasnuxfd-stav-\1}/g' "${FILE%.md}.tex"
+  sed -ie 's/\\subsection{Jazyk}\\label{jazyk-\([[:digit:]]\)}/'\
+'\\subsection\*{Jazyk}\\label{jazyk-\1}/g' "${FILE%.md}.tex"
+
   rm "${FILE%.md}.texe"
   rename 's/^markdown(.*)/tex$1/' "${FILE%.md}.tex"
 done
 
-echo -e "\n\n### Commiting to git ###\n\n"
+# echo -e "\n\n### Commiting to git ###\n\n"
 
 git add *
 git commit -m 'Change'
 
-echo -e "\n\n### Force pushing to GitHub ###\n\n"
+# echo -e "\n\n### Force pushing to GitHub ###\n\n"
 
 git push -f origin main
 
