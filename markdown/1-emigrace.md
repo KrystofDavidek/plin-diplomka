@@ -90,6 +90,6 @@ Na začátku 90. let tak v zahraničí žilo přibližně 2 až 3 miliony lidí\
 
 ## Enkláva českého jazyka
 
-Z jazykovědné perspektivy lze na zahraniční krajanské komunity nahlížet jako na kompaktní seskupení českého obyvatelstva mimo území českého národního jazyka, jež mohlo vzniknout dvěma způsoby. Jednak mohlo být dříve území, kde se komunita aktuálně vyskytuje, součástí české jazykové oblasti (například staré české osídlení v polském Kladsku), anebo se tyto lokality vyskytují mimo souvislou oblast českého jazyka vytvořené prostřednictvím migračních pohybu (jde tedy o příklady, které jsme uváděly v předchozích podkapitolách).
+Z jazykovědné perspektivy lze na zahraniční krajanské komunity nahlížet jako na kompaktní seskupení českého obyvatelstva mimo území českého národního jazyka, jež vznikaly typicky dvěma možnými způsoby. Jednak mohlo být dříve území, kde se komunita aktuálně vyskytuje, součástí české jazykové oblasti (například staré české osídlení v polském Kladsku), anebo se tyto lokality vyskytují mimo souvislou oblast českého jazyka vytvořené prostřednictvím migračních pohybu (jde tedy o příklady, které jsme uváděly v předchozích podkapitolách).
 
-Tyto lokality nazýváme _jazykové ostrovy_ a jejich hlavní charakteristikou je souvislé navázání k určité české nářeční oblasti podle okolností vzniků konkrétní komunity...
+Tyto lokality nazýváme _jazykové ostrovy_ a jejich hlavním znakem je souvislé navázání k určité české nářeční oblasti podle okolností vzniků konkrétní komunity a současně začlenění do jiného státního celku. Díky izolovanosti těchto enkláv lze tak do velké míry studovat problematiku českých dialektů, protože je u těchto komunit dochovaná velká mírá nářečních prvků \parencite{enklava2017}.
