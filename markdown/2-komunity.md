@@ -20,9 +20,11 @@ Po zrušení Vojenské hranice v roce 1871 se Banát stal součástí Uherského
 
 V období první světové války bojovali někteří muži z Českého Banátu nejčastěji na italské a ruské frontě, každopádně i přes to, že byly české vesnice na krátkou dobu obsazeny Srbskými jednotkami, nebyl život v komunitách výrazněji ovlivněn \parencite{Gecse2013}.
 
-Větší odliv krajanů způsobila až druhá světová válka, po níž reemigrovala zpátky na české území až třetina Čechů. Důvodem byla jak situace v tehdejším Československu (kvůli velké ztrátě obyvatel stát apeloval na přesídlení zpět do vlasti), tak neutěšený stav v samotných krajanských osadách (v průběhu doby došlo k nedostatku půdy a v důsledku přelidnění i k šíření různých chorobo) \parencite{Secka1995}.
+Větší odliv emigrantů způsobila až druhá světová válka, po níž reemigrovala zpátky na české území až třetina Čechů. Důvodem byla jak situace v tehdejším Československu (kvůli velké ztrátě obyvatel stát apeloval na přesídlení krajanů zpět do vlasti), tak neutěšený stav v samotných krajanských osadách (v průběhu doby došlo k nedostatku půdy a v důsledku přelidnění i k šíření různých chorob) \parencite{Secka1995}.
 
-Díky těžko průstupnému terénu
+Díky těžko přístupnému terénu a nepříliš úrodné půdě byly české osady do velké míry izolovány i za komunistického režimu, jenž plnil politiku kontrolovaného hospodářství. Vesnice sice platily daně, ale vyhnuly se větším perzekucím ze strany státu \parencite{Frnochova2012}.
+
+Český jazyk se nadále v komunitách udržel, protože po roce 1945 do Rumunska přicházeli učitele z Československa. Dokonce byla v roce 1972 v nedalekém městě Nadlaku otevřena přípravka pro budoucí slovenské a české učitele, kteří už v roce 1976 nastupovali do škol v jednotlivých vesnicích. Dalším činitelem, který významně přispěl k zachování českého jazyka a české kultury obecně, byly duchovní akce \parencite{Vaculik2009b}.
 
 ### Současný stav
 
