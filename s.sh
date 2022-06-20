@@ -26,11 +26,11 @@ for FILE in markdown/*.md; do
 '\\chapter\*{Závěr}\\label{zaver}\\addcontentsline{toc}{chapter}{Závěr}/g' "${FILE%.md}.tex"
 
 # Remove from TOC repeated subsections
-  sed -ie 's/\\subsection{Historie}\\label{historie\([-[[:digit:]]]*\)}/'\
+  sed -ie 's/\\subsection{Historie}\\label{historie\(\[-[[:digit:]]\]*\)}/'\
 '\\subsection\*{Historie}\\label{historie-\1}/g' "${FILE%.md}.tex"
-  sed -ie 's/\\subsection{Současný stav}\\label{souux10dasnuxfd-stav\([-[[:digit:]]]*\)}/'\
+  sed -ie 's/\\subsection{Současný stav}\\label{souux10dasnuxfd-stav\(\[-[[:digit:]]\]*\)}/'\
 '\\subsection\*{Současný stav}\\label{souux10dasnuxfd-stav-\1}/g' "${FILE%.md}.tex"
-  sed -ie 's/\\subsection{Jazyk}\\label{jazyk\([-[[:digit:]]]*\)}/'\
+  sed -ie 's/\\subsection{Jazyk}\\label{jazyk\(\[-[[:digit:]]\]*\)}/'\
 '\\subsection\*{Jazyk}\\label{jazyk-\1}/g' "${FILE%.md}.tex"
 
   rm "${FILE%.md}.texe"
