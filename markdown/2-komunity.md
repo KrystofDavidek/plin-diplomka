@@ -22,24 +22,6 @@ Vystěhovalcům byla na náklady státu zajištěna lodní doprava po Dunaji (na
 
 ## Volyň
 
-### Historie
-
-### Současný stav
-
-### Jazyk
-
 ## Kavkaz
 
-### Historie
-
-### Současný stav
-
-### Jazyk
-
 ## Texas
-
-### Historie
-
-### Současný stav
-
-### Jazyk
