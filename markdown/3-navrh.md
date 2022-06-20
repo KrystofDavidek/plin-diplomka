@@ -1,5 +1,5 @@
 \part{Praktická část}
 
-# Třetí kapitola
+# Návrh
 
-Tohle je třetí kapitola \parencite{Nespor2005}
+Tohle je návrh aplikace...

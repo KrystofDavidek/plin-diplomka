@@ -1,3 +1,3 @@
-# Čtvrtá kapitola
+# Implementace
 
-Tohle je čtvrtá kapitola \parencite{Broucek2017}
+Tohle je implementace aplikace...
