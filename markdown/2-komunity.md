@@ -4,8 +4,32 @@ V následující kapitole si představíme několik význačných krajanských k
 
 ## Banát
 
+### Historie
+
+### Současný stav
+
+### Jazyk
+
 ## Volyň
+
+### Historie
+
+### Současný stav
+
+### Jazyk
 
 ## Kavkaz
 
+### Historie
+
+### Současný stav
+
+### Jazyk
+
 ## Texas
+
+### Historie
+
+### Současný stav
+
+### Jazyk
