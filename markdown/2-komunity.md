@@ -31,7 +31,7 @@ Po roce 1989 se o etnické menšiny v celém rumunském Banátu začaly víc zab
 \begin{center}
 \begin{tabular}{||l c c||}
 \hline
-Česká vesnice & populace v roce 1991 & populace v roce 2009 \\ [0.5ex]
+Česká vesnice & 1991 & 2009 \\ [0.5ex]
 \hline\hline
 Svatá Helena & 800 & 357 \\
 \hline
@@ -46,6 +46,8 @@ Bígr & 360 & 218 \\
 Eibenthal (a Ujbánye) & 3110 & 1525 \\ [1ex]
 \hline
 \end{tabular}
+\caption{Demografický vývoj českých vesnic v Banátu za roky 1991–2009}
+\label{table:1}
 \end{center}
 
 ### Jazyk
