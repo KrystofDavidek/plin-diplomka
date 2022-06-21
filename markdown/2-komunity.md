@@ -26,7 +26,7 @@ Díky těžko přístupnému terénu a nepříliš úrodné půdě byly české 
 
 Český jazyk se nadále v komunitách udržel, protože po roce 1945 do Rumunska přicházeli učitele z Československa. Dokonce byla v roce 1972 v nedalekém městě Nadlaku otevřena přípravka pro budoucí slovenské a české učitele, kteří už v roce 1976 nastupovali do škol v jednotlivých vesnicích. Dalším činitelem, který významně přispěl k zachování českého jazyka a české kultury obecně, byly pravidelné duchovní akce v nedělní škole, díky kterým se i mladá generace učila české kultuře a historii \parencite{Vaculik2009b}.
 
-Po roce 1989 se o etnické menšiny v celém rumunském Banátu začaly víc zabývat jejich mateřské země, Československo a pozdější České republika nevyjímaje. Český zastupitelský úřad v Bukurešti často za spolupráce rumunských úřadů realizoval systematickou podporu vesnic formou humanitární pomoci (od roku 1995 začal tuto činnost koordinovat nadace Člověk v tísní). Snahou tak bylo stabilizovat českou populaci v jižním Banátu, nicméně demografický vývoj českých vesnic má do dnešního dne spíše klesající tendenci viz srov. populace u jednotlivých českých vesnic za roky 1991 a 2009.
+Po roce 1989 se o etnické menšiny v celém rumunském Banátu začaly víc zabývat jejich mateřské země, Československo a pozdější České republika nevyjímaje. Český zastupitelský úřad v Bukurešti často za spolupráce rumunských úřadů realizoval systematickou podporu vesnic formou humanitární pomoci (od roku 1995 začal tuto činnost koordinovat nadace Člověk v tísní). Snahou tak bylo stabilizovat českou populaci v jižním Banátu, nicméně demografický vývoj českých vesnic má do dnešního dne spíše klesající tendenci viz srov. populace u jednotlivých českých vesnic za roky 1991 a 2009 \parencite{Gecse2013}.
 
 \begin{table}[h!]
 \centering
@@ -47,11 +47,19 @@ Bígr & 360 & 218 \\
 Eibenthal (a Ujbánye) & 3110 & 1525 \\ [1ex]
 \hline
 \end{tabular}
-\caption{Demografický vývoj českých vesnic v Banátu za roky 1991–2009}
+\caption\*{Demografický vývoj českých vesnic v Banátu za roky 1991–2009}
 \label{table:1}
 \end{table}
 
 ### Jazyk
+
+Jak bylo v předchozí podkapitole poznamenáno, český jazyk byl v krajanských komunitách českých osad do velké míry zachován. I přes to, že jednotliví vystěhovalci typicky pocházeli z různých krajů Čech (nejčastěji z jihozápadní oblasti), každá z vesnic si vytvořila svůj vlastí specificky dialekt, jenž vycházel z nejhojněji zastoupené nářeční skupiny \parencite{Gecse2013}. Níže si nastíníme pár obecnějších jazykových charakteristik, jež se týkají celé oblasti českého Banátu.
+
+Z cizích jazyků banátskou češtinu nejvíce ovlivnila rumunština a němčina (kterou si osadníci přivezli z tehdejšího Rakouska-Uherska). Na úrovni slovní zásoby šlo typicky o přejímky (z rumunštiny se tyto lexikální jednotky nazývají banatismy) týkající se převážně administrativních a hospodářských činností (_kamín_ nebo _čobán_). Obecně je dodnes jazyk krajanů bohatý na archaismy češtiny z 19. století (_šustr_ či _špajz_ \parencite{Frnochova2012}.
+
+Rumunský vliv je každopádně patrný i na ostatních úrovních jazykového plánu. U hláskosloví lze pozorovat časté labializované _a_ a tvrdou výslovnost některých tupých sykavek (_cas_) a výslovnost *ď *jako _dz_ nebo diftongickou výslovnost _é_, _ó_ (_péaří_, _móaže_). Obecným fonetických jevem je však diftongizace _ý > ej_ (_bejk_), _ú > ou_ (_soused_) a úžení _é > í_ (_chlív_). V mluvě se objevují i protetické hlásky _-h_ (_huďit_) a _-v_ (_vobjet_) a další jevy jako je například zánik některých souhlásek v určitých hláskových skupinách (_střelec > třelec_), změna změna _šč > šť_ (_šťáva_) nebo proměná kvanity vokálů (_móře_) \parencite{Skulina1976}.
+
+Tvarosloví je pak charakteristické například používáním koncovek _-ove_ (_holubove_), _-úch_, _-ích_ nebo přípona _-ojc_ u příjmení (_Kalinojc_) a na syntaktické rovině se můžeme setkat s používání analytických větných konstrukcí (_říkáme tadi jít do mlíkárna_) \parencite{Skulina1976}.
 
 ## Volyň
 
