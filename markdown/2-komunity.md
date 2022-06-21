@@ -28,7 +28,8 @@ Díky těžko přístupnému terénu a nepříliš úrodné půdě byly české 
 
 Po roce 1989 se o etnické menšiny v celém rumunském Banátu začaly víc zabývat jejich mateřské země, Československo a pozdější České republika nevyjímaje. Český zastupitelský úřad v Bukurešti často za spolupráce rumunských úřadů realizoval systematickou podporu vesnic formou humanitární pomoci (od roku 1995 začal tuto činnost koordinovat nadace Člověk v tísní). Snahou tak bylo stabilizovat českou populaci v jižním Banátu, nicméně demografický vývoj českých vesnic má do dnešního dne spíše klesající tendenci viz srov. populace u jednotlivých českých vesnic za roky 1991 a 2009.
 
-\begin{center}
+\begin{table}[h!]
+\centering
 \begin{tabular}{||l c c||}
 \hline
 Česká vesnice & 1991 & 2009 \\ [0.5ex]
@@ -48,7 +49,7 @@ Eibenthal (a Ujbánye) & 3110 & 1525 \\ [1ex]
 \end{tabular}
 \caption{Demografický vývoj českých vesnic v Banátu za roky 1991–2009}
 \label{table:1}
-\end{center}
+\end{table}
 
 ### Jazyk
 
