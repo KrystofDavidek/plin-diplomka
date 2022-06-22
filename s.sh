@@ -25,6 +25,8 @@ for FILE in markdown/*.md; do
   sed -ie 's/\\chapter{Závěr}\\label{zuxe1vux11br}/'\
 '\\chapter\*{Závěr}\\label{zaver}\\addcontentsline{toc}{chapter}{Závěr}/g' "${FILE%.md}.tex"
 
+  sed -ie 's/\\subsubsection{/\\subsubsection*{/g' "${FILE%.md}.tex"
+
 # Remove from TOC repeated subsections
     sed -ie 's/\\subsection{Historický vývoj}\\label{historickuxfd-vuxfdvoj}/'\
 '\\subsection\*{Historický vývoj}\\label{historickuxfd-vuxfdvoj}/g' "${FILE%.md}.tex"
