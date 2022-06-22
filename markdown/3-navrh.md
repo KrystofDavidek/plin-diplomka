@@ -12,13 +12,27 @@ XXX
 
 ### Funkční požadavky
 
-Funkční požadavky vyplývají z účelu aplikace a jsou typicky definované zákazníkem nebo jiným zadavatelem aplikace. Souvisí tak se základními funkcemi, akcemi a aktivitami, jimiž by mělo digitální řešení disponovat pro řešení konkrétních problémů\parencite{Gorton2006}.
+Funkční požadavky vyplývají z účelu aplikace a jsou typicky definované zákazníkem nebo jiným zadavatelem aplikace. Souvisí tak se základními funkcemi, akcemi a aktivitami, jimiž by mělo digitální řešení disponovat pro řešení konkrétních problémů \parencite{Gorton2006}.
 
-Tyto požadavky můžeme u naší webové aplikace pro geografické zmapování krajanských komunit a jejich jazyka (dále jen aplikace) pro větší přehlednost rozdělit do tří hlavních kategorií.
+Tyto požadavky můžeme u webové aplikace pro geografické zmapování krajanských komunit a jejich jazyka (dále jen aplikace) pro větší přehlednost rozdělit do tří hlavních kategorií.
 
 #### Geografická reprezentace českých komunit na mapě
 
+Jedním z nejdůležitějších nároků na aplikaci je vizualizace jednotlivých českých komunit po celém světě. Aplikace má tak disponovat samostatnou stránkou, v rámci které budou dostupné mapové podklady celého světa. Na této mapě mají být pak prostřednictvím mapových vrstev vizualizovány konkrétní české enklávy. Pod mapovými vrstvami myslíme n-úhelníkové plochy, které mohou mít na mapě jakýkoliv tvar a velikost podle potřeby vybrané komunity (geografická místa komunit v aplikaci popisujeme jako lokality). Má být tak možné vizualizovat jak malé osady, tak celé regiony nebo státy – vrstvy se též mohou jakýmkoliv způsobem překrývat.
+
+Zapotřebí je také zahrnout základní funkční požadavky, které se pojí s obsluhou mapové aplikace. Jde o možnosti oddalování, a přibližování pohledu (spolu s navráceném do výchozí pozice), navigaci na mapě pomocí posouvání kurzoru klikání myší/dotykem anebo prostřednictvím minimapy zobrazující vždy širší kontext vybraného pohledu. Další důležitou mapovou funkcí je vyhledávání lokalit na mapě. Aplikace má umožňovat přiblížení na danou mapovou vrstvu na základě výběru ve vyhledávacím poli.
+
+Zacílení lokalit má být umožněno i jiným způsobem, než vyhledáváním v mapových podkladech. Z toho důvodu má aplikace disponovat výčtem lokalit, které budou dostupné z mapové stránky prostřednictvím levé vysouvací části obrazovky. Tato sekce má sloužit jako přehledný abecedně seřazený seznam všech dostupných krajanských komunit (spolu s úvodním obrázkem a sekundárních názvem), z něhož je možné lokalitu buď zacílit na mapě, anebo rovnou zobrazit její detail.
+
+Posledním funkčním požadavkem souvisícím s geografickou složkou je možnost filtrování lokalit na základě vybraných metrik (tyto metriky rozvedeme v kapitole týkající se dat viz XXX). Tato funkce se má nacházet v sekci se seřazenými komunitami a po označení libovolného počtu filtrů se mají z výběru i z mapových podkladů vyfiltrovat takové lokality, jež splňují danou podmínku. 
+
 #### Vizualizace detailních informací vybrané komunity
+
+Druhým významným požadavkem na naši aplikaci je uživatelky přívětivá vizualizace všech dostupných informací, které se týkají vybrané krajanské komunity. Jelikož mohou být tyto informace rozličné velikosti a multimediální povahy (mluvy, audio, obrázky, videa a textové informace) je zapotřebí, aby v aplikaci existoval sekundární navigační systém. Tato druhotná navigace má zajistit přehlednost při průchodu vybranou lokalitou a umožnit tak uživateli výběr konkrétní části.
+
+Jak bylo výše naznačeno, cílem našeho řešení je zmapovat ukázky komunikace v češtině a prostřednictvím audio nahrávek a jejich transkriptů přiblížit jazyk dané české komunity. Požadavkem je tak také vhodné propojení audio souborů s jejich přepisy.
+
+Sekundární požadavkem v této oblasti je možnost sdílení vybrané lokality prostřednictvím URL adresy pro případnou kolaboraci při práci s určitou českou enklávou.
 
 #### Administrační prostředí pro editaci jednotlivých komunit
 
