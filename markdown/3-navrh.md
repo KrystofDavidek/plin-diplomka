@@ -1,6 +1,8 @@
 \part{Praktická část}
 
-# Návrh webové aplikace
+# Analýza požadavků na aplikaci
+
+V praktické části této diplomové práce popisujeme výslednou webovou aplikaci pro geografické zmapování krajanských komunit a jejich jazyka (dále jen aplikace). V následujících kapitolách si ve stručnosti popíšeme související projekty, z nichž jsme se při tvorbě více či méně inspirovali. Dále aplikaci představíme jak z pohledu funkčních a nefunkčních požadavků, tak z hlediska procesu návrhu a implementace. 
 
 ## Související projekty
 
@@ -8,13 +10,13 @@ XXX
 
 ## Požadavky na aplikaci
 
- V návrhové fázi vývoje je před počátkem implementace jakéhokoliv typu aplikace zapotřebí mít vyjasněny všechny požadavky, které jsou na daný systém kladeny. Tyto požadavky lze rozlišit na dva základny typy, a to na funkční a nefunkční.
+Ještě před návrhovou fází vývoje je u jakéhokoliv typu aplikace zapotřebí mít vyjasněny všechny požadavky, které jsou na daný systém kladeny. Tyto požadavky lze rozlišit na dva základny typy, a to na funkční a nefunkční.
 
 ### Funkční požadavky
 
 Funkční požadavky vyplývají z účelu aplikace a jsou typicky definované zákazníkem nebo jiným zadavatelem aplikace. Souvisí tak se základními funkcemi, akcemi a aktivitami, jimiž by mělo digitální řešení disponovat pro řešení konkrétních problémů \parencite{Gorton2006}.
 
-Tyto požadavky můžeme u naší webové aplikace pro geografické zmapování krajanských komunit a jejich jazyka (dále jen aplikace) pro větší přehlednost rozdělit do tří hlavních kategorií.
+Tyto požadavky můžeme u naší webové aplikace pro větší přehlednost rozdělit do tří hlavních kategorií.
 
 #### Geografická reprezentace českých komunit na mapě
 
@@ -52,4 +54,8 @@ Hlavním nefunkčním požadavkem je, aby byl náš systém realizován jako mul
 
 Výběr technologií taktéž souvisí s nefunkčními požadavky. Protože se jedná o webovou aplikaci, její základ bude postaven na základních webových technologiích, jimiž jsou JavaScript, HTML a CSS. Pro tvorbu uživatelského rozhraní bude zvolen javaScriptový framework React spolu s využitím TypeScriptu a pro autentifikaci a databázové řešení bude vybrána platforma Firebase.
 
-## Požadavky na aplikaci
+# Návrh aplikace
+
+## Použité technologie
+
+Bla bla bla ...
