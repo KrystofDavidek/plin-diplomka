@@ -70,9 +70,9 @@ Jelikož je naše navrhované řešení webovou aplikací, budeme se níže zab�
 
 ### Základní webové technologie
 
-I přes to, že je svět webových technologií jednou z nejdynamičtěji rozvíjejících se oblastí IT, jeho základy jsou již několik desítek let stále stejné. Aby mohl webový prohlížeč vykreslit webovou stránku nebo aplikaci, musí být jejich obsah vždy určitým způsobem strukturovaný. Pro tyto účely se již řadu let využívá HTML (the Hypertext Markup Language) – značkovací jazyk, který popisuje přesnou strukturu určitého dokumentu. 
+I přes to, že je svět webových technologií jednou z nejdynamičtěji rozvíjejících se oblastí IT, jeho základy jsou již několik desítek let stále stejné. Aby mohl webový prohlížeč vykreslit webovou stránku\footnote{Pojmy webová stránka a webová aplikace vnímáme v tomto kontextu totožně. Tedy vše, co platí pro vývoj webových stránek, platí i pro vývoj webových aplikací (protože aplikace jsou v principu jen komplexnější formou webových stránek).}, musí být její obsah vždy určitým způsobem strukturovaný. Pro tyto účely se již řadu let využívá HTML (Hypertext Markup Language) – značkovací jazyk, který popisuje přesnou strukturu určitého dokumentu. 
 
-Prostřednictvím značek tohoto jazyka dáváme jednotlivým částem dokumentu strukturální významy. Mohou to být například značky pro označení odstavce, odkazů nebo třeba tabulek či videí. Některé značky sice mohou vyvolat změny vzhledu dané části dokumentu, nicméně pro tyto účely HTML není primárně určeno\parencite{htmlcss}.
+Prostřednictvím značek tohoto jazyka dáváme jednotlivým částem dokumentu strukturální významy. Mohou to být například značky pro označení odstavce, odkazů nebo třeba tabulek či videí. Některé značky sice mohou vyvolat změny vzhledu dané části dokumentu, nicméně pro tyto účely HTML není primárně určeno \parencite{htmlcss}.
 
 Abychom mohli upravit vzhled webové stránky, je zapotřebí využít druhé základní technologie, a to CSS (Cascading Style Sheets). Jedná se o jazyk, pomocí kterého lze konkrétním HTML značkám přiřazovat předdefinované vlastnosti, a tak jim měnit vzhled dle potřeb. Typicky může jít o změny barvy, velikosti, fontů, ale i třeba o implementaci složitějších animací, přechodů atd. \parencite{htmlcss}.
 
@@ -86,13 +86,30 @@ Aby JavaScript a CSS mohly přistupovat k jednotlivým částem HTML, dochází 
  
 Při výběru dalších technologií pro vývoj webové aplikace si je zapotřebí nejdříve uvědomit, jakou strategii vykreslování bude naše aplikace naplňovat.
 
-#### Dynamické vykreslování
+#### Dynamické webové stránky
 
-Historicky nejstarší způsob...
+Jednou z nejčastějších strategií je dynamické vykreslování stránek. Jedná se o princip, kdy je webová stránka (tedy HTML s CSS a JavaScriptem) se všemi potřebnými informacemi dynamicky vytvořena na vzdáleném serveru. Prohlížeč (jinými slovy klient) tak na základě akce od uživatele pošle na server takzvaný *request* a server vygenerovanou webovou stránku obratem pošle nazpět.
+
+Výhodou toho přístupu je fakt, že klient dostane už kompletní dokument se všemi potřebnými informacemi (což je výhodné z hlediska SEO\footnote{Search engine optimization (SEO) je proces optimalizace viditelnosti webových stránek v rámci internetových vyhledávačů jako je např. Google. Čím lepší je SEO, tím je pravděpodobnější, že se daná webová stránka objeví na vyšších příčkách při vyhledávání.}). Neméně důležitým přínosem je pak to, že se veškerá logika děje na serveru (který je typicky výkonnější než klient, prohlížeč akorát vykresluje výsledek.
+
+Na druhou stranu lze vidět i nevýhodu primárně v opakovaném generování každé stránky při opětovné návštěvě, což může být problém při pomalejším internetovém připojení. Komplikovanější též může být vývoj samotných aplikací, protože vývojář musí znát jak  HTML, CSS a JavaScript (souhrnně frontend), tak technologie spojené se serverovou částí (práce s databází atd.). protože jsou na sebe obě složky na serveru nutně navázané \parencite{spa}. 
 
 \begin{figure}[ht]   
     \centering
-    \includegraphics[width=.9\textwidth]{dynamic}  
+    \includegraphics[width=.5\textwidth]{dynamic}  
     \caption{Dynamické vykreslování}
-    \label{algoritmus}
+    \label{dynamic}
+ \end{figure}
+
+#### Statické webové stránky
+
+Druhý přístup je nejstarší a zároveň nejjednodušší, protože se jedná o již vytvořené HTML (spolu s CSS a JavaScriptem) soubory, které jsou neměnné. To znamená, že jsou tyto již připravené statické soubory uložené na serveru, kde očekávají request od klienta k vykreslení. Jedná se tedy nejčastěji o takové webové stránky, které jsou jednodušší a neočekává se u nich příliš mnoho interaktivity s uživatelem.
+
+V dnešní době jsou navíc populární takzvané generátory statických stránek, které umožňují vytvářet statické stránky na základě předpřipravených šablon a odlehčeného značkovacího jazyka jako je například Markdown\footnote{[https://www.markdownguide.org/](https://www.markdownguide.org/)}, v němž se vytváří samostatný obsah \parencite{spa}.
+
+\begin{figure}[ht]   
+    \centering
+    \includegraphics[width=.5\textwidth]{static}  
+    \caption{Statické vykreslování}
+    \label{static}
  \end{figure}
