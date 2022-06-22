@@ -8,7 +8,7 @@ XXX
 
 ## Požadavky na aplikaci pro geografické zmapování krajanských komunit a jejich jazyka
 
-V návrhové fázi vývoje je před počátkem implementace jakéhokoliv typu aplikace zapotřebí mít vyjasněny všechny požadavky, které jsou na daný systém kladeny. Tyto požadavky lze rozlišit na dva základny typy, a to na funkční a nefunkční.
+ V návrhové fázi vývoje je před počátkem implementace jakéhokoliv typu aplikace zapotřebí mít vyjasněny všechny požadavky, které jsou na daný systém kladeny. Tyto požadavky lze rozlišit na dva základny typy, a to na funkční a nefunkční.
 
 ### Funkční požadavky
 

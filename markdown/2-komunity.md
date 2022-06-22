@@ -1,4 +1,4 @@
-# Významné krajanské komunity ve světě
+# Významné krajanské komunity ve světě 
 
 V následující kapitole si představíme několik význačných krajanských komunit ve světě, jejichž historický vývoj a aktuální stav je již literaturou alespoň do jisté míry popsán. Jedná se tedy o takové jazykové enklávy, u nichž lze významněji reflektovat asimilační vývoj jazyka a jsou tak dobrými ukázkami využití naší webové aplikace v praxi. V rozsahu této diplomové práce každopádně není vložit všechny informace vypsané níže do digitálního formátu, ale spíše vybrat určité části (ať už jednotlivé osady nebo celé lokality), které demonstrují možnosti a funkce vytvořené webové aplikace viz XXX.
 
@@ -6,13 +6,13 @@ V následující kapitole si představíme několik význačných krajanských k
 
 ### Historický vývoj
 
-Rumunský Banát se nachází na jihozápadě Rumunska a do roku 1552 byl součástí uherské říše, než byl dobyt Turky. Po vyhnání tureckých sil v roce 1718 se z oblasti stala zpustošená krajina, jejíž jižní část zůstala z velké části neobydlena. Právě tohle území se stalo pro české emigranty cílovou destinací, jelikož nabízelo zlepšení tehdejších životních podmínek. Kolonizátorům byla od majitele pozemků nabídnuta půda, dřevo na stavbu domů spolu s nářadím a dalšími nutnostmi k založení osad \parencite{Secka1995}.
+Rumunský Banát se nachází na jihozápadě Rumunska a do roku 1552 byl součástí uherské říše, než byl dobyt Turky. Po vyhnání tureckých sil v roce 1718 se z oblasti stala zpustošená krajina, jejíž jižní část zůstala z velké části neobydlena. Právě tohle území se stalo pro české emigranty cílovou destinací, jelikož nabízelo zlepšení tehdejších životních podmínek. Kolonizátorům byla od majitele pozemků nabídnuta půda, dřevo na stavbu domů spolu s nářadím a dalšími nutnostmi k založení osad \parencite{Secka1995}. 
 
 Do Banátu se první čeští vystěhovalci dostali v letech 1820–1821. Šlo přibližně o 80 rodin, jež byly tvořeny převážně drobnými řemeslníky, zemědělci, ale i vysloužilími vojáky. Byly to především obyvatelé z Plzeňska, Domažlicka, Klatovska, Kladenská a Čáslavská a založili na rumunském území dvě osady – Elisabethfeld a Svatou Helenu (Češi katolického původu se usídlili do Elisabethfeldu, evangeličtí emigranti pak založili druhou zmíněnou osadu) \parencite{Gecse2013}.
 
 Zpočátku byl pro české exulanty pobyt na novém území velmi náročný. Potřebovali se vypořádat s odlišnými přírodními podmínkami, jako byl kopcovitý terén a nepřístupné lesy, ale i kruté zimy či nebezpečná divoká zvířata. Problémem též byly počáteční neshody s nájemníkem pozemků, jež se měl o vystěhovalce starat, nicméně v roce 1826 i s majetkem odjel a nechal kolonisty napospas. I tak se podařilo díky začlenění do tehdejší Vojenské hranice kolonie založit a vytvořit tak podhoubí pro další migrační pohyby na území Banátu \parencite{Secka1995}.
 
-Druhá emigrační vlna se konala v letech 1826–1828. Ta již byla pod správou rakouských vojenských úřadů, protože vojenská správa byla spokojena se zapojením emigrantů do Vojenské hranice a chtěla tak navýšit stavy na strategickém území hranice habsburského státu. Tato nabídka se setkala se zájmem, jelikož v tu dobu probíhala na českém území hospodářská krize – tuto výzvu proto vyslyšelo přes 1800 rodin \parencite{Frnochova2012}.
+Druhá emigrační vlna se konala v letech 1826–1828. Ta již byla pod správou rakouských vojenských úřadů, protože vojenská správa byla spokojena se zapojením emigrantů do Vojenské hranice a chtěla tak navýšit stavy na strategickém území hranice habsburského státu. Tato nabídka se setkala se zájmem, jelikož v tu dobu probíhala na českém území hospodářská krize – tuto výzvu proto vyslyšelo přes 1800 rodin \parencite{Frnochova2012}.  
 
 Vystěhovalcům byla na náklady státu zajištěna lodní doprava po Dunaji (na rozdíl od první vlny, kdy se krajané stěhovali prostřednictvím vozů) a kolonizovali místa, jež byla vybrána vojenskými úřady. Vznikly tak nové osady Bígr, Eibenthál, Rovensko, Šumice a Gerník, které byly ale vzájemně kvůli nedostupnému terénu do značné míry izolovány a vznikaly tak uzavřené komunity. S okolním obyvatelstvem (Rumuny a Srby) se tedy emigranti příliš nestýkali a s úřady Vojenské hranice komunikovali výlučně německy, i proto se české národní povědomí krajanů v těchto komunitách úspěšně drží \parencite{Secka1995}.
 
@@ -24,30 +24,30 @@ Větší odliv emigrantů způsobila až druhá světová válka, po níž reemi
 
 Díky těžko přístupnému terénu a nepříliš úrodné půdě byly české osady do velké míry izolovány i za komunistického režimu, jenž plnil politiku kontrolovaného hospodářství. Vesnice sice platily daně, ale vyhnuly se větším perzekucím ze strany státu \parencite{Frnochova2012}.
 
-Český jazyk se nadále v komunitách udržel, protože po roce 1945 do Rumunska přicházeli učitele z Československa. Dokonce byla v roce 1972 v nedalekém městě Nadlaku otevřena přípravka pro budoucí slovenské a české učitele, kteří už v roce 1976 nastupovali do škol v jednotlivých vesnicích. Dalším činitelem, který významně přispěl k zachování českého jazyka a české kultury obecně, byly pravidelné duchovní akce v nedělní škole, díky kterým se i mladá generace učila české kultuře a historii \parencite{Vaculik2009b}.
+Český jazyk se nadále v komunitách udržel, protože po roce 1945 do Rumunska přicházeli učitele z Československa. Dokonce byla v roce 1972 v nedalekém městě Nadlaku otevřena přípravka pro budoucí slovenské a české učitele, kteří už v roce 1976 nastupovali do škol v jednotlivých vesnicích. Dalším činitelem, který významně přispěl k zachování českého jazyka a české kultury obecně, byly pravidelné duchovní akce v nedělní škole, díky kterým se i mladá generace učila české kultuře a historii  \parencite{Vaculik2009b}.
 
 Po roce 1989 se o etnické menšiny v celém rumunském Banátu začaly víc zabývat jejich mateřské země, Československo a pozdější České republika nevyjímaje. Český zastupitelský úřad v Bukurešti často za spolupráce rumunských úřadů realizoval systematickou podporu vesnic formou humanitární pomoci (od roku 1995 začal tuto činnost koordinovat nadace Člověk v tísní). Snahou tak bylo stabilizovat českou populaci v jižním Banátu, nicméně demografický vývoj českých vesnic má do dnešního dne spíše klesající tendenci viz srov. populace u jednotlivých českých vesnic za roky 1991 a 2009 \parencite{Gecse2013}.
 
 \begin{table}[h!]
 \centering
-\begin{tabular}{||l c c||}
-\hline
-Česká vesnice & 1991 & 2009 \\ [0.5ex]
-\hline\hline
-Svatá Helena & 800 & 357 \\
-\hline
-Gernik & 910 & 340 \\
-\hline
-Rovensko & 235 & 205 \\
-\hline
-Bígr & 360 & 218 \\
-\hline
-Šumice & 205 & 104 \\ [1ex]
-\hline
-Eibenthal (a Ujbánye) & 3110 & 1525 \\ [1ex]
-\hline
+\begin{tabular}{||l c c||} 
+ \hline
+  Česká vesnice & 1991 & 2009 \\ [0.5ex] 
+ \hline\hline
+ Svatá Helena & 800 & 357 \\ 
+ \hline
+ Gernik & 910 & 340 \\
+ \hline
+ Rovensko & 235 & 205 \\
+ \hline
+ Bígr & 360 & 218 \\
+ \hline
+ Šumice & 205 & 104  \\ [1ex] 
+ \hline
+  Eibenthal (a Ujbánye) & 3110 & 1525 \\ [1ex] 
+ \hline
 \end{tabular}
-\caption\*{Demografický vývoj českých vesnic v Banátu za roky 1991–2009}
+\caption*{Demografický vývoj českých vesnic v Banátu za roky 1991–2009}
 \label{table:1}
 \end{table}
 
@@ -55,11 +55,11 @@ Eibenthal (a Ujbánye) & 3110 & 1525 \\ [1ex]
 
 Jak bylo v předchozí podkapitole poznamenáno, český jazyk byl v krajanských komunitách do velké míry zachován. I přes to, že jednotliví vystěhovalci typicky pocházeli z různých krajů Čech (nejčastěji z jihozápadní oblasti), každá z vesnic si vytvořila svůj vlastní specifický dialekt, jenž vycházel z nejhojněji zastoupené nářeční skupiny \parencite{Gecse2013}. Níže si nastíníme pár obecnějších jazykových charakteristik, jež se týkají celé oblasti českého Banátu.
 
-Z cizích jazyků banátskou češtinu nejvíce ovlivnila rumunština a němčina (kterou si osadníci přivezli z tehdejšího Rakouska-Uherska). Na úrovni slovní zásoby šlo typicky o přejímky (z rumunštiny se tyto lexikální jednotky nazývají banatismy) týkající se převážně administrativních a hospodářských činností (_kamín_ nebo _čobán_). Obecně je dodnes jazyk krajanů bohatý na archaismy češtiny z 19. století (_šustr_ či _špajz_ \parencite{Frnochova2012}.
+Z cizích jazyků banátskou češtinu nejvíce ovlivnila rumunština a němčina (kterou si osadníci přivezli z tehdejšího Rakouska-Uherska). Na úrovni slovní zásoby šlo typicky o přejímky (z rumunštiny se tyto lexikální jednotky nazývají banatismy) týkající se převážně administrativních a hospodářských činností  (*kamín* nebo *čobán*).  Obecně je dodnes jazyk krajanů bohatý na archaismy češtiny z 19. století (*šustr* či *špajz* \parencite{Frnochova2012}.
 
-Rumunský vliv je každopádně patrný i na ostatních úrovních jazykového plánu. U hláskosloví lze pozorovat časté labializované _a_ a tvrdou výslovnost některých tupých sykavek (_cas_) a výslovnost *ď *jako _dz_ nebo diftongickou výslovnost _é_, _ó_ (_péaří_, _móaže_). Obecným fonetických jevem je však diftongizace _ý > ej_ (_bejk_), _ú > ou_ (_soused_) a úžení _é > í_ (_chlív_). V mluvě se objevují i protetické hlásky _-h_ (_huďit_) a _-v_ (_vobjet_) a další jevy jako je například zánik některých souhlásek v určitých hláskových skupinách (_střelec > třelec_), změna změna _šč > šť_ (_šťáva_) nebo proměná kvanity vokálů (_móře_) \parencite{Skulina1976}.
+Rumunský vliv je každopádně patrný i na ostatních úrovních jazykového plánu. U hláskosloví lze pozorovat časté labializované *a* a tvrdou výslovnost některých tupých sykavek (*cas*) a výslovnost *ď *jako *dz* nebo diftongickou výslovnost *é*, *ó* (*péaří*, *móaže*). Obecným fonetických jevem je však diftongizace *ý > ej* (*bejk*), *ú > ou* (*soused*)  a úžení *é > í* (*chlív*). V mluvě se objevují i protetické hlásky  *-h* (*huďit*) a *-v* (*vobjet*) a další jevy jako je například zánik některých souhlásek v určitých hláskových skupinách (*střelec > třelec*), změna změna *šč > šť* (*šťáva*) nebo proměná kvanity vokálů (*móře*)  \parencite{Skulina1976}.
 
-Tvarosloví je pak charakteristické například používáním koncovek _-ove_ (_holubove_), _-úch_, _-ích_ nebo přípona _-ojc_ u příjmení (_Kalinojc_) a na syntaktické rovině se můžeme setkat s používáním analytických větných konstrukcí (_říkáme tadi jít do mlíkárna_) a se změnou významu některých předložek (_vyčisťit Brno z Ňemcúch_) \parencite{Skulina1976}.
+Tvarosloví je pak charakteristické například používáním koncovek *-ove* (*holubove*), *-úch*, *-ích* nebo přípona *-ojc* u příjmení (*Kalinojc*) a na syntaktické rovině se můžeme setkat s používáním analytických větných konstrukcí (*říkáme tadi jít do mlíkárna*) a se změnou významu některých předložek (*vyčisťit Brno z Ňemcúch*) \parencite{Skulina1976}.
 
 ## Volyň
 
@@ -69,4 +69,4 @@ Tvarosloví je pak charakteristické například používáním koncovek _-ove_ 
 
 ## Kavkaz
 
-## Texas
+##  Texas
