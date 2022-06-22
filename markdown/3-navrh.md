@@ -113,3 +113,12 @@ V dnešní době jsou navíc populární takzvané generátory statických strá
     \caption{Statické vykreslování}
     \label{static}
  \end{figure}
+ 
+#### Single Page Applications
+
+\begin{figure}[ht]   
+    \centering
+    \includegraphics[width=.5\textwidth]{spa}  
+    \caption{Single Page Application}
+    \label{spa}
+ \end{figure}
