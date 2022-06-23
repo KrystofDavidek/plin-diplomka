@@ -175,12 +175,18 @@ Detailní tvorba *features* ve formátu GeoJSON může být v textovém editoru 
 
 ### Firebase
 
-Z funkčních požadavků dále vyplývá potřeba ukládat data na vzdálenou databázi, aby byly informace pro všechny uživatele konzistentní a aktualizované. Pro naplnění tohoto nároku jsme se rozhodli vybrat platformu Firebase od firmy Google, která nabízí předpřipravená cloudová řešení pro backendovou část (správa databáze a autentifikace atd.) mobilních a webových aplikací \parencite{firebase}. Pro naše potřeby jsme využili tyto tři nástroje.
+Z funkčních požadavků dále vyplývá potřeba ukládat data na vzdálenou databázi, aby byly informace pro všechny uživatele konzistentní a aktualizované. Pro naplnění tohoto nároku jsme se rozhodli vybrat platformu Firebase od firmy Google, která nabízí předpřipravená cloudová řešení pro backendovou část (správa databáze a autentifikace atd.) mobilních a webových aplikací \parencite{firebase}. Pro naše potřeby jsme využili tři nástroje popsané níže.
 
 #### Firebase Authentication
 
-Firebase Authentication je služba, která poskytuje komplexní řešení autentifikace v souladu se základními standardy jako jsou OAuth 2.0 and OpenID. Nástroj nabízí registraci a přihlašování přes různé poskytovatele jako jsou Facebook, Google anebo Twitter, my ale využíváme klasického přihlášení přes e-mail a heslo. V této verzi aplikace nemá uživatel možnost vlastní registrace, protože administrační část je otevřena pouze ověřeným editorům krajanských komunit \parencite{auth}.
+Firebase Authentication je služba, která poskytuje komplexní řešení autentifikace v souladu se základními standardy jako jsou OAuth 2.0 and OpenID. Výhodou tohoto řešení je její integrace i do ostatních Firebase produktů, je tedy možné např. nastavovat práva pro konkrétní přihlášené/nepřihlášené uživatele týkající se zápisu do Cloud Firestore databáze.
+
+Nástroj nabízí registraci a přihlašování přes různé poskytovatele jako jsou Facebook, Google anebo Twitter, my ale využíváme klasického přihlášení přes e-mail a heslo. V této verzi aplikace nemá uživatel možnost vlastní registrace, protože administrační část je otevřena pouze ověřeným editorům krajanských komunit \parencite{auth}.
 
 #### Cloud Firestore
  
-Druhým využitým nástrojem je Cloud Firestore – databázové řešení, v němž ukládáme všechna data textové povahy. Jedná se flexibilní a škálovatelnou NoSQL databázi, která ukládá data ve formě JSON dokumentů 
+Druhým využitým nástrojem je Cloud Firestore – databázové řešení, v němž ukládáme všechna data textové povahy. Jedná se flexibilní a škálovatelnou dokumentovou databázi, která ukládá data ve formě JSON dokumentů (tzn. uložená data jsou až na pár detailů velmi podobná formátu, který využíváme v naší aplikaci). Tuto databázi využíváme jako hlavní uložiště pro jednotlivé lokality \parencite{firestore}. 
+
+#### Cloud Storage
+
+Poslední zvolenou službou je Cloud Storage. Jde o jednoduché a cenově výhodné cloudové uložiště, které je uzpůsobeno na ukládání netextových souborů jako jsou obrázky, audio soubory či videa. Tento nástroj umožňuje efektivní stahování a nahrávání větších souborů spolu s jejich validací a kontrolou existence. Taktéž je navázán na Firebase Authentication a lze tak regulovat přístup k některým souborům. Výhodou tohoto řešení je vysoká míra škálovatelnosti, kterou je zapotřebí řešit při větším počtu aktivních uživatelů \parencite{storage}.
