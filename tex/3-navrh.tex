@@ -69,7 +69,7 @@ V~rámci představení návrhu aplikace se zaměříme na čtyři klíčová té
 
 V~první části si představíme použité technologie spolu s~odůvodněním jejich výběru. V~další podkapitole popíšeme data, se kterými v~aplikaci pracujeme a~jakým způsobem je v~systému reprezentujeme.
 
-Hlavní součástí této kapitoly pak bude představení uživatelského rozhraní prostřednictvím jednotlivých obrazovek aplikace. Zaměříme se zde také na popis interakce uživatele se systémem. Na závěr charakterizujeme základní architekturu aplikace.
+Hlavní součástí této kapitoly pak bude představení uživatelského rozhraní (UI) prostřednictvím jednotlivých obrazovek aplikace. Zaměříme se zde také na popis interakce uživatele se systémem. Na závěr charakterizujeme základní architekturu aplikace.
 
 \hypertarget{pouux17eituxe9-technologie}{%
 \section{Použité technologie}\label{pouux17eituxe9-technologie}}
@@ -145,8 +145,14 @@ Tento přístup má dvě základní nevýhody. Zaprvé může být v~některých
 Jelikož naše aplikace obsahuje komplexnější komponenty, které nebývají součástí základních webových stránek (např. mapa pro geografické zobrazování), a~počítá s~vyšší mírou uživatelské interakce (např. administrační prostředí spolu s~autentifikací), volíme právě tento přístup pro vývoj našeho řešení.
 
 \hypertarget{react}{%
-\section{React}\label{react}}
+\subsection{React}\label{react}}
 
 Jak bylo výše napsáno, vývoj SPA aplikací je především záležitostí programování javaScriptového kódu. Aby nemuseli vývojáři veškerou integraci a~tvorbu základních funkcionalit tvořit stále od začátku, existují takzvané webové frameworky. Jejich hlavní význam je zjednodušit a~zefektivnit vývoj uživatelského rozhraní (frameworky samozřejmě existují i~pro ostatní části vývoje, například pro backend atd.) a~nastavují tak daným komunitám vývojářů základní pravidla, a~tím pádem určitou konzistenci pro strukturalizaci kódu. Tento aspekt je zvláště důležitý, pokud na určitém projektu pracuje větší množství lidí.
 
-V~našem případě byly jedním z~nejdůležitějších nefunkčních požadavků udržitelnost a~rozšiřitelnost. Proto za webový framework vybíráme React\footnote{I přes to, že v~našem textu React popisujeme jako webový framework, není tomu zcela tak. Zcela přesně se jedna o~webovou knihovnu, která má mírně odlišné charakteristiky (např. výkon, komplexita atd.), nicméně pro naše účely můžeme tyto významové nuance ignorovat.}, který je v~tuto chvíli stále nejpopulárnější volbou mezi vývojáři na celém světě\footnote{https://www.developer-tech.com/news/2021/aug/03/2021-stack-overflow-survey-react-js-takes-the-web-framework-crown-python-is-in-demand-and-devs-still-love-rust/}. a~základní znalost tohoto nástroje je tak v~dnešní době pro webové vývojáře takřka podmínkou.
+V~našem případě byly jedním z~nejdůležitějších nefunkčních požadavků udržitelnost a~rozšiřitelnost. Proto za webový framework vybíráme React\footnote{I přes to, že v~našem textu React popisujeme jako webový framework, není tomu zcela tak. Zcela přesně se jedna o~webovou knihovnu, která má mírně odlišné charakteristiky (např. výkon, komplexita atd.), nicméně pro naše účely můžeme tyto významové nuance ignorovat.}, který je v~tuto chvíli stále nejpopulárnější volbou mezi vývojáři na celém světě\footnote{https://www.developer-tech.com/news/2021/aug/03/2021-stack-overflow-survey-react-js-takes-the-web-framework-crown-python-is-in-demand-and-devs-still-love-rust/} a~základní znalost tohoto nástroje je tak v~dnešní době pro webové vývojáře takřka podmínkou.
+
+Jedná se o~open-source software\footnote{https://github.com/facebook/react} vytvořený v~roce 2013 a~udržovaný programátory společností Meta (dříve Facebooku) za podpory široké komunity vývojářů.
+
+React je založen na deklarativním vývoji uživatelského rozhraní. Vývojář tedy vytváří vzhled pro všechny stavy aplikace, které se pak vykreslují na základě změny v~datech (např. u~přihlášeného uživatele není zapotřebí zobrazovat tlačítko přihlášení a~naopak). Kód je tak pochopitelnější a~jednodušší na debugging (ladění chyb).
+
+Druhou významnou vlastností Reactu je přístup založený na komponentách. Jedná se o~opakovaně použitelné části UI (tzn. i~samotného naprogramovaného kódu), které jsou hierarchicky strukturované buď podle využití v~aplikaci (např. adresář s~komponentou pro přihlášení \emph{Login} bude obsahovat soubor podkomponenty pro tlačítko \emph{LoginButton}), nebo podle jednotlivých funkcí (všechny komponenty tlačítek v~aplikaci budou ve vlastní složce \emph{Buttons}).
