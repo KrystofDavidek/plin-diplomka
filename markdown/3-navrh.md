@@ -135,8 +135,33 @@ Jak bylo výše napsáno, vývoj SPA aplikací je především záležitostí pr
 
 V našem případě byly jedním z nejdůležitějších nefunkčních požadavků udržitelnost a rozšiřitelnost. Proto za webový framework vybíráme React\footnote{I přes to, že v našem textu React popisujeme jako webový framework, není tomu zcela tak. Zcela přesně se jedna o webovou knihovnu, která má mírně odlišné charakteristiky (např. výkon, komplexita atd.), nicméně pro naše účely můžeme tyto významové nuance ignorovat.}, který je v tuto chvíli stále nejpopulárnější volbou mezi vývojáři na celém světě\footnote{https://www.developer-tech.com/news/2021/aug/03/2021-stack-overflow-survey-react-js-takes-the-web-framework-crown-python-is-in-demand-and-devs-still-love-rust/} a základní znalost tohoto nástroje je tak v dnešní době pro webové vývojáře takřka podmínkou.
 
-Jedná se o open-source software\footnote{https://github.com/facebook/react} vytvořený v roce 2013 a udržovaný programátory společností Meta (dříve Facebooku) za podpory široké komunity vývojářů.
+Jedná se o open-source software\footnote{https://github.com/facebook/react} vytvořený v roce 2013 a udržovaný programátory společností Meta (dříve Facebooku) za podpory široké komunity vývojářů \parencite{react}.
 
-React je založen na deklarativním vývoji uživatelského rozhraní. Vývojář tedy vytváří vzhled pro všechny stavy aplikace, které se pak vykreslují na základě změny v datech (např. u přihlášeného uživatele není zapotřebí zobrazovat tlačítko přihlášení a naopak). Kód je tak pochopitelnější a jednodušší na debugging (ladění chyb).
+React je založen na deklarativním vývoji uživatelského rozhraní. Vývojář tedy vytváří vzhled pro všechny stavy aplikace, které se pak vykreslují na základě změny v datech (např. u přihlášeného uživatele není zapotřebí zobrazovat tlačítko přihlášení a naopak). Kód je tak pochopitelnější a jednodušší na ladění chyb (debugging).
 
-Druhou významnou vlastností Reactu je přístup založený na komponentách. Jedná se o opakovaně použitelné části UI (tzn. i samotného naprogramovaného kódu), které jsou hierarchicky strukturované buď podle využití v aplikaci (např. adresář s komponentou pro přihlášení *Login* bude obsahovat soubor podkomponenty pro tlačítko *LoginButton*), nebo podle jednotlivých funkcí (všechny komponenty tlačítek v aplikaci budou ve vlastní složce *Buttons*).
+Druhou významnou vlastností Reactu je přístup založený na komponentách. Jedná se o opakovaně použitelné části UI (tzn. i samotného naprogramovaného kódu), které jsou hierarchicky strukturované buď podle využití v aplikaci (např. adresář s komponentou pro přihlášení *Login* bude obsahovat soubor podkomponenty pro tlačítko *LoginButton*), nebo podle obecně sdílených funkcionalit (všechny komponenty tlačítek v aplikaci budou ve vlastní složce *Buttons*). Data, na kterých jsou závislé jednotlivé stavy, lze mezi komponentami předávám prostřednictvím takzvaných *props*.
+
+React namísto klasického stromové objektu DOM (viz XXX) využívá koncept virtuálního DOM (virtual Document Object Model). Jedná se o speciální objektovou strukturu uloženou v mezipaměti prohlížeče, která umožňuje efektivněji synchronizovat změny v UI s daným stavem aplikace. Zjednodušeně řečeno jde o odlehčenou verzi DOM, s níž je na úrovni klienta jednodušší na úrovni klienta manipulovat a přizpůsobovat akcím od uživatele.
+
+Posledním důležitým specifikem tohoto webového frameworku je využívání jazyka JSX, který je doporučován pro zápis komponent. JSX je svojí syntaxí nadstavbou JavaScriptu a kombinuje strukturní značky, které známe z HTML s javaScriptovými konstrukcemi pro práci s proměnnými a funkcemi/metodami.
+
+### Technologie spojené s mapovou aplikací
+
+Hlavní součástí aplikace je vizualizace jednotlivých českých komunit po celém světě. Mapovými podklady (spolu s nástroji, které s mapou manipulují) standardně webové frameworky nedisponují. Níže tedy popisujeme technologie, které jsme vybrali a integrovali do našeho řešení.
+
+#### OpenStreetMap
+
+Za mapové podklady jsme vybrali volně editovatelné a otevřené topografické mapy OpenStreetMap. Jedná se o projekt, který vznikl v roce 2004 jako protiváha proti tehdejším proprietárním řešením. Byl inspirován úspěchem wikipedie a jeho cílem je distribuovat volně dostupná geografická data jak pro nekomerční, tak komerční účely \parencite{open-street}. Z těchto důvodu jsme OpenStreetMap vybrali i do naší aplikace.
+
+#### Leaflet
+
+Pro manipulaci s OpenStreetMap jsme využili open-source javaScriptovou knihovnu Leaflet\footnote{Autorem knihovny je Kyjevan Volodymyr Agafonkin, který kvůli ruské invazi v roce 2022 stejně jako mnoho ostatních Ukrajinců utekl ze svého domova. Téma této práce se týká i nucených emigrací, a proto si zde dovolím udělat menší vložku a vepsat odkaz, kde je možné podpořit Ukrajinu v této nelehké době – https://www.comebackalive.in.ua/.}. Tento nástroj umožňuje webovým vývojářům vizualizovat na mapových podkladech vlastní interaktivní značky, vrstvy a další vizuální prvky bez znalosti GIS\footnote{https://education.nationalgeographic.org/resource/geographic-information-system-gis} \parencite{leaflet}.
+
+### Firebase
+
+Z funkčních požadavků dále vyplývá potřeba ukládat data na vzdálenou databázi, aby byly informace pro všechny uživatele konzistentní a aktualizované. Pro naplnění tohoto nároku jsme se rozhodli vybrat platformu Firebase od firmy Google, která nabízí předpřipravená cloudová řešení pro backendovou část (správa databáze a autentifikace atd.) mobilních a webových aplikací \parencite{firebase}.
+
+Pro naše potřeby jsme využili tyto tři nástroje:
+
+ - **Firebase Authentication** – služba, která poskytuje komplexní řešení autentifikace v souladu se základními standardy jako jsou OAuth 2.0 and OpenID. Nástroj nabízí registraci a přihlašování přes různé poskytovatele jako jsou Facebook, Google anebo Twitter, my ale využíváme klasického přihlášení přes e-mail a heslo. V této verzi aplikace nemá uživatel možnost vlastí registrace, protože administrační část je otevřena pouze ověřeným editorům krajanských komunit \parencite{auth};
+ - **Cloud Firestore** – databázové řešení, v němž ukládáme všechna data textové povahy. Jedná se flexibilní a škálovatelnou NoSQL databázi, která ukládá data ve formě JSON dokumentů 
