@@ -20,7 +20,7 @@ Tyto požadavky můžeme u naší webové aplikace pro větší přehlednost roz
 
 #### Geografická reprezentace českých komunit na mapě
 
-Jedním z nejdůležitějších nároků na aplikaci je vizualizace jednotlivých českých komunit po celém světě. Aplikace má tak disponovat samostatnou stránkou, v rámci které budou dostupné mapové podklady celého světa. Na této mapě mají být pak prostřednictvím mapových vrstev vizualizovány konkrétní české enklávy. Pod mapovými vrstvami myslíme n-úhelníkové plochy, které mohou mít na mapě jakýkoliv tvar a velikost podle potřeby vybrané komunity (geografická místa komunit v aplikaci popisujeme jako lokality). Má být tak možné vizualizovat jak malé osady, tak celé regiony nebo státy – vrstvy se též mohou jakýmkoliv způsobem překrývat.
+Jedním z nejdůležitějších nároků na aplikaci je vizualizace jednotlivých českých komunit po celém světě. Aplikace má tak disponovat samostatnou stránkou, v rámci které budou dostupné mapové podklady celého světa. Na této mapě mají být pak prostřednictvím mapových vrstev vizualizovány konkrétní české enklávy. Pod mapovými vrstvami myslíme mnohoúhelníkové plochy, které mohou mít na mapě jakýkoliv tvar a velikost podle potřeby vybrané komunity (geografická místa komunit v aplikaci popisujeme jako lokality). Má být tak možné vizualizovat jak malé osady, tak celé regiony nebo státy – vrstvy se též mohou jakýmkoliv způsobem překrývat.
 
 Zapotřebí je také zahrnout základní funkční požadavky, které se pojí s obsluhou mapové aplikace. Jde o možnosti oddalování, a přibližování pohledu (spolu s navráceném do výchozí pozice), navigaci na mapě pomocí posouvání kurzoru klikání myší/dotykem anebo prostřednictvím minimapy zobrazující vždy širší kontext vybraného pohledu. Další důležitou mapovou funkcí je vyhledávání lokalit na mapě. Aplikace má umožňovat přiblížení na danou mapovou vrstvu na základě výběru ve vyhledávacím poli.
 
@@ -64,7 +64,7 @@ Hlavní součástí této kapitoly pak bude představení uživatelského rozhra
 
 ## Použité technologie
 
-Jelikož je naše navrhované řešení webovou aplikací, budeme se níže zabývat výhradně nástroji, knihovnami a frameworky, které se primárně týkají webových technologií.
+Jelikož je naše navrhované řešení webová aplikace, budeme se níže zabývat výhradně nástroji, knihovnami a frameworky, které se primárně týkají webových technologií. Konkrétní příklady kódu budeme rozebírat v kapitole týkající se vlastní implementace (viz xxx).
 
 ### Základní webové technologie
 
@@ -139,15 +139,21 @@ Jedná se o open-source software\footnote{https://github.com/facebook/react} vyt
 
 React je založen na deklarativním vývoji uživatelského rozhraní. Vývojář tedy vytváří vzhled pro všechny stavy aplikace, které se pak vykreslují na základě změny v datech (např. u přihlášeného uživatele není zapotřebí zobrazovat tlačítko přihlášení a naopak). Kód je tak pochopitelnější a jednodušší na ladění chyb (debugging).
 
-Druhou významnou vlastností Reactu je přístup založený na komponentách. Jedná se o opakovaně použitelné části UI (tzn. i samotného naprogramovaného kódu), které jsou hierarchicky strukturované buď podle využití v aplikaci (např. adresář s komponentou pro přihlášení *Login* bude obsahovat soubor podkomponenty pro tlačítko *LoginButton*), nebo podle obecně sdílených funkcionalit (všechny komponenty tlačítek v aplikaci budou ve vlastní složce *Buttons*). Data, na kterých jsou závislé jednotlivé stavy, lze mezi komponentami předávám prostřednictvím takzvaných *props*.
+Druhou významnou vlastností Reactu je přístup založený na komponentách. Jedná se o opakovaně použitelné části UI (tzn. i samotného naprogramovaného kódu), které jsou hierarchicky strukturované buď podle využití v aplikaci (např. adresář s komponentou pro přihlášení *Login* bude obsahovat soubor podkomponenty pro tlačítko *LoginButton*), nebo podle obecně sdílených funkcionalit (všechny komponenty tlačítek v aplikaci budou ve vlastní složce *Buttons*). Data, na kterých jsou závislé jednotlivé stavy, lze mezi komponentami předávám prostřednictvím objektu s názvem *props*.
 
 React namísto klasického stromové objektu DOM (viz XXX) využívá koncept virtuálního DOM (virtual Document Object Model). Jedná se o speciální objektovou strukturu uloženou v mezipaměti prohlížeče, která umožňuje efektivněji synchronizovat změny v UI s daným stavem aplikace. Zjednodušeně řečeno jde o odlehčenou verzi DOM, s níž je na úrovni klienta jednodušší na úrovni klienta manipulovat a přizpůsobovat akcím od uživatele.
 
 Posledním důležitým specifikem tohoto webového frameworku je využívání jazyka JSX, který je doporučován pro zápis komponent. JSX je svojí syntaxí nadstavbou JavaScriptu a kombinuje strukturní značky, které známe z HTML s javaScriptovými konstrukcemi pro práci s proměnnými a funkcemi/metodami.
 
-### Technologie spojené s mapovou aplikací
+### TypeScript
 
-Hlavní součástí aplikace je vizualizace jednotlivých českých komunit po celém světě. Mapovými podklady (spolu s nástroji, které s mapou manipulují) standardně webové frameworky nedisponují. Níže tedy popisujeme technologie, které jsme vybrali a integrovali do našeho řešení.
+V předchozí podkapitolách jsme popisovali významnou roli JavaScriptu při vývoji webových aplikací, nicméně existuje modernější a vhodnější varianta tohoto programovacího jazyka – TypeScript. Nejedná se ale o nový, samostatný jazyk, ale o rozšíření syntaxe stávajícího JavaScriptu. TypeScript byl vytvořen v roce 2012 společností Microsoft a jeho hlavním cílem je obohatit JavaScript o typovou kontrolu objektů a proměnných. Pomocí typové kontroly lze docílit k větší prevenci potenciálních chyb a celý kód se tak navíc stává přehlednějším \parencite{typescript}.
+
+Jelikož se chceme držet zásad čitelného a čistého kódu, použijeme TypeScript i v naší aplikaci. Zároveň je zapotřebí dodat, že je javaScriptová syntaxe podmnožinou TypeScriptu\footnote{Typescript se vždy před spuštěním nejprve převede do čistého JavaScriptu, proto lze v TypeScriptu psát případně čistý javaScriptový kód.}, tedy pro TypeScript platí všechny informace, které se v této práci vážou k JavaScriptu.
+
+### Technologie spojené s vizualizací komunit na mapě
+
+Hlavní součástí aplikace je vizualizace jednotlivých českých komunit po celém světě. Mapovými podklady (spolu s nástroji, které s mapou manipulují) standardně webové frameworky nedisponují. Níže popisujeme technologie, které jsme vybrali a integrovali do našeho řešení.
 
 #### OpenStreetMap
 
@@ -155,13 +161,26 @@ Za mapové podklady jsme vybrali volně editovatelné a otevřené topografické
 
 #### Leaflet
 
-Pro manipulaci s OpenStreetMap jsme využili open-source javaScriptovou knihovnu Leaflet\footnote{Autorem knihovny je Kyjevan Volodymyr Agafonkin, který kvůli ruské invazi v roce 2022 stejně jako mnoho ostatních Ukrajinců utekl ze svého domova. Téma této práce se týká i nucených emigrací, a proto si zde dovolím udělat menší vložku a vepsat odkaz, kde je možné podpořit Ukrajinu v této nelehké době – https://www.comebackalive.in.ua/.}. Tento nástroj umožňuje webovým vývojářům vizualizovat na mapových podkladech vlastní interaktivní značky, vrstvy a další vizuální prvky bez znalosti GIS\footnote{https://education.nationalgeographic.org/resource/geographic-information-system-gis} \parencite{leaflet}.
+Pro manipulaci s OpenStreetMap jsme využili open-source javaScriptovou knihovnu Leaflet\footnote{Autorem knihovny je Kyjevan Volodymyr Agafonkin, který kvůli ruské invazi v roce 2022 stejně jako mnoho ostatních Ukrajinců utekl ze svého domova. Téma této práce se týká i nucených emigrací, a proto si zde dovolíme udělat menší vložku a vepsat odkaz, kde je možné podpořit Ukrajinu v této nelehké době – https://www.comebackalive.in.ua/.}. Tento nástroj umožňuje webovým vývojářům vizualizovat na mapových podkladech vlastní interaktivní značky, vrstvy a další vizuální prvky bez znalosti GIS\footnote{https://education.nationalgeographic.org/resource/geographic-information-system-gis} \parencite{leaflet}.
+
+Integrace nástroje Leaflet do frameworku React jsme provedli prostřednictvím knihovny React Leaflet. Ta je nástavbou předchozí knihovny a abstrahuje jednotlivé složky Leafletu do systému komponent a stavů, které jsou typické pro React \parencite{react-leaflet}.
+
+#### GeoJSON
+
+Abychom byli schopni vkládat do OpenStreetMap prostřednictvím Leafletu vlastní geografická data krajanských komunit, musíme zvolit vhodný formát dat. Přenos dat ve světě webových technologií standardně probíhá pomocí formátu JSON (JavaScript Object Notation). Jde o otevřený standard pro výměnu dat, který používá čitelný zápis skládající se vždy z dvojic klíč – hodnota. I přes to, že je použitelný napříč programovacími jazyky, vychází z JavaScriptu, konkrétně ze zápisu objektů (což je výhodné, protože se dá z dat ihned vytvořit objekt a dále s nimi pracovat jako s proměnnou). Jeho použití je rozmanité, nicméně se s ním lze nejčastěji setkat při komunikaci mezi webovými aplikacemi a vzdálenými servery \parencite{json}.
+
+GeoJSON z formátu JSON vychází – jedná se tedy o otevřený standard pro reprezentaci takzvaných *features* (OpenGIS standard pro specifikaci geografických dat). Pod *features* si můžeme představit konkrétní tvary na mapě jako jsou například body, čáry, ale hlavně mnohoúhelníky, které využíváme pro vizualizaci lokalit \parencite{geojson}.
+
+Detailní tvorba *features* ve formátu GeoJSON může být v textovém editoru komplexní a časově náročnou aktivitou. Jelikož je našim cílem editovat lokality v aplikaci uživatelsky přívětivým způsobem, využíváme externí službu Geoman.io, která disponuje již vytvořeným GeoJSON editorem \parencite{geoman}.
 
 ### Firebase
 
-Z funkčních požadavků dále vyplývá potřeba ukládat data na vzdálenou databázi, aby byly informace pro všechny uživatele konzistentní a aktualizované. Pro naplnění tohoto nároku jsme se rozhodli vybrat platformu Firebase od firmy Google, která nabízí předpřipravená cloudová řešení pro backendovou část (správa databáze a autentifikace atd.) mobilních a webových aplikací \parencite{firebase}.
+Z funkčních požadavků dále vyplývá potřeba ukládat data na vzdálenou databázi, aby byly informace pro všechny uživatele konzistentní a aktualizované. Pro naplnění tohoto nároku jsme se rozhodli vybrat platformu Firebase od firmy Google, která nabízí předpřipravená cloudová řešení pro backendovou část (správa databáze a autentifikace atd.) mobilních a webových aplikací \parencite{firebase}. Pro naše potřeby jsme využili tyto tři nástroje.
 
-Pro naše potřeby jsme využili tyto tři nástroje:
+#### Firebase Authentication
 
- - **Firebase Authentication** – služba, která poskytuje komplexní řešení autentifikace v souladu se základními standardy jako jsou OAuth 2.0 and OpenID. Nástroj nabízí registraci a přihlašování přes různé poskytovatele jako jsou Facebook, Google anebo Twitter, my ale využíváme klasického přihlášení přes e-mail a heslo. V této verzi aplikace nemá uživatel možnost vlastí registrace, protože administrační část je otevřena pouze ověřeným editorům krajanských komunit \parencite{auth};
- - **Cloud Firestore** – databázové řešení, v němž ukládáme všechna data textové povahy. Jedná se flexibilní a škálovatelnou NoSQL databázi, která ukládá data ve formě JSON dokumentů 
+Firebase Authentication je služba, která poskytuje komplexní řešení autentifikace v souladu se základními standardy jako jsou OAuth 2.0 and OpenID. Nástroj nabízí registraci a přihlašování přes různé poskytovatele jako jsou Facebook, Google anebo Twitter, my ale využíváme klasického přihlášení přes e-mail a heslo. V této verzi aplikace nemá uživatel možnost vlastní registrace, protože administrační část je otevřena pouze ověřeným editorům krajanských komunit \parencite{auth}.
+
+#### Cloud Firestore
+ 
+Druhým využitým nástrojem je Cloud Firestore – databázové řešení, v němž ukládáme všechna data textové povahy. Jedná se flexibilní a škálovatelnou NoSQL databázi, která ukládá data ve formě JSON dokumentů 
