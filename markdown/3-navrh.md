@@ -193,14 +193,26 @@ Poslední zvolenou službou je Cloud Storage. Jde o jednoduché a cenově výhod
 
 ## Data o krajanských komunitách
 
-Jelikož jsou data nutnou součástí každého informačního systému nebo aplikace, vyjádříme se v následující podkapitole ke struktuře a obsahu dat, ze kterých se skládají informace o jednotlivých krajanských komunitách. Zároveň platí, že všechny zmíněné složky lze v administrativní části upravovat. Pro větší přehlednost tyto informace rozdělíme do podsekcí tak, jak je lze najít v samotné aplikaci.
+Jelikož jsou data nutnou součástí a vlastně i samotným smyslem aplikace, vyjádříme se v následující podkapitole ke struktuře a obsahu dat, ze kterých se skládají informace o jednotlivých krajanských komunitách.
+
+Zároveň platí, že všechny zmíněné složky lze v administrativní části upravovat. Kromě názvu hlavní lokality a geografických dat není žádná z položek povinná, protože u každé komunity nemusí být dostupné všechny typy informací. Pro větší přehlednost tyto informace dělíme do podsekcí tak, jak je lze najít v samotné aplikaci.
 
 ### Úvod
 
  - **Název hlavní lokality** – jedná se o unikátní název, bez kterého nelze lokalitu vytvořit. Podle tohoto hlavního názvu je komunit třízena v seznamu komunit lokalit;
  - **Název sekundární lokality ** – doplňující název pro vyšší správní jednotky, tedy pro region, kraj nebo stát;
  - **Úvodní obrázek** – náhledový obrázek, kterým je lokalita znázorněna ve vedlejším seznamu, anebo při rozkliku mapové vrstvy;
- - **Demografické údaje** – základní údaje, týkající se především demografie komunity. Taktéž jsou zde pro větší přehlednost vypsány hodnoty, podle kterých mohou být aplikovány filtry (viz xxx);
+ - **Demografické údaje** – základní údaje, týkající se především demografie komunity. Taktéž jsou zde pro větší přehlednost vypsány hodnoty, podle kterých mohou být aplikovány filtry (viz xxx).
 
 ### Detailní informace
 
+ - **Nahrávka**
+	 - Audio nahrávka – audio soubor s nahrávkou, která obsahuje příklad autentického jazyka vybrané české komunity;
+	 - Název nahrávky a případný komentář ke vzniku – název audio nahrávky s případným doprovodný komentářem;
+	 - Přepis nahrávky – fonetická transkripce zvukové nahrávky do textové podoby (bez použití speciálních znaků);
+	 - Poznámky k jazyku a jazyková charakteristika – komentář k jazyku nahrávky a popis jazykové charakteristiky komunity (hláskosloví, tvarosloví atd.);
+	 - Další zdroje – prostor pro odkazy na jazykovou normu či jiné zdroje.
+- **Historie a současnost**
+	- Historie – sekce určená k popisu historie komunit;
+	- Současnost – text věnovaný k aktuálnímu stavu české enklávy.
+- **Multimediální obsah**
