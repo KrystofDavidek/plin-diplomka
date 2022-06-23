@@ -56,11 +56,11 @@ Důležitou vlastností aplikace by také měla být udržitelnost a rozšiřite
 
 # Návrh aplikace
 
-V rámci představení návrhu aplikace se zaměříme na čtyři klíčová témata, jejichž obsah vychází především z funkčních a nefunkčních požadavků definovaných výše.
+V rámci představení návrhu aplikace se zaměříme na tři klíčová témata, jejichž obsah vychází především z funkčních a nefunkčních požadavků definovaných v předchozí kapitole.
 
-V první části si představíme použité technologie spolu s odůvodněním jejich výběru. V další podkapitole popíšeme data, se kterými v aplikaci pracujeme a jakým způsobem je v systému reprezentujeme.
+V první části představíme použité technologie spolu s odůvodněním jejich výběru. V další podkapitole popíšeme strukturu a obsah dat, ze kterých se skládají informace o jednotlivých krajanských komunitách.
 
-Hlavní součástí této kapitoly pak bude představení uživatelského rozhraní (UI) prostřednictvím jednotlivých obrazovek aplikace. Zaměříme se zde také na popis interakce uživatele se systémem. Na závěr charakterizujeme základní architekturu aplikace.
+Hlavní součástí této kapitoly pak bude představení uživatelského rozhraní (UI) prostřednictvím konkrétních obrazovek aplikace. Zaměříme se zde také na popis interakce uživatele se systémem.
 
 ## Použité technologie
 
@@ -149,7 +149,7 @@ Posledním důležitým specifikem tohoto webového frameworku je využívání 
 
 V předchozí podkapitolách jsme popisovali významnou roli JavaScriptu při vývoji webových aplikací, nicméně existuje modernější a vhodnější varianta tohoto programovacího jazyka – TypeScript. Nejedná se ale o nový, samostatný jazyk, ale o rozšíření syntaxe stávajícího JavaScriptu. TypeScript byl vytvořen v roce 2012 společností Microsoft a jeho hlavním cílem je obohatit JavaScript o typovou kontrolu objektů a proměnných. Pomocí typové kontroly lze docílit k větší prevenci potenciálních chyb a celý kód se tak navíc stává přehlednějším \parencite{typescript}.
 
-Jelikož se chceme držet zásad čitelného a čistého kódu, použijeme TypeScript i v naší aplikaci. Zároveň je zapotřebí dodat, že je javaScriptová syntaxe podmnožinou TypeScriptu\footnote{Typescript se vždy před spuštěním nejprve převede do čistého JavaScriptu, proto lze v TypeScriptu psát případně čistý javaScriptový kód.}, tedy pro TypeScript platí všechny informace, které se v této práci vážou k JavaScriptu.
+Jelikož se chceme držet zásad čitelného a čistého kódu, použijeme TypeScript i v naší aplikaci. Zároveň je zapotřebí dodat, že je javaScriptová syntaxe podmnožinou TypeScriptu\footnote{Typescript se vždy před spuštěním nejprve převede do čistého JavaScriptu, proto lze v TypeScriptu psát v případě potřeby čistý javaScriptový kód.}, tedy pro TypeScript platí všechny informace, které se v této práci vážou k JavaScriptu.
 
 ### Technologie spojené s vizualizací komunit na mapě
 
@@ -185,8 +185,22 @@ Nástroj nabízí registraci a přihlašování přes různé poskytovatele jako
 
 #### Cloud Firestore
  
-Druhým využitým nástrojem je Cloud Firestore – databázové řešení, v němž ukládáme všechna data textové povahy. Jedná se flexibilní a škálovatelnou dokumentovou databázi, která ukládá data ve formě JSON dokumentů (tzn. uložená data jsou až na pár detailů velmi podobná formátu, který využíváme v naší aplikaci). Tuto databázi využíváme jako hlavní uložiště pro jednotlivé lokality \parencite{firestore}. 
+Druhým využitým nástrojem je Cloud Firestore – databázové řešení, v němž ukládáme všechna data textové povahy. Jedná se flexibilní a škálovatelnou dokumentovou databázi, která ukládá data do kolekcí a izolovaných JSON dokumentů (tzn. uložená data jsou až na pár detailů velmi podobná formátu, který využíváme v naší aplikaci). Tuto databázi využíváme jako hlavní uložiště pro jednotlivé lokality \parencite{firestore}. 
 
 #### Cloud Storage
 
-Poslední zvolenou službou je Cloud Storage. Jde o jednoduché a cenově výhodné cloudové uložiště, které je uzpůsobeno na ukládání netextových souborů jako jsou obrázky, audio soubory či videa. Tento nástroj umožňuje efektivní stahování a nahrávání větších souborů spolu s jejich validací a kontrolou existence. Taktéž je navázán na Firebase Authentication a lze tak regulovat přístup k některým souborům. Výhodou tohoto řešení je vysoká míra škálovatelnosti, kterou je zapotřebí řešit při větším počtu aktivních uživatelů \parencite{storage}.
+Poslední zvolenou službou je Cloud Storage. Jde o jednoduché a cenově výhodné cloudové uložiště, které je uzpůsobeno k ukládání netextových souborů jako jsou obrázky, audio soubory či videa. Tento nástroj umožňuje efektivní stahování a nahrávání větších souborů spolu s jejich validací a kontrolou existence. Taktéž je navázán na Firebase Authentication a lze tak regulovat přístup k některým souborům. Výhodou tohoto řešení je vysoká míra škálovatelnosti, kterou je zapotřebí řešit při větším počtu aktivních uživatelů \parencite{storage}.
+
+## Data o krajanských komunitách
+
+Jelikož jsou data nutnou součástí každého informačního systému nebo aplikace, vyjádříme se v následující podkapitole ke struktuře a obsahu dat, ze kterých se skládají informace o jednotlivých krajanských komunitách. Zároveň platí, že všechny zmíněné složky lze v administrativní části upravovat. Pro větší přehlednost tyto informace rozdělíme do podsekcí tak, jak je lze najít v samotné aplikaci.
+
+### Úvod
+
+ - **Název hlavní lokality** – jedná se o unikátní název, bez kterého nelze lokalitu vytvořit. Podle tohoto hlavního názvu je komunit třízena v seznamu komunit lokalit;
+ - **Název sekundární lokality ** – doplňující název pro vyšší správní jednotky, tedy pro region, kraj nebo stát;
+ - **Úvodní obrázek** – náhledový obrázek, kterým je lokalita znázorněna ve vedlejším seznamu, anebo při rozkliku mapové vrstvy;
+ - **Demografické údaje** – základní údaje, týkající se především demografie komunity. Taktéž jsou zde pro větší přehlednost vypsány hodnoty, podle kterých mohou být aplikovány filtry (viz xxx);
+
+### Detailní informace
+
