@@ -105,7 +105,7 @@ Na druhou stranu lze vidět i nevýhodu primárně v opakovaném generování ka
 
 Druhý přístup je nejstarší a zároveň nejjednodušší, protože se jedná o již vytvořené HTML (spolu s CSS a JavaScriptem) soubory, které jsou neměnné. To znamená, že jsou tyto již připravené statické soubory uložené na serveru, kde očekávají request od klienta k vykreslení. Jedná se tedy nejčastěji o takové webové stránky, které jsou jednodušší a neočekává se u nich příliš mnoho interaktivity s uživatelem.
 
-V dnešní době jsou navíc populární takzvané generátory statických stránek, které umožňují vytvářet statické stránky na základě předpřipravených šablon a odlehčeného značkovacího jazyka jako je například Markdown\footnote{[https://www.markdownguide.org/](https://www.markdownguide.org/)}, v němž se vytváří samostatný obsah \parencite{spa}.
+V dnešní době jsou navíc populární takzvané generátory statických stránek, které umožňují vytvářet statické stránky na základě předpřipravených šablon a odlehčeného značkovacího jazyka jako je například Markdown\footnote{https://www.markdownguide.org/}, v němž se vytváří samostatný obsah \parencite{spa}.
 
 \begin{figure}[ht]   
     \centering
@@ -116,9 +116,17 @@ V dnešní době jsou navíc populární takzvané generátory statických strá
  
 #### Single Page Applications
 
+Posledním populárním přístupem jsou takzvané Single Page Applications (SPA), jejichž princip je přesně opačný od dynamických webových stránek. Klient sice také musí poslat request na server, nicméně ten vrací vždy jeden stejný HTML soubor s velkým množství přidruženého javaScriptového kódu. JavaScript pak v prohlížeči upravuje samotný DOM HTML souboru do výsledné podoby pro vykreslení.
+
+Díky této strategii jsou webové stránky tohoto typu vysoce uživatelsky přívětivé, protože se veškeré vizuální změny dějí na klientovi. Pokud je tedy zapotřebí například stáhnout data z databáze, JavaScript změní DOM do určité formy vizuálně přívětivého načítání nebo umožní data stahovat v pozadí a uživatel se může v aplikace dál pohybovat. V předchozích případech případech by návštěvník webu musel čekat, až se všechny změny provedou na serverové části.
+
+Tento přístup má dvě základní nevýhody. Zaprvé může být v některých případech pro prohlížeč náročné zpracovat všechny javaScriptové instrukce pro vygenerování výsledného HTML (zvláště, pokud jsou SPA neefetkivně napsané nebo uživatel používá starší zařízení / má pomalejší připojení). Druhým problémem bývá již zmíněné SEO – iniciální HTML soubor totiž obsahuje malé množství metadat a dalších informací o stránce (jelikož ještě neproběhlo generování JavaScriptem) a pro prohlížeč se webová stránka nemusí jevit důvěryhodně a přiřazuje ji tak menší váhu při vyhledávání \parencite{spa}.
+
 \begin{figure}[ht]   
     \centering
     \includegraphics[width=.5\textwidth]{spa}  
     \caption{Single Page Application}
     \label{spa}
  \end{figure}
+
+Jelikož naše aplikace obsahuje komplexnější komponenty, které nebývají součástí základních webových stránek (např. mapa pro geografické zobrazování), a počítá s vyšší mírou uživatelské interakce (např. administrační prostředí spolu s autentifikací), volíme právě tento přístup pro vývoj našeho řešení.
