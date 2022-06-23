@@ -50,15 +50,13 @@ S administrací tak nutně souvisí i požadavek na persistenci dat, tzn. potře
 
 Pod nefunkčními požadavky si lze představit určitá omezení na design a implementaci aplikace. Zde se jedná například o volbu technologií, míru bezpečnosti, důraz na výkon či udržitelnost do budoucna atd. V závěru se však vždy jedná o určitý kompromis napříč jednotlivými faktory (např. vysoký výkon vs. udržitelnost) \parencite{Gorton2006}.
 
-Hlavním nefunkčním požadavkem je, aby byl náš systém realizován jako multiplatformní webová aplikace, protože lze tak efektivně docílit multiplatformnímu řešení. Z tohoto faktu vyplývá potřeba responzivního řešení, tedy aby byla aplikace stejně funkční a vzhledově atraktivní jak na zařízeních s vyšším rozlišením, tak i na menších obrazovkách. Dalším implicitním požadavkem je tím pádem i nutnost internetového připojení.
+Hlavním nefunkčním požadavkem je, aby byl náš systém realizován jako webová aplikace, protože lze tak efektivně docílit k multiplatformnímu výsledku. Z tohoto faktu vyplývá potřeba responzivního řešení, tedy aby byla aplikace stejně funkční a vzhledově atraktivní jak na zařízeních s vyšším rozlišením, tak i na menších obrazovkách. Dalším implicitním požadavkem je tím pádem i nutnost internetového připojení.
 
-Důležitou vlastností aplikace by také měla být udržitelnost a škálovatelnost. V tuto chvíli již existují konkrétní plány na rozšiřování aplikace mimo rozsah této diplomové práce, a proto by měla být aplikace napsána se zásadami čistého a  čitelného kódu pro případné navázání jinými programátory.
-
-Výběr technologií taktéž souvisí s nefunkčními požadavky. Protože se jedná o webovou aplikaci, její základ bude postaven na základních webových technologiích, jimiž jsou JavaScript, HTML a CSS. Pro tvorbu uživatelského rozhraní bude zvolen javaScriptový framework React spolu s využitím TypeScriptu a pro autentifikaci a databázové řešení bude vybrána platforma Firebase.
+Důležitou vlastností aplikace by také měla být udržitelnost a rozšiřitelnost. V tuto chvíli již existují konkrétní plány na rozšiřování aplikace mimo rozsah této diplomové práce, a proto by měla být aplikace napsána se zásadami čistého a  čitelného kódu pro případné navázání jinými programátory.
 
 # Návrh aplikace
 
-V rámci popisu návrhu se zaměříme na čtyři klíčová témata, jejichž obsah vychází především z funkčních požadavků definovaných výše.
+V rámci představení návrhu aplikace se zaměříme na čtyři klíčová témata, jejichž obsah vychází především z funkčních a nefunkčních požadavků definovaných výše.
 
 V první části si představíme použité technologie spolu s odůvodněním jejich výběru. V další podkapitole popíšeme data, se kterými v aplikaci pracujeme a jakým způsobem je v systému reprezentujeme.
 
@@ -70,7 +68,7 @@ Jelikož je naše navrhované řešení webovou aplikací, budeme se níže zab�
 
 ### Základní webové technologie
 
-I přes to, že je svět webových technologií jednou z nejdynamičtěji rozvíjejících se oblastí IT, jeho základy jsou již několik desítek let stále stejné. Aby mohl webový prohlížeč vykreslit webovou stránku\footnote{Pojmy webová stránka a webová aplikace vnímáme v tomto kontextu totožně. Tedy vše, co platí pro vývoj webových stránek, platí i pro vývoj webových aplikací (protože aplikace jsou v principu jen komplexnější formou webových stránek).}, musí být její obsah vždy určitým způsobem strukturovaný. Pro tyto účely se již řadu let využívá HTML (Hypertext Markup Language) – značkovací jazyk, který popisuje přesnou strukturu určitého dokumentu. 
+I přes to, že je svět webových technologií jednou z nejdynamičtěji rozvíjejících se oblastí IT, jeho základy jsou již několik desítek let stále stejné. Aby mohl webový prohlížeč vykreslit (renderovat) webovou stránku\footnote{Pojmy webová stránka a webová aplikace vnímáme v tomto kontextu totožně. Tedy vše, co platí pro vývoj webových stránek, platí i pro vývoj webových aplikací (protože aplikace jsou v principu jen komplexnější formou webových stránek).}, musí být její obsah vždy určitým způsobem strukturovaný. Pro tyto účely se již řadu let využívá HTML (Hypertext Markup Language) – značkovací jazyk, který popisuje přesnou strukturu určitého dokumentu. 
 
 Prostřednictvím značek tohoto jazyka dáváme jednotlivým částem dokumentu strukturální významy. Mohou to být například značky pro označení odstavce, odkazů nebo třeba tabulek či videí. Některé značky sice mohou vyvolat změny vzhledu dané části dokumentu, nicméně pro tyto účely HTML není primárně určeno \parencite{htmlcss}.
 
@@ -82,7 +80,7 @@ Třetí základní technologií je programovací jazyk JavaScript (oficiálně E
 
 Aby JavaScript a CSS mohly přistupovat k jednotlivým částem HTML, dochází vždy před vykreslením k převedení ze značkovacího jazyka do takzvaného DOM (Document Object Model). Jedná se o objekt stromové struktury, v němž je uložené vlastní HTML a každá značka (uzel) si drží informaci o své lokaci. CSS pak na tento objekt aplikuje svá pravidla pro správné vykreslení a JavaScript případně mění strukturu spolu s další části tohoto stromového objektu \parencite{howbrowserswork}.
 
-### Vykreslování webových stránek
+### Přístupy k vykreslování webových stránek
  
 Při výběru dalších technologií pro vývoj webové aplikace si je zapotřebí nejdříve uvědomit, jakou strategii vykreslování bude naše aplikace naplňovat.
 
@@ -130,3 +128,9 @@ Tento přístup má dvě základní nevýhody. Zaprvé může být v některých
  \end{figure}
 
 Jelikož naše aplikace obsahuje komplexnější komponenty, které nebývají součástí základních webových stránek (např. mapa pro geografické zobrazování), a počítá s vyšší mírou uživatelské interakce (např. administrační prostředí spolu s autentifikací), volíme právě tento přístup pro vývoj našeho řešení.
+
+## React
+
+Jak bylo výše napsáno, vývoj SPA aplikací je především záležitostí programování javaScriptového kódu. Aby nemuseli vývojáři veškerou integraci a tvorbu základních funkcionalit tvořit stále od začátku, existují takzvané webové frameworky. Jejich hlavní význam je zjednodušit a zefektivnit vývoj uživatelského rozhraní (frameworky samozřejmě existují i pro ostatní části vývoje, například pro backend atd.) a nastavují tak daným komunitám vývojářů základní pravidla, a tím pádem určitou konzistenci pro strukturalizaci kódu. Tento aspekt je zvláště důležitý, pokud na určitém projektu pracuje větší množství lidí.
+
+V našem případě byly jedním z nejdůležitějších nefunkčních požadavků udržitelnost a rozšiřitelnost. Proto za webový framework vybíráme React\footnote{I přes to, že v našem textu React popisujeme jako webový framework, není tomu zcela tak. Zcela přesně se jedna o webovou knihovnu, která má mírně odlišné charakteristiky (např. výkon, komplexita atd.), nicméně pro naše účely můžeme tyto významové nuance ignorovat.}, který je v tuto chvíli stále nejpopulárnější volbou mezi vývojáři na celém světě\footnote{https://www.developer-tech.com/news/2021/aug/03/2021-stack-overflow-survey-react-js-takes-the-web-framework-crown-python-is-in-demand-and-devs-still-love-rust/}. a základní znalost tohoto nástroje je tak v dnešní době pro webové vývojáře takřka podmínkou.
