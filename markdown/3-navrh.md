@@ -304,7 +304,7 @@ Zároveň platí, že všechny zmíněné složky lze v administrativní části
 
 ## Uživatelské rozhraní
 
-V této podkapitole
+V této podkapitole představíme
 
 \begin{figure}[hb!]   
     \centering
@@ -314,4 +314,3 @@ V této podkapitole
 \end{figure}
 
 ### Responzivní design
-
