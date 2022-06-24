@@ -409,3 +409,4 @@ Administraci lze otevřít až po úspěšném přihlášení, to zle provést n
 Po přihlášení se s v navigačním menu objeví nová položka *Editor*, v níž probíhají všechny úkony spojené s editace jednotlivých lokalit.
 
 ### Responzivní design
+
