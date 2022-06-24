@@ -236,8 +236,8 @@ Zároveň platí, že všechny zmíněné složky lze v administrativní části
 
 ### Geografická data
 
-- **GeoJSON** – pole pro vkládání jedné mapové vrstvy ve formátu GeoJSON. Na tomto místě je také příložen odkaz na službu Geoman.io, prostřednictvím které lze uživatelsky přívětivě kreslit jednotlivé vrstvy;
-- **Podmínky pro třídění na mapě** – všechny níže uvedené podmínky, jsou ve formě polí výběru (selection box), u nichž lze vybírat libovolné množství hodnot (níže je vždy vedle názvu filtru vypisujeme). Podle těchto vybraných hodnot je pak možné lokality filtrovat na mapě a v bočním seznamu;
+- **GeoJSON** – pole pro vkládání jedné mapové vrstvy ve formátu GeoJSON. Na tomto místě je také příložen odkaz na službu Geoman.io, prostřednictvím které lze jednoduše kreslit jednotlivé mapové objekty a generovat tak GeoJSON soubor;
+- **Podmínky pro třídění na mapě** – všechny níže uvedené podmínky jsou ve formě polí výběru (selection box), u nichž lze vybírat libovolné množství hodnot (níže je vždy vedle názvu filtru vypisujeme). Podle těchto vybraných hodnot je pak možné lokality filtrovat na mapě a v bočním seznamu;
 	- Doba příchodu česky mluvících osob
 		- 1550–1620,
 		- 1620–1700,
@@ -254,5 +254,50 @@ Zároveň platí, že všechny zmíněné složky lze v administrativní části
 		- v 19. století,
 		- v 1. pol. 20. stol,
 		- ve 2. pol. 20. stol,
-		- 2000-současnost;
-	-	Velikost komunity
+		- 2000–současnost;
+	- Velikost komunity
+		- méně než 10,
+		- 10–50,
+		- více než 50,
+		- více než 500,
+		- více než 10 000,
+		- více než 50 000;
+	- Převládající nářeční základ
+		- městská mluva,
+		- severovýchodočeská skupina,
+		- středočeská,
+		- jihozápadněčeská skupina,
+		- středomoravská,
+		- východomoravská,
+		- lašská,
+		- českomoravská;
+	- Počet generací, po které se čeština uchovala
+		- 1,
+		- 2,
+		- 3,
+		- 4,
+		- 5,
+		- 6,
+		- 7,
+		- 8,
+		- 9,
+		- 10;
+	- Převládající motivace pro emigraci z českých zemí
+		- náboženská (cca do 1850),
+		- hospodářská (1820–1939, po 1989),
+		- politická (zejm. po 1939–1989);
+	- Existuje audiomateriál nebo písemná dokumentace jazyka?
+		- ano,
+		- ne;
+	- Převládající náboženství
+		- protestantské,
+		- katolické, 
+		- bez vyznání, 
+		- nezjištěno;
+	- Proběhla reemigrace?
+		- po 1. světové válce,
+		- po 2. světové válce;
+	- Typ migrace
+		- primární, 
+		- sekundární,
+		- další migrace.
