@@ -309,15 +309,8 @@ V této podkapitole
 \begin{figure}[hb!]   
     \centering
     \includegraphics[width=1.1\textwidth]{mapa}  
-    \caption{Mapa}
+    \caption{Výchozí pohled na mapu}
     \label{mapa}
-\end{figure}
-
-\begin{figure}[hb!]   
-    \centering
-    \includegraphics[width=1.1\textwidth]{modal}  
-    \caption{Modal}
-    \label{modal}
 \end{figure}
 
 ### Responzivní design
