@@ -304,7 +304,9 @@ Zároveň platí, že všechny zmíněné složky lze v administrativní části
 
 ## Uživatelské rozhraní
 
-V následující podkapitole si na konkrétních ukázkách z aplikace představíme průchod uživatelským rozhraním se zřetelem na nejdůležitější prvky interakce. Návrh rozhraní vychází z funkčních požadavků.
+V následující podkapitole si na konkrétních ukázkách z aplikace představíme průchod uživatelským rozhraním se zřetelem na nejdůležitější interakční prvky. Návrh celého rozhraní vychází z funkčních požadavků.
+
+Zároveň je zapotřebí dodat, jsou v době psaní této práce v aplikaci přítomny dva kompletní záznamy krajanských komunit (Šumice a Kirillovka), na nichž budeme demonstrovat funkčnost aplikace.
 
 Na každé stránce aplikace je přítomný neměnný vrchní navigační panel, přes který se uživatel může dostat do jednotlivých části. Respektive pokud uživatel není přihlášen, vyskytuje se na konci panelu tlačítko pro přihlášení, v případě že přihlášen je, se může pomocí návodné ikony odhlásit.
 
