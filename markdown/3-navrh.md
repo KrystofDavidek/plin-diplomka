@@ -2,7 +2,7 @@
 
 # Analýza požadavků na aplikaci
 
-V praktické části této diplomové práce popisujeme výslednou webovou aplikaci pro geografické zmapování krajanských komunit a jejich jazyka (dále jen aplikace). V následujících kapitolách si ve stručnosti popíšeme související projekty, z nichž jsme se při tvorbě více či méně inspirovali. Dále aplikaci představíme jak z pohledu funkčních a nefunkčních požadavků, tak z hlediska návrhových a implementačních částí. 
+V praktické části této diplomové práce popisujeme výslednou webovou aplikaci\footnote{Výsledná aplikace je v tuto chvíli plně funkční pod URL adresou https://czech-map.netlify.app.} pro geografické zmapování krajanských komunit a jejich jazyka (dále jen aplikace). V následujících kapitolách si ve stručnosti popíšeme související projekty, z nichž jsme se při tvorbě více či méně inspirovali. Dále aplikaci představíme jak z pohledu funkčních a nefunkčních požadavků, tak z hlediska návrhových a implementačních částí. 
 
 ## Související projekty
 
@@ -310,7 +310,9 @@ Zároveň je zapotřebí dodat, jsou v době psaní této práce v aplikaci př�
 
 Na každé stránce aplikace je v horní části umístěné statické navigační menu, přes které se uživatel může dostat do jednotlivých části. Respektive pokud uživatel není přihlášen, vyskytuje se na konci panelu tlačítko pro přihlášení, v případě že přihlášen je, se může pomocí návodné ikony odhlásit.
 
-Vstupní částí aplikace je stránka s mapou  (viz obrázek \ref{mapa}), na níž jsou při defaultní pozici mapy vidět  bodově označené lokality. V mapové části se je možné pohybovat standardním způsobem a pro navrácení pozice mapy do výchozího stavu lze využít tlačítko pod tlačítkem oddálení. Taktéž je v pravém horním rohu umístěna mini mapa pro přehlednější orientaci.
+Vstupní částí aplikace je stránka s mapou  (viz obrázek \ref{mapa}), na níž jsou při defaultní pozici mapy vidět bodově označené lokality. V mapové části se je možné pohybovat standardním způsobem a pro navrácení pozice mapy do výchozího stavu lze využít tlačítko pod tlačítkem oddálení. Taktéž je v pravém horním rohu umístěna mini mapa pro přehlednější orientaci.
+
+Práci s mapou navíc usnadňuje vyhledávač, který má dvě hlavní funkce. Uživatel po jeho nakliknutí ihned uvidí všechny dostupné lokality českých komunit, nemusí je tak složitě zjišťovat ze seznamu a vepisovat jejich jména (po výběru je pohled mapy ihned přesunut na vybranou lokalitu. Vyhledávač také umožňuje měnit výsek mapy na jakékoliv lokace, města a regiony, které jsou v běžných mapách dostupné (tato funkce navíc funguje napříč jazyky – např. pohled mapy se přesune nad Paříž, pokud napíšeme do vyhledávače Paris, tak i českou variantu Paříž).
 
 \begin{figure}[hb!]   
     \centering
@@ -363,7 +365,9 @@ V druhé sekci můžeme najít audio nahrávku a další informace, jež s ní s
 
 Třetí část se skládá z multimediálního obsahu. Pro zobrazení fotografií jsme vybrali uživatelsky přívětivou podobu obrázkové galerie, která v sobě obsahuje náhled na všechny obrázkové soubory (viz obrázek \ref{media}). Také je zde možnost zobrazení na celou obrazovku nebo přepínání obrázků pomocí šípek na klávesnici. V této sekci se taktéž případně nachází další audio nahrávky, přiložená videa ve formě vloženého YouTube přehrávače či libovolné množství textových materiálů.
 
-Poslední oddílem je část *Ostatní*, kde je prostor na jakékoliv dodatečné textové informace jakou jsou projekty, nabídky, atrakce, zajímavosti (viz obrázek \ref{ostatni}). Zároveň je zde místo pro výpis použitých zdrojů a název autora, který tento záznam vytvořil.   
+Poslední oddílem je část *Ostatní*, kde je prostor na jakékoliv dodatečné textové informace jakou jsou projekty, nabídky, atrakce, zajímavosti (viz obrázek \ref{ostatni}). Zároveň je zde místo pro výpis použitých zdrojů a název autora, který tento záznam vytvořil.
+
+Užitečným detailem je v tomto kontextu ještě sdílení vybrané lokality prostřednictvím jejího URL odkazu na jiné zařízení (v tomto případě tedy např. https://czech-map.netlify.app/location/Šumice). Aplikace podle názvu v URL odkazu rozpozná danou komunitu a stáhne si ze vzdálené databáze všechna potřebná data.
 
 \begin{figure}[hb!]   
     \centering
@@ -393,6 +397,15 @@ Poslední oddílem je část *Ostatní*, kde je prostor na jakékoliv dodatečn�
     \label{ostatni}
 \end{figure}
 
-Bla bla bla
+Administraci lze otevřít až po úspěšném přihlášení, to zle provést na stránce *Přihlášení* (viz obrázek \ref{ostatni}) prostřednictvím přiřazeného e-mailu a hesla. Uživatel v tuto chvíli nemá možnost účet založit, pro editory krajanských komunit budou v této fázi údaje zpřístupněny po vzájemné dohodě.
+
+\begin{figure}[hb!]   
+    \centering
+    \includegraphics[width=0.95\textwidth]{login}  
+    \caption{Přihlášení}
+    \label{login}
+\end{figure}
+
+Po přihlášení se s v navigačním menu objeví nová položka *Editor*, v níž probíhají všechny úkony spojené s editace jednotlivých lokalit.
 
 ### Responzivní design
