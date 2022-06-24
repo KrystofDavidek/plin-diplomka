@@ -497,15 +497,33 @@ V~následující podkapitole si na konkrétních ukázkách z~aplikace představ
 
 Zároveň je zapotřebí dodat, jsou v~době psaní této práce v~aplikaci přítomny dva kompletní záznamy krajanských komunit (Šumice a~Kirillovka), na nichž budeme demonstrovat funkčnost aplikace.
 
-Na každé stránce aplikace je přítomný neměnný vrchní navigační panel, přes který se uživatel může dostat do jednotlivých části. Respektive pokud uživatel není přihlášen, vyskytuje se na konci panelu tlačítko pro přihlášení, v~případě že přihlášen je, se může pomocí návodné ikony odhlásit.
+Na každé stránce aplikace je v~horní části umístěné statické navigační menu, přes které se uživatel může dostat do jednotlivých části. Respektive pokud uživatel není přihlášen, vyskytuje se na konci panelu tlačítko pro přihlášení, v~případě že přihlášen je, se může pomocí návodné ikony odhlásit.
 
-Výchozí a~zároveň hlavní částí aplikace je stránka s~mapou (viz obrázek \ref{mapa}), kde\ldots{}
+Vstupní částí aplikace je stránka s~mapou (viz obrázek \ref{mapa}), na níž jsou při defaultní pozici mapy vidět bodově označené lokality. V~mapové části se je možné pohybovat standardním způsobem a~pro navrácení pozice mapy do výchozího stavu lze využít tlačítko pod tlačítkem oddálení. Taktéž je v~pravém horním rohu umístěna mini mapa pro přehlednější orientaci.
 
 \begin{figure}[hb!]   
     \centering
     \includegraphics[width=0.95\textwidth]{mapa}  
     \caption{Výchozí pohled na mapu}
     \label{mapa}
+\end{figure}
+
+Pro zobrazení výčtu dostupných lokalit slouží tlačítko menu na levé části navigačního panelu. Tímto způsobem se zobrazí postranní sekce s~abecedně seřazenými lokalitami na základě aplikovaných filtrů (ve výchozím stavu bez omezení) (viz obrázek \ref{mapa-2}).
+
+\begin{figure}[hb!]   
+    \centering
+    \includegraphics[width=0.95\textwidth]{mapa-2}  
+    \caption{Seznam lokalit v~bočním panelu}
+    \label{mapa-2}
+\end{figure}
+
+Pro přiblížení na konkrétní krajanskou komunitu na mapě lze využít buď tlačítko \emph{zobrazit na mapě} u~vybrané lokality, případně kliknout na modrou značku, která je zobrazená na mapě. Po jednoduché animaci je pohled mapy zacílen na danou mapovou vrstvu (viz obrázek \ref{cil-mapa}). Pokud by vedle sebe větší množství lokalit, lze je od sebe na mapě rozlišit najetím myši na mapovou vrstvu -- vypíše se tak hlavní název komunity.
+
+\begin{figure}[hb!]   
+    \centering
+    \includegraphics[width=0.95\textwidth]{cil-mapa}  
+    \caption{Přiblížení na vybranou krajanskou komunitu}
+    \label{cil-mapa}
 \end{figure}
 
 \hypertarget{responzivnuxed-design}{%
