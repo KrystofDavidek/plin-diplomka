@@ -346,7 +346,9 @@ Po výběru daných filtrů si uživatel může povšimnout okamžitě projeven�
     \label{filtr2}
 \end{figure}
 
-Pro přiblížení na konkrétní krajanskou komunitu na mapě lze využít buď tlačítko *zobrazit na mapě* u vybrané lokality, případně kliknout na modrou značku, která je zobrazená na mapě. Po jednoduché animaci je pohled mapy zacílen na danou mapovou vrstvu (viz obrázek \ref{cil-mapa}). Pokud by se vedle sebe nacházelo větší množství lokalit, lze je od sebe na mapě rozlišit po najetí myši na mapovou vrstvu – vypíše se tak hlavní název komunity.
+Pro přiblížení na konkrétní krajanskou komunitu na mapě lze využít buď tlačítko *zobrazit na mapě* u vybrané lokality (pokud je uživatel přihlášen, ja na tomto místě navíc umístěna ikona nastavení pro přechod na stránku s administrací), případně kliknout na modrou značku, která je zobrazená na mapě. Po jednoduché animaci je pohled mapy zacílen na danou mapovou vrstvu (viz obrázek \ref{cil-mapa}).
+
+Pokud by se vedle sebe nacházelo větší množství lokalit, lze je od sebe navzájem rozlišit po najetí myši na mapovou vrstvu – vypíše se tak hlavní název komunity. Po kliknutí na mapovou vrstvu se zobrazí modální okno s hlavním a vedlejším názvem, případně s úvodním obrázkem a s dalšími akcemi jako jsou *Upravit lokalitu* (v případě přihlášení), *Zpátky* a *Přejít na lokalitu*.
 
 \begin{figure}[hb!]   
     \centering
@@ -354,5 +356,43 @@ Pro přiblížení na konkrétní krajanskou komunitu na mapě lze využít buď
     \caption{Přiblížení na vybranou krajanskou komunitu}
     \label{cil-mapa}
 \end{figure}
+
+Jak bylo v minulé podkapitole zmíněno, informace o vybrané lokalitě se dělí do několika oddílů. První z nich je úvodní stránka (viz obrázek \ref{cil-mapa}) se základními informaci.
+
+V druhé sekci můžeme najít audio nahrávku a další informace, jež s ní souvisí (viz obrázek \ref{detail}). V okamžiku, kdy uživatel spustí audio přehrávač, zobrazí se i případné jazykové informace, které se k nahrávce vážou (transkripce, jazyková charakteristika atd.), ty lze ovšem dle potřeby skrýt. Pod nahrávkou jsou pak informace vztahující se k jak historii, tak k současné situaci dané komunity.
+
+Třetí část se skládá z multimediálního obsahu. Pro zobrazení fotografií jsme vybrali uživatelsky přívětivou podobu obrázkové galerie, která v sobě obsahuje náhled na všechny obrázkové soubory (viz obrázek \ref{media}). Také je zde možnost zobrazení na celou obrazovku nebo přepínání obrázků pomocí šípek na klávesnici. V této sekci se taktéž případně nachází další audio nahrávky, přiložená videa ve formě vloženého YouTube přehrávače či libovolné množství textových materiálů.
+
+Poslední oddílem je část *Ostatní*, kde je prostor na jakékoliv dodatečné textové informace jakou jsou projekty, nabídky, atrakce, zajímavosti (viz obrázek \ref{ostatni}). Zároveň je zde místo pro výpis použitých zdrojů a název autora, který tento záznam vytvořil.   
+
+\begin{figure}[hb!]   
+    \centering
+    \includegraphics[width=0.95\textwidth]{uvod}  
+    \caption{Úvodní informace}
+    \label{uvod}
+\end{figure}
+
+\begin{figure}[hb!]   
+    \centering
+    \includegraphics[width=0.95\textwidth]{detail}  
+    \caption{Detailní informace spolu s audio nahrávkou}
+    \label{detail}
+\end{figure}
+
+\begin{figure}[hb!]   
+    \centering
+    \includegraphics[width=0.95\textwidth]{media}  
+    \caption{Obrázková galerie}
+    \label{media}
+\end{figure}
+
+\begin{figure}[hb!]   
+    \centering
+    \includegraphics[width=0.95\textwidth]{ostatni}  
+    \caption{Poslední část s doplňujícími informacemi}
+    \label{ostatni}
+\end{figure}
+
+Bla bla bla
 
 ### Responzivní design
