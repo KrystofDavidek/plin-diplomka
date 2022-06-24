@@ -441,13 +441,35 @@ Pro vkládání souborů (obrázky a audio) do systému pak slouží speciální
     \label{admin-obrazky}
 \end{figure}
 
-Poslední důležitou složkou administrace je správa geografických dat a filtrů...
+Poslední důležitou složkou administrace je správa geografických dat a nastavování filtrů (viz obrázek \ref{admin-ge}). Jak bylo v předchozí podkapitole zmíněno, geografická data aplikace zpracovává ve formátu GeoJSON. Proto využíváme speciálně upravený textový editor, který dokáže validovat správný formát vstupního textu (GeoJSON je i přes svoje specifika v principu stále textový řetězec).
+
+Pravděpodobnost chyby se navíc snažíme eliminovat tím způsobem, že uživatele nutíme měnit obsah pole pouze prostřednictvím zkopírování textu. Takto chceme editora motivovat k využití přiložené služby Geoman.io, kde si může jednoduchým způsobem nakreslit potřebnou mapovou vrstvu, a vygenerovat si tak GeoJSON kód (viz obrázek \ref{geoman}). Ten pak stačí celý zkopírovat a rovnou vložit do naší aplikace, která jej pak automaticky zpracuje a vybere z něj potřebné hodnoty pro zakreslení do mapy.
+
+Věříme, že tento způsob je v této fázi aplikace uživatelsky nejpřívětivější a efektivní zároveň. Jedinými nevýhodami tohoto přístupu jsou prozatímní závislost na externím nástroji a nutnost při úpravě existující lokality znovu vygenerovat celý GeoJSON kód.
+
+Volba filtrů je vytvořena jednoduchým způsobem skrze select boxy s vícenásobným výběrem. V závěru je zapotřebí data z celé administrativní části odeslat pomocí výrazného tlačítka umístěného na konci stránky. Až pak se propíší do databáze a zároveň do dalších částí aplikace. Je tedy zřejmé, že uživatel nesmí při editace ztratit připojení nebo jakýmkoliv jiným způsobem přerušit spojení s editorem (např. refresh stránky atd.). I z tohoto důvodu je přidáno konfirmační modální okno po kliknutí na ikony oka, jež slouží pro zobrazení lokality ve standardním módu.  
 
 \begin{figure}
     \centering
     \includegraphics[width=0.95\textwidth]{admin-geo}  
     \caption{Vkládání geografických dat a úprava filtrů}
     \label{admin-geo}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.95\textwidth]{geoman}  
+    \caption{Rozhraní služby Geoman.io}
+    \label{geoman}
+\end{figure}
+
+Závěrečnou obrazovkou, jež zmíníme, je sekce *O projektu* (viz obrázek \ref{about}). Ta je v tuto chvíli spíše marginálnější povahy, protože obsahuje pouze základní informace o celém projektu. Nicméně do budoucna může být prostorem pro další informace jako jsou například nápověda nebo odkazy na přidružené projekty.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.95\textwidth]{about}  
+    \caption{Informační stránka o projektu}
+    \label{about}
 \end{figure}
 
 ### Responzivní design
