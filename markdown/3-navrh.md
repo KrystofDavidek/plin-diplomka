@@ -359,7 +359,7 @@ Pokud by se vedle sebe nacházelo větší množství lokalit, lze je od sebe na
     \label{cil-mapa}
 \end{figure}
 
-Jak bylo v minulé podkapitole zmíněno, informace o vybrané lokalitě se dělí do několika oddílů. První z nich je úvodní stránka (viz obrázek \ref{cil-mapa}) se základními informaci.
+Jak bylo v minulé podkapitole zmíněno, informace o vybrané lokalitě se dělí do několika oddílů. První z nich je úvodní stránka (viz obrázek \ref{uvod}) se základními informaci.
 
 V druhé sekci můžeme najít audio nahrávku a další informace, jež s ní souvisí (viz obrázek \ref{detail}). V okamžiku, kdy uživatel spustí audio přehrávač, zobrazí se i případné jazykové informace, které se k nahrávce vážou (transkripce, jazyková charakteristika atd.), ty lze ovšem dle potřeby skrýt. Pod nahrávkou jsou pak informace vztahující se k jak historii, tak k současné situaci dané komunity.
 
@@ -397,7 +397,7 @@ Užitečným detailem je v tomto kontextu ještě sdílení vybrané lokality pr
     \label{ostatni}
 \end{figure}
 
-Administraci lze otevřít až po úspěšném přihlášení, to zle provést na stránce *Přihlášení* (viz obrázek \ref{ostatni}) prostřednictvím přiřazeného e-mailu a hesla. Uživatel v tuto chvíli nemá možnost účet založit, pro editory krajanských komunit budou v této fázi údaje zpřístupněny po vzájemné dohodě.
+Administraci lze otevřít až po úspěšném přihlášení, to zle provést na stránce *Přihlášení* (viz obrázek \ref{login}) prostřednictvím přiřazeného e-mailu a hesla. Uživatel v tuto chvíli nemá možnost účet založit, pro editory krajanských komunit budou v této fázi údaje zpřístupněny po vzájemné dohodě.
 
 \begin{figure}
     \centering
@@ -406,7 +406,48 @@ Administraci lze otevřít až po úspěšném přihlášení, to zle provést n
     \label{login}
 \end{figure}
 
-Po přihlášení se s v navigačním menu objeví nová položka *Editor*, v níž probíhají všechny úkony spojené s editace jednotlivých lokalit.
+Po přihlášení se v navigačním menu objeví nová položka *Editor*, která uživatele přesměruje do podstránek s administrací, kde probíhají všechny úkony spojené s editací jednotlivých lokalit.
+
+Stránku s administrací lze použít dvěma základními způsoby. Buď vytvořit novou lokalitu (tedy kliknout na tlačítko v menu), anebo použít některou z možností pro úpravu již existujícího záznamu (např. v seznamu lokalit, v modálním okně či v samotném detailu komunity). Níže představujeme administraci pro již existující komunitu.
+
+Po přepnutí do administrace si uživatel může všimnout progress baru umístěného hned pod navigačním menu, který reaguje na přepnutí napříč sekcemi (tedy na začátku je téměř prázdný, v posledním oddíle naopak plný) (viz obrázek \ref{admin-uvod}).
+
+Pod tímto indikátorem jsou názvy oddílů, které je možné v rámci editoru vyplňovat, a následně dvě ikony pro vstup na lokalitu a pro odstranění celého záznamu (před smazáním se objevuje konfirmační modální okno, kde musí uživatel svoji volbu potvrdit).
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.95\textwidth]{admin-uvod}  
+    \caption{Úvodní stránka administrace}
+    \label{admin-uvod}
+\end{figure}
+
+Dále se pak nachází vždy obsah pro jednotlivé oddíly, kde je možné vyplňovat data pro vybrané položky. U položek textového charakteru jsou prvky formuláře buď jednoduchého typu (umožňují vkládat text pouze bez formátování, například název atd.), anebo se jedná o složitější textový editor pro uložení komplexnější textové informace (viz obrázek \ref{admin-nahravka}).
+
+V textovém editoru je možné přidávat standardní značky pro formátování textu jako jsou odrážky, tučný řez písma, odkazy, nadpisy, ale i třeba emotikony a další prvky, které mohou být užitečné v některých sekcích. Do aplikace tak lze jednoduše a efektivně vkládat delší texty, které si uživatel připraví např. v textovém procesoru typu MS Word.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.95\textwidth]{admin-nahravka}  
+    \caption{Prvky formuláře pro vkládání delšího textu a audio nahrávky}
+    \label{admin-nahravka}
+\end{figure}
+
+Pro vkládání souborů (obrázky a audio) do systému pak slouží speciální komponenta, která přehledným způsobem vykresluje již vložené soubory ve formě textu (viz obrázek \ref{admin-obrazky}). Uživatel na první pohled vidí, jaké soubory jsou součástí dané lokality a může tak jednoduchým způsobem přidávat a odstraňovat soubory (či jejich popisky) dle potřeby.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.95\textwidth]{admin-obrázky}  
+    \caption{Vkládání obrázků přes speciální komponentu}
+    \label{admin-obrazky}
+\end{figure}
+
+Poslední důležitou složkou administrace je správa geografických dat a filtrů...
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.95\textwidth]{admin-geo}  
+    \caption{Vkládání geografických dat a úprava filtrů}
+    \label{admin-geo}
+\end{figure}
 
 ### Responzivní design
-
