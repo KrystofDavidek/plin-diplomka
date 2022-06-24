@@ -314,7 +314,7 @@ Vstupní částí aplikace je stránka s mapou  (viz obrázek \ref{mapa}), na n�
 
 Práci s mapou navíc usnadňuje vyhledávač, který má dvě hlavní funkce. Uživatel po jeho nakliknutí ihned uvidí všechny dostupné lokality českých komunit, nemusí je tak složitě zjišťovat ze seznamu a vepisovat jejich jména (po výběru je pohled mapy ihned přesunut na vybranou lokalitu. Vyhledávač také umožňuje měnit výsek mapy na jakékoliv lokace, města a regiony, které jsou v běžných mapách dostupné (tato funkce navíc funguje napříč jazyky – např. pohled mapy se přesune nad Paříž, pokud napíšeme do vyhledávače Paris, tak i českou variantu Paříž).
 
-\begin{figure}[hb!]   
+\begin{figure}
     \centering
     \includegraphics[width=0.95\textwidth]{mapa}  
     \caption{Výchozí pohled na mapu}
@@ -323,7 +323,7 @@ Práci s mapou navíc usnadňuje vyhledávač, který má dvě hlavní funkce. U
 
 Výčet dostupných lokalit se zobrazuje prostřednictvím tlačítka menu na levé části navigačního panelu. Tímto způsobem se zobrazí vysouvací postranní sekce s abecedně seřazenými lokalitami podle aplikovaných filtrů (ve výchozím stavu bez omezení) (viz obrázek \ref{mapa-2}).
 
-\begin{figure}[hb!]   
+\begin{figure}  
     \centering
     \includegraphics[width=0.95\textwidth]{mapa-2}  
     \caption{Seznam lokalit v bočním panelu}
@@ -332,7 +332,7 @@ Výčet dostupných lokalit se zobrazuje prostřednictvím tlačítka menu na le
 
 Nastavování filtrů se otevírá přes ikonu filtru vedle *Seznamu lokalit*. Změní se tak mód vysouvacího panelu, kde můžeme zatrhávat libovolné množství podmínek pro zobrazení lokalit (viz obrázek \ref{filtr1}).
 
-\begin{figure}[hb!]   
+\begin{figure}
     \centering
     \includegraphics[width=0.95\textwidth]{filtr1} 
     \caption{Výchozí stav filtrů}
@@ -341,7 +341,7 @@ Nastavování filtrů se otevírá přes ikonu filtru vedle *Seznamu lokalit*. Z
 
 Po výběru daných filtrů si uživatel může povšimnout okamžitě projevené změny zobrazení (viz obrázek \ref{filtr2}), a to jak na mapě, tak i v předchozím seznamu lokalit (pro větší přehlednost je počet aktuálně vyfiltrovaných komunit zobrazen vedle možnosti *Restartovat filtry*, uživatel má tak možnost ihned vidět celkový počet). 
 
-\begin{figure}[hb!]   
+\begin{figure}  
     \centering
     \includegraphics[width=0.95\textwidth]{filtr2}  
     \caption{Stav po použití filtru}
@@ -352,7 +352,7 @@ Pro přiblížení na konkrétní krajanskou komunitu na mapě lze využít buď
 
 Pokud by se vedle sebe nacházelo větší množství lokalit, lze je od sebe navzájem rozlišit po najetí myši na mapovou vrstvu – vypíše se tak hlavní název komunity. Po kliknutí na mapovou vrstvu se zobrazí modální okno s hlavním a vedlejším názvem, případně s úvodním obrázkem a s dalšími akcemi jako jsou *Upravit lokalitu* (v případě přihlášení), *Zpátky* a *Přejít na lokalitu*.
 
-\begin{figure}[hb!]   
+\begin{figure} 
     \centering
     \includegraphics[width=0.95\textwidth]{cil-mapa}  
     \caption{Přiblížení na vybranou krajanskou komunitu}
@@ -363,34 +363,34 @@ Jak bylo v minulé podkapitole zmíněno, informace o vybrané lokalitě se děl
 
 V druhé sekci můžeme najít audio nahrávku a další informace, jež s ní souvisí (viz obrázek \ref{detail}). V okamžiku, kdy uživatel spustí audio přehrávač, zobrazí se i případné jazykové informace, které se k nahrávce vážou (transkripce, jazyková charakteristika atd.), ty lze ovšem dle potřeby skrýt. Pod nahrávkou jsou pak informace vztahující se k jak historii, tak k současné situaci dané komunity.
 
-Třetí část se skládá z multimediálního obsahu. Pro zobrazení fotografií jsme vybrali uživatelsky přívětivou podobu obrázkové galerie, která v sobě obsahuje náhled na všechny obrázkové soubory (viz obrázek \ref{media}). Také je zde možnost zobrazení na celou obrazovku nebo přepínání obrázků pomocí šípek na klávesnici. V této sekci se taktéž případně nachází další audio nahrávky, přiložená videa ve formě vloženého YouTube přehrávače či libovolné množství textových materiálů.
-
-Poslední oddílem je část *Ostatní*, kde je prostor na jakékoliv dodatečné textové informace jakou jsou projekty, nabídky, atrakce, zajímavosti (viz obrázek \ref{ostatni}). Zároveň je zde místo pro výpis použitých zdrojů a název autora, který tento záznam vytvořil.
-
-Užitečným detailem je v tomto kontextu ještě sdílení vybrané lokality prostřednictvím jejího URL odkazu na jiné zařízení (v tomto případě tedy např. https://czech-map.netlify.app/location/Šumice). Aplikace podle názvu v URL odkazu rozpozná danou komunitu a stáhne si ze vzdálené databáze všechna potřebná data.
-
-\begin{figure}[hb!]   
+\begin{figure} 
     \centering
     \includegraphics[width=0.95\textwidth]{uvod}  
     \caption{Úvodní informace}
     \label{uvod}
 \end{figure}
 
-\begin{figure}[hb!]   
+\begin{figure}
     \centering
     \includegraphics[width=0.95\textwidth]{detail}  
     \caption{Detailní informace spolu s audio nahrávkou}
     \label{detail}
 \end{figure}
 
-\begin{figure}[hb!]   
+Třetí část se skládá z multimediálního obsahu. Pro zobrazení fotografií jsme vybrali uživatelsky přívětivou podobu obrázkové galerie, která v sobě obsahuje náhled na všechny obrázkové soubory (viz obrázek \ref{media}). Také je zde možnost zobrazení na celou obrazovku nebo přepínání obrázků pomocí šípek na klávesnici. V této sekci se taktéž případně nachází další audio nahrávky, přiložená videa ve formě vloženého YouTube přehrávače či libovolné množství textových materiálů.
+
+Poslední oddílem je část *Ostatní*, kde je prostor na jakékoliv dodatečné textové informace jakou jsou projekty, nabídky, atrakce, zajímavosti (viz obrázek \ref{ostatni}). Zároveň je zde místo pro výpis použitých zdrojů a název autora, který tento záznam vytvořil.
+
+Užitečným detailem je v tomto kontextu ještě sdílení vybrané lokality prostřednictvím jejího URL odkazu na jiné zařízení (v tomto případě tedy např. https://czech-map.netlify.app/location/Šumice). Aplikace podle názvu v URL odkazu rozpozná danou komunitu a stáhne si ze vzdálené databáze všechna potřebná data.
+
+\begin{figure}  
     \centering
     \includegraphics[width=0.95\textwidth]{media}  
     \caption{Obrázková galerie}
     \label{media}
 \end{figure}
 
-\begin{figure}[hb!]   
+\begin{figure} 
     \centering
     \includegraphics[width=0.95\textwidth]{ostatni}  
     \caption{Poslední část s doplňujícími informacemi}
@@ -399,7 +399,7 @@ Užitečným detailem je v tomto kontextu ještě sdílení vybrané lokality pr
 
 Administraci lze otevřít až po úspěšném přihlášení, to zle provést na stránce *Přihlášení* (viz obrázek \ref{ostatni}) prostřednictvím přiřazeného e-mailu a hesla. Uživatel v tuto chvíli nemá možnost účet založit, pro editory krajanských komunit budou v této fázi údaje zpřístupněny po vzájemné dohodě.
 
-\begin{figure}[hb!]   
+\begin{figure}
     \centering
     \includegraphics[width=0.95\textwidth]{login}  
     \caption{Přihlášení}
