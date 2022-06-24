@@ -313,5 +313,12 @@ V této podkapitole
     \label{mapa}
 \end{figure}
 
+\begin{figure}[hb!]   
+    \centering
+    \includegraphics[width=1.1\textwidth]{modal}  
+    \caption{Modal}
+    \label{modal}
+\end{figure}
+
 ### Responzivní design
 
