@@ -436,7 +436,7 @@ Pro vkládání souborů (obrázky a audio) do systému pak slouží speciální
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.95\textwidth]{admin-obrázky}  
+    \includegraphics[width=0.95\textwidth]{admin-obrazky}  
     \caption{Vkládání obrázků přes speciální komponentu}
     \label{admin-obrazky}
 \end{figure}
