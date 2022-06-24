@@ -304,7 +304,7 @@ Zároveň platí, že všechny zmíněné složky lze v administrativní části
 
 ## Uživatelské rozhraní
 
-V této podkapitole představíme
+V této podkapitole představíme UI
 
 \begin{figure}[hb!]   
     \centering
