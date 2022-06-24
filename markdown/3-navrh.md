@@ -195,7 +195,7 @@ Poslední zvolenou službou je Cloud Storage. Jde o jednoduché a cenově výhod
 
 Jelikož jsou data nutnou součástí a vlastně i samotným smyslem aplikace, vyjádříme se v následující podkapitole ke struktuře a obsahu dat, ze kterých se skládají informace o jednotlivých krajanských komunitách.
 
-Zároveň platí, že všechny zmíněné složky lze v administrativní části upravovat. Kromě názvu hlavní lokality a geografických dat není žádná z položek povinná, protože u každé komunity nemusí být dostupné všechny typy informací. Pro větší přehlednost tyto informace dělíme do podsekcí tak, jak je lze najít v samotné aplikaci.
+Zároveň platí, že všechny zmíněné složky lze v administrativní části upravovat. Kromě názvu hlavní lokality a geografických dat není žádná z položek povinná, protože u každé komunity nemusí být dostupné všechny typy informací. Pro větší přehlednost tyto informace dělíme do podsekcí tak, jak je lze najít v administraci webové aplikace.
 
 ### Úvod
 
@@ -215,4 +215,44 @@ Zároveň platí, že všechny zmíněné složky lze v administrativní části
 - **Historie a současnost**
 	- Historie – sekce určená k popisu historie komunit;
 	- Současnost – text věnovaný k aktuálnímu stavu české enklávy.
-- **Multimediální obsah**
+
+### Multimediální obsah
+
+ - **Autor fotografií/obrázků** – jméno a a případně odkaz na autora obrázků a fotografií;
+ - **Obrázky** – libovolné množství fotografií a dalších ilustračních obrázků dané české komunity spolu s krátkými popisky;
+ - **Audio** – libovolné množství audio nahrávek s rozhovory s krajany či odborníky na danou lokalitu (spolu s krátkými popisky);
+ - **Videa** – libovolné množství odkazů na videa o komunitě spolu s popisky;
+ - **Texty** – prostor na ukázky textových materiálů jako jsou úryvky z knih, místních časopisů atd.;
+ -  **Ostatní** – sekce na doplňující informace, které se nehodily umístit nikam jinam.
+
+### Ostatní
+
+ - **Projekty** – informace o existujících projektech související s vybranou lokalitou;
+ - **Nabídky** – vyjmenování případných nabídek spolupráce či jiných participací s komunitou;
+- **Atrakce** – doplňující informace týkající se lokálních atrakcí, přírodních památek nebo turistického vyžití na daném místě;
+- **Zajímavosti** – dodatečné zajímavosti ohledně historie, demografie či tamější architektury atd.;
+- **Zdroje** – prostor na vkládání všech zdrojů, jež byly využity pro tvorbu digitálního záznamu o krajanské komunitě;
+- **Kontakt** – kontakt na tvůrce konkrétního záznamu.
+
+### Geografická data
+
+- **GeoJSON** – pole pro vkládání jedné mapové vrstvy ve formátu GeoJSON. Na tomto místě je také příložen odkaz na službu Geoman.io, prostřednictvím které lze uživatelsky přívětivě kreslit jednotlivé vrstvy;
+- **Podmínky pro třídění na mapě** – všechny níže uvedené podmínky, jsou ve formě polí výběru (selection box), u nichž lze vybírat libovolné množství hodnot (níže je vždy vedle názvu filtru vypisujeme). Podle těchto vybraných hodnot je pak možné lokality filtrovat na mapě a v bočním seznamu;
+	- Doba příchodu česky mluvících osob
+		- 1550–1620,
+		- 1620–1700,
+		- 1700–1800,
+		- 1800–1850,
+		- 1850–1914,
+		- 1914–1930,
+		- po 1939,
+		- po 1989;
+	- Doba zániku
+		- před 1620,
+		- před 1700,
+		- v 18. století,
+		- v 19. století,
+		- v 1. pol. 20. stol,
+		- ve 2. pol. 20. stol,
+		- 2000-současnost;
+	-	Velikost komunity

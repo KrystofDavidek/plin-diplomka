@@ -221,7 +221,7 @@ Poslední zvolenou službou je Cloud Storage. Jde o~jednoduché a~cenově výhod
 
 Jelikož jsou data nutnou součástí a~vlastně i~samotným smyslem aplikace, vyjádříme se v~následující podkapitole ke struktuře a~obsahu dat, ze kterých se skládají informace o~jednotlivých krajanských komunitách.
 
-Zároveň platí, že všechny zmíněné složky lze v~administrativní části upravovat. Kromě názvu hlavní lokality a~geografických dat není žádná z~položek povinná, protože u~každé komunity nemusí být dostupné všechny typy informací. Pro větší přehlednost tyto informace dělíme do podsekcí tak, jak je lze najít v~samotné aplikaci.
+Zároveň platí, že všechny zmíněné složky lze v~administrativní části upravovat. Kromě názvu hlavní lokality a~geografických dat není žádná z~položek povinná, protože u~každé komunity nemusí být dostupné všechny typy informací. Pro větší přehlednost tyto informace dělíme do podsekcí tak, jak je lze najít v~administraci webové aplikace.
 
 \hypertarget{uxfavod}{%
 \subsection{Úvod}\label{uxfavod}}
@@ -269,6 +269,101 @@ Zároveň platí, že všechny zmíněné složky lze v~administrativní části
   \item
     Současnost -- text věnovaný k~aktuálnímu stavu české enklávy.
   \end{itemize}
+\end{itemize}
+
+\hypertarget{multimediuxe1lnuxed-obsah}{%
+\subsection{Multimediální obsah}\label{multimediuxe1lnuxed-obsah}}
+
+\begin{itemize}
+\tightlist
 \item
-  \textbf{Multimediální obsah}
+  \textbf{Autor fotografií/obrázků} -- jméno a~a~případně odkaz na autora obrázků a~fotografií;
+\item
+  \textbf{Obrázky} -- libovolné množství fotografií a~dalších ilustračních obrázků dané české komunity spolu s~krátkými popisky;
+\item
+  \textbf{Audio} -- libovolné množství audio nahrávek s~rozhovory s~krajany či odborníky na danou lokalitu (spolu s~krátkými popisky);
+\item
+  \textbf{Videa} -- libovolné množství odkazů na videa o~komunitě spolu s~popisky;
+\item
+  \textbf{Texty} -- prostor na ukázky textových materiálů jako jsou úryvky z~knih, místních časopisů atd.;
+\item
+  \textbf{Ostatní} -- sekce na doplňující informace, které se nehodily umístit nikam jinam.
+\end{itemize}
+
+\hypertarget{ostatnuxed}{%
+\subsection{Ostatní}\label{ostatnuxed}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Projekty} -- informace o~existujících projektech související s~vybranou lokalitou;
+\item
+  \textbf{Nabídky} -- vyjmenování případných nabídek spolupráce či jiných participací s~komunitou;
+\item
+  \textbf{Atrakce} -- doplňující informace týkající se lokálních atrakcí, přírodních památek nebo turistického vyžití na daném místě;
+\item
+  \textbf{Zajímavosti} -- dodatečné zajímavosti ohledně historie, demografie či tamější architektury atd.;
+\item
+  \textbf{Zdroje} -- prostor na vkládání všech zdrojů, jež byly využity pro tvorbu digitálního záznamu o~krajanské komunitě;
+\item
+  \textbf{Kontakt} -- kontakt na tvůrce konkrétního záznamu.
+\end{itemize}
+
+\hypertarget{geografickuxe1-data}{%
+\subsection{Geografická data}\label{geografickuxe1-data}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{GeoJSON} -- pole pro vkládání jedné mapové vrstvy ve formátu GeoJSON. Na tomto místě je také příložen odkaz na službu Geoman.io, prostřednictvím které lze uživatelsky přívětivě kreslit jednotlivé vrstvy;
+\item
+  \textbf{Podmínky pro třídění na mapě} -- všechny níže uvedené podmínky, jsou ve formě polí výběru (selection box), u~nichž lze vybírat libovolné množství hodnot (níže je vždy vedle názvu filtru vypisujeme). Podle těchto vybraných hodnot je pak možné lokality filtrovat na mapě a~v~bočním seznamu;
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Doba příchodu česky mluvících osob
+
+    \begin{itemize}
+    \tightlist
+    \item
+      1550--1620,
+    \item
+      1620--1700,
+    \item
+      1700--1800,
+    \item
+      1800--1850,
+    \item
+      1850--1914,
+    \item
+      1914--1930,
+    \item
+      po 1939,
+    \item
+      po 1989;
+    \end{itemize}
+  \item
+    Doba zániku
+
+    \begin{itemize}
+    \tightlist
+    \item
+      před 1620,
+    \item
+      před 1700,
+    \item
+      v~18. století,
+    \item
+      v~19. století,
+    \item
+      v~1. pol. 20. stol,
+    \item
+      ve 2. pol. 20. stol,
+    \item
+      2000-současnost;
+    \end{itemize}
+  \item
+    Velikost komunity
+  \end{itemize}
 \end{itemize}
