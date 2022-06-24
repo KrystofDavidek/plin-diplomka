@@ -308,7 +308,7 @@ V této podkapitole
 
 \begin{figure}[hb!]   
     \centering
-    \includegraphics[width=1.1\textwidth]{mapa}  
+    \includegraphics[width=0.95\textwidth]{mapa}  
     \caption{Výchozí pohled na mapu}
     \label{mapa}
 \end{figure}
