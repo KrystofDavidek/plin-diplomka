@@ -478,16 +478,28 @@ Jedním z nefunkčních požadavků na aplikaci je její multiplatformní povaha
 
 Jelikož jsme jsme vyvíjeli webovou aplikaci, museli jsme tak brát ohled na zásady responzivního designu. Jedná se o způsob stylování HTML (primárně pomoci CSS, ale i JavaScriptu) pomocí různých flexibilních struktur (např. *grid*), jehož výsledkem má být optimální zobrazení na všech možných obrazovkách.
 
-Tento požadavek se nám povedlo naplnit (viz obrázky \ref{resA} a xxx), ačkoliv u administrace nepředpokládáme tak hojné využívání na menších zařízeních. Zároveň se u dotykových zařízení lehce mění způsob využívání některých komponent (např. mapa nebo obrázková galerie), které jsou tak uzpůsobeny na dotykovou interakci.
+Tento požadavek se nám povedlo naplnit (viz obrázky \ref{resA} a \ref{resB}), ačkoliv u administrace nepředpokládáme tak hojné využívání na menších zařízeních. Zároveň se u dotykových zařízení lehce mění způsob využívání některých komponent (např. mapa nebo obrázková galerie), které jsou tak uzpůsobeny na dotykovou interakci.
 
 \begin{figure}
-  \begin{subfigure}[b]{0.475\textwidth}
-    \includegraphics[width=0.95\textwidth]{res1}
+  \begin{subfigure}[b]{0.4\textwidth}
+    \includegraphics[width=1\textwidth]{res1}
   \end{subfigure}
   \hfill
-  \begin{subfigure}[b]{0.475\textwidth}
-    \includegraphics[width=0.95\textwidth]{res2}
+  \begin{subfigure}[b]{0.4\textwidth}
+    \includegraphics[width=1\textwidth]{res2}
   \end{subfigure}
   \caption{Responzivní zobrazení mapy a seznamu lokalit}
   \label{resA}
+\end{figure}
+
+\begin{figure}
+  \begin{subfigure}[b]{0.4\textwidth}
+    \includegraphics[width=1\textwidth]{res2}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.4\textwidth}
+    \includegraphics[width=1\textwidth]{res2}
+  \end{subfigure}
+  \caption{Responzivní zobrazení obrázkové galerie a administrace}
+  \label{resB}
 \end{figure}
