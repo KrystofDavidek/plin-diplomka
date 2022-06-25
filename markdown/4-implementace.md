@@ -228,70 +228,76 @@ export const addNewEntry = async (entry: Entry) => {
 
 Podobné implementační výzvy jsme v rámci práce s databází museli řešit i na jiných místech. Ku příkladu problematika nahráváním a odstraňování souborů na základě aktivit uživatele nebyla triviální záležitostí. Museli jsme se postarat o synchronizaci napříč názvy souborů u jednotlivých lokalit v Cloud Firestore a reálnými soubory v Cloud Storage. A zároveň se vypořádat s problémem odstraňování souborů při smazání celé lokace apod. 
 
-## Mapa
+## Mapová komponenta
 
 Mapová část byla implementována na základě komponenty \verb|MapContainer| z knihovny React Leaflet, jež se skládá z několika dílčích komponent. Pro využití OpenStreetMap byla využita část \verb|TileLayer| (taktéž z knihovny React Leaflet), zbytek podkomponent jsme implementovali vlastní cestou.
 
 \begin{verbatim}
-	...
+    ...
 const MapWrapper = () => {
-	const [position] = useState<LatLngExpression>(latLng(49.1922443, 16.6113382));
+    const [position] = useState<LatLngExpression>(latLng(49.1922443, 16.6113382));
 
-	return (
-		<MapContainer center={position} zoom={5} scrollWheelZoom={false}>
-			<TileLayer
-				attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-				url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-			/>
-			<MinimapControl position="topright" />
-			<Features />
-			<Zoomer />
-			<ViewerOnClick />
-			<ResetViewControl
-				title="Restartovat pohled"
-				icon="url(/assets/icons/repeat.svg)"
-			/>
-		</MapContainer>
-	);
+    return (
+        <MapContainer center={position} zoom={5} scrollWheelZoom={false}>
+            <TileLayer
+                attribution='&copy;
+                <a
+                href="https://www.openstreetmap.org/copyright">OpenStreetMap
+                </a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            <MinimapControl position="topright" />
+            <Features />
+            <Zoomer />
+            <ViewerOnClick />
+            <ResetViewControl
+                title="Restartovat pohled"
+                icon="url(/assets/icons/repeat.svg)"
+            />
+        </MapContainer>
+    );
 };
-	...
-	\end{verbatim}
+    ...
+    \end{verbatim}
 
 Nejdůležitější je komponenta \verb|Features|, která při svém počátečním načtení stahuje všechna geografická data lokalit z databáze a na základě aktivních filtrů je posléze přetváří do podoby mapových vrstev. Níže je viditelný TSX kód, v němž se přes všechna data prochází a transformují se do komponent \verb|FeatureGroup| a \verb|FeatureShape|. První z nich zajišťuje interaktivitu s uživatelem a nastavení barev mapové vrstvy pomocí javaScriptových událostí (\verb|click|, \verb|mouseover| a  \verb|mouseout| a druhá pak zpracovává konkrétní souřadnice a vykresluje z nich požadovaný tvar.
 
 \begin{verbatim}
+...
 return (
-		<>
-			{(featureCollection as FeatureCollection).features.map(
-				(feature: Feature, index: number) => (
-					<FeatureGroup
-						eventHandlers={{
-							click: () => {
-								map.setView(
-									zoomCoords(feature.geometry.coordinates),
-									zoom(map)
-								);
-								handleOnClick(feature);
-							},
-							mouseover: e => {
-								e.target.setStyle({ fillColor: theme.palette.feature.main });
-							},
-							mouseout: e => {
-								e.target.setStyle({ fillColor: theme.palette.feature.light });
-							}
-						}}
-						key={index}
-						pathOptions={{ color: theme.palette.feature.border }}
-					>
-						<FeatureShape
-							type={feature.geometry.type}
-							coordinates={feature.geometry.coordinates}
-							properties={feature.properties}
-							isMarker={zoomLevel < 8}
-						/>
-					</FeatureGroup>
-				)
-			)}
-			;
-		</>
-	\end{verbatim}
+        <>
+            {(featureCollection as FeatureCollection).features.map(
+                (feature: Feature, index: number) => (
+                    <FeatureGroup
+                        eventHandlers={{
+                            click: () => {
+                                map.setView(
+                                    zoomCoords(feature.geometry.coordinates),
+                                    zoom(map)
+                                );
+                                handleOnClick(feature);
+                            },
+                            mouseover: e => {
+                                e.target.setStyle(
+                                { fillColor: theme.palette.feature.main });
+                            },
+                            mouseout: e => {
+                                e.target.setStyle(
+                                { fillColor: theme.palette.feature.light });
+                            }
+                        }}
+                        key={index}
+                        pathOptions={{ color: theme.palette.feature.border }}
+                    >
+                        <FeatureShape
+                            type={feature.geometry.type}
+                            coordinates={feature.geometry.coordinates}
+                            properties={feature.properties}
+                            isMarker={zoomLevel < 8}
+                        />
+                    </FeatureGroup>
+                )
+            )}
+            ;
+        </>
+    \end{verbatim}
