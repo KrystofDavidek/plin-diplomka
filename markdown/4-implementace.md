@@ -22,7 +22,7 @@ Jelikož je naše aplikace založena na webovém frameworku React, drželi jsme 
 .2 utils.
 }
 
-Při tvorbě komponent jsme se snažili o co největší modularitu z hlediska funkcionalit jednotlivých částí. Níže uvádíme příklad komponenty \verb|Gallery|, která obsahuje logiku a UI pro obrázkovou galerii.
+Při tvorbě komponent jsme se snažili o co největší izolovanost z hlediska funkcionality. Níže uvádíme příklad komponenty \verb|Gallery|, která obsahuje logiku a UI pro obrázkovou galerii.
 
 Komponentu definujeme jako javaScriptovou funkci a za vstupní parametr (objekt *props*) vkládáme danou část dostupných dat typu \verb|GalleryProps| (jde o seznam názvů souborů a jejich případných popisků).
 
@@ -190,7 +190,9 @@ Složitěji se však muselo přistupovat k vytváření nových lokalit, protož
 
 V kódu přiloženém níže se tak nejprve validují vstupní data a posléze se abstrahují informace týkající se konkrétní *feature*. Geografická data je zapotřebí před nahráním do databáze poupravit (funkce \verb|serialize(feature);|), protože Cloud Firestore v tuto chvíli nepodporuje tento formát dat (stejným způsobem musí dojít i deserializaci, když feature naopak stahujeme).
 
-V dalším kroku je zapotřebí zjistit, zda se jedná o vytvoření nové lokality, nebo se upravuje již existující. V obou případech se přepisují všechna data, v případě, že záznam existuje, ID dokumentu s feature se využije k updatu existujícího záznamu.
+V dalším kroku je zapotřebí zjistit, zda se jedná o vytvoření nové lokality, nebo o úpravu již existující. V obou případech se přepisují všechna data. V případě, že záznam existuje, ID dokumentu s feature se využije k updatu existujícího záznamu.
+
+Také je zde prostřednictvím příkazů \verb|async| a \verb|await| řízena posloupnost asynchronních operací, protože 
 
 \begin{verbatim}
 	...
@@ -224,8 +226,72 @@ export const addNewEntry = async (entry: Entry) => {
 	...
 	\end{verbatim}
 
-Podobné implementační výzvy jsme v rámci práce s databází museli řešit i na jiných místech. Ku příkladu problematika nahráváním a odstraňování souborů na základě aktivit uživatele nebyla triviální záležitostí. Museli jsme se postarat o synchronizaci napříč názvy souborů u jednotlivých lokalit v Cloud Firestore a reálnými soubory v Cloud Storage. A zároveň se vypořádat s problémem odstraňování souborů při smazání celé lokace atd. 
+Podobné implementační výzvy jsme v rámci práce s databází museli řešit i na jiných místech. Ku příkladu problematika nahráváním a odstraňování souborů na základě aktivit uživatele nebyla triviální záležitostí. Museli jsme se postarat o synchronizaci napříč názvy souborů u jednotlivých lokalit v Cloud Firestore a reálnými soubory v Cloud Storage. A zároveň se vypořádat s problémem odstraňování souborů při smazání celé lokace apod. 
 
 ## Mapa
 
-Poslední 
+Mapová část byla implementována na základě komponenty \verb|MapContainer| z knihovny React Leaflet, jež se skládá z několika dílčích komponent. Pro využití OpenStreetMap byla využita část \verb|TileLayer| (taktéž z knihovny React Leaflet), zbytek podkomponent jsme implementovali vlastní cestou.
+
+\begin{verbatim}
+	...
+const MapWrapper = () => {
+	const [position] = useState<LatLngExpression>(latLng(49.1922443, 16.6113382));
+
+	return (
+		<MapContainer center={position} zoom={5} scrollWheelZoom={false}>
+			<TileLayer
+				attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+				url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+			/>
+			<MinimapControl position="topright" />
+			<Features />
+			<Zoomer />
+			<ViewerOnClick />
+			<ResetViewControl
+				title="Restartovat pohled"
+				icon="url(/assets/icons/repeat.svg)"
+			/>
+		</MapContainer>
+	);
+};
+	...
+	\end{verbatim}
+
+Nejdůležitější je komponenta \verb|Features|, která při svém počátečním načtení stahuje všechna geografická data lokalit z databáze a na základě aktivních filtrů je posléze přetváří do podoby mapových vrstev. Níže je viditelný TSX kód, v němž se přes všechna data prochází a transformují se do komponent \verb|FeatureGroup| a \verb|FeatureShape|. První z nich zajišťuje interaktivitu s uživatelem a nastavení barev mapové vrstvy pomocí javaScriptových událostí (\verb|click|, \verb|mouseover| a  \verb|mouseout| a druhá pak zpracovává konkrétní souřadnice a vykresluje z nich požadovaný tvar.
+
+\begin{verbatim}
+return (
+		<>
+			{(featureCollection as FeatureCollection).features.map(
+				(feature: Feature, index: number) => (
+					<FeatureGroup
+						eventHandlers={{
+							click: () => {
+								map.setView(
+									zoomCoords(feature.geometry.coordinates),
+									zoom(map)
+								);
+								handleOnClick(feature);
+							},
+							mouseover: e => {
+								e.target.setStyle({ fillColor: theme.palette.feature.main });
+							},
+							mouseout: e => {
+								e.target.setStyle({ fillColor: theme.palette.feature.light });
+							}
+						}}
+						key={index}
+						pathOptions={{ color: theme.palette.feature.border }}
+					>
+						<FeatureShape
+							type={feature.geometry.type}
+							coordinates={feature.geometry.coordinates}
+							properties={feature.properties}
+							isMarker={zoomLevel < 8}
+						/>
+					</FeatureGroup>
+				)
+			)}
+			;
+		</>
+	\end{verbatim}
