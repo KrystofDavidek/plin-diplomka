@@ -270,39 +270,38 @@ Nejdůležitější je komponenta \verb|Features|, která při svém počátečn
 \begin{verbatim}
 ...
 return (
-        <>
-            {(featureCollection as FeatureCollection).features.map(
-                (feature: Feature, index: number) => (
-                    <FeatureGroup
-                        eventHandlers={{
-                            click: () => {
-                                map.setView(
-                                    zoomCoords(feature.geometry.coordinates),
-                                    zoom(map)
-                                );
-                                handleOnClick(feature);
-                            },
-                            mouseover: e => {
-                                e.target.setStyle(
-                                { fillColor: theme.palette.feature.main });
-                            },
-                            mouseout: e => {
-                                e.target.setStyle(
-                                { fillColor: theme.palette.feature.light });
-                            }
-                        }}
-                        key={index}
-                        pathOptions={{ color: theme.palette.feature.border }}
-                    >
-                        <FeatureShape
-                            type={feature.geometry.type}
-                            coordinates={feature.geometry.coordinates}
-                            properties={feature.properties}
-                            isMarker={zoomLevel < 8}
-                        />
-                    </FeatureGroup>
-                )
-            )}
-            ;
-        </>
-    \end{verbatim}
+  <>
+    {(featureCollection as FeatureCollection).features.map(
+      (feature: Feature, index: number) => (
+        <FeatureGroup
+          eventHandlers={{
+            click: () => {
+                map.setView(
+                    zoomCoords(feature.geometry.coordinates),
+                    zoom(map)
+                );
+                handleOnClick(feature);
+            },
+            mouseover: e => {
+                e.target.setStyle(
+                { fillColor: theme.palette.feature.main });
+            },
+            mouseout: e => {
+                e.target.setStyle(
+                { fillColor: theme.palette.feature.light });
+            }
+          }}
+          key={index}
+          pathOptions={{ color: theme.palette.feature.border }}
+        >
+          <FeatureShape
+              type={feature.geometry.type}
+              coordinates={feature.geometry.coordinates}
+              properties={feature.properties}
+              isMarker={zoomLevel < 8}
+          />
+        </FeatureGroup>
+      )
+    ;
+  </>
+\end{verbatim}
