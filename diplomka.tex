@@ -36,6 +36,9 @@
 \usepackage{lscape}
 \usepackage{bashful}
 \usepackage{dirtree}
+\usepackage{etoolbox}
+\apptocmd{\dirtree}{\bigskip}{}{}
+\pretocmd{\dirtree}{\bigskip}{}{}
 
 \usepackage[hidelinks]{hyperref}
 
