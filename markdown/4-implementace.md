@@ -45,7 +45,9 @@ if (!dropZone.files[0]) return  <></>;
 	...
 \end{verbatim}
 
-Jelikož je komponenta \verb|Gallery| závislá na datech z externí databáze, musí nejprve proběhnout stáhnutí požadovaných souborů. To probíhá prostřednictvím jiného *hooku* \verb|useEffect|, který se vždy spouští při změně hodnoty proměnné, která je definovaná na konci funkce v takzvaném *dependency array*. Takto si komponenta na základě vstupních dat zavolá asynchronní funkci, z předchozí ukázky \verb|setNames| z hooku \verb|useAsyncFiles|, která izolovaně komunikuje s databází a přiřazuje výsledné URL adresy souborů do proměnné \verb|urls|. Výhodou tohoto principu je nezávislost komponent na aktuálně používaném řešení pro stahování dat.
+Jelikož je komponenta \verb|Gallery| závislá na datech z externí databáze, musí nejprve proběhnout stáhnutí požadovaných souborů. To probíhá prostřednictvím \verb|useEffect|, který se vždy spouští při změně hodnoty proměnné, která je definovaná na konci funkce v takzvaném *dependency array*.
+
+Takto si komponenta na základě vstupních dat zavolá asynchronní funkci \verb|setNames| z hooku \verb|useAsyncFiles| (ten je definován v předchozí ukázce), která izolovaně komunikuje s databází a přiřazuje výsledné URL adresy souborů do proměnné \verb|urls|. Výhodou tohoto principu je nezávislost komponent na aktuálně používaném řešení pro stahování dat.
 
 \begin{verbatim}
 ...
@@ -67,6 +69,37 @@ useEffect(() => {
   }
 }, [dropZone]);
 ...
+\end{verbatim}
+
+Po inicializaci proměnné \verb|urls| je pak její obsah vložen do stavu komponenty, která jej posléze vykreslí prostřednictvím příkazu \verb|return|.  
+
+\begin{verbatim}
+...
+return (
+		<>
+			<Text variant="h3" component="h1" text="Obrázky" />
+			{loading ? (
+				<LoadingSpinner
+					boxWidth="100%"
+					height="5rem"
+					width="5rem"
+					textAlign="center"
+					pt="2rem"
+					pb="10rem"
+				/>
+			) : (
+				<Box sx={{ mt: '3rem !important' }}>
+					<ImageGallery
+						lazyLoad
+						showPlayButton={false}
+						items={images as ReactImageGalleryItem[]}
+					/>
+				</Box>
+			)}
+
+			<Divider />
+		</>
+	);
 \end{verbatim}
 
 ## Stavy aplikace
