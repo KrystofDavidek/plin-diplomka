@@ -4,14 +4,22 @@ V poslední části této práce se zaměříme na implementační detaily webov
 
 ## Systém komponent
 
-Aplikace...
+Jelikož je naše aplikace založena na systému React komponet, museli zvolili jsme následující adresářovou strukturu.
 
 \dirtree{%
-.1 spam.
-.2 ham.
-.2 eggs.
-.3 more spam.
-.3 dead parrots.
+.1 src.
+.2 assets.
+.2 components.
+.3 Dialogs.
+.3 Entry.
+.3 Form.
+.3 Map.
+.2 contexts.
+.2 data.
+.2 hooks.
+.2 models.
+.2 pages.
+.2 utils.
 }
 
 ## Stavy aplikace
