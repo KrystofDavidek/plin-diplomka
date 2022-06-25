@@ -192,39 +192,40 @@ V kódu přiloženém níže se tak nejprve validují vstupní data a posléze s
 
 V dalším kroku je zapotřebí zjistit, zda se jedná o vytvoření nové lokality, nebo o úpravu již existující. V obou případech se přepisují všechna data. V případě, že záznam existuje, ID dokumentu s feature se využije k updatu existujícího záznamu.
 
-Také je zde prostřednictvím příkazů \verb|async| a \verb|await| řízena posloupnost asynchronních operací, protože 
+Také je zde prostřednictvím příkazů \verb|async| a \verb|await| řízena posloupnost asynchronních operací, protože při komunikaci s databází jsou informace vyměňovány standardně asynchronním způsobem.
 
 \begin{verbatim}
-	...
+    ...
 export const addNewEntry = async (entry: Entry) => {
-	const feature: Feature = JSON.parse(entry.feature) as Feature;
-	feature.properties.mainLocation = entry.location.mainLocation;
-	feature.properties.filters = entry.location.filters;
+    const feature: Feature = JSON.parse(entry.feature) as Feature;
+    feature.properties.mainLocation = entry.location.mainLocation;
+    feature.properties.filters = entry.location.filters;
 
-	feature.properties.secondaryLocation =
-		entry.location.secondaryLocation.length > 0
-			? entry.location.secondaryLocation
-			: '';
+    feature.properties.secondaryLocation =
+        entry.location.secondaryLocation.length > 0
+            ? entry.location.secondaryLocation
+            : '';
 
-	feature.properties.introImage =
-		entry.location.introImage.length > 0 ? entry.location.introImage : [];
+    feature.properties.introImage =
+        entry.location.introImage.length > 0 ? 
+        entry.location.introImage : [];
 
-	const firestoreFeature: FirestoreFeature = serialize(feature);
-	if (entry.id) {
-		firestoreFeature.id = entry.id;
-		await setDoc(doc(db, 'entries', entry.id), entry);
-		await setDoc(doc(db, 'features', entry.id), firestoreFeature);
-	} else {
-		const docRef = await addDoc(collection(db, 'entries'), entry);
-		firestoreFeature.id = docRef.id;
-		await updateDoc(docRef, {
-			id: docRef.id
-		});
-		await setDoc(doc(db, 'features', docRef.id), firestoreFeature);
-	}
+    const firestoreFeature: FirestoreFeature = serialize(feature);
+    if (entry.id) {
+        firestoreFeature.id = entry.id;
+        await setDoc(doc(db, 'entries', entry.id), entry);
+        await setDoc(doc(db, 'features', entry.id), firestoreFeature);
+    } else {
+        const docRef = await addDoc(collection(db, 'entries'), entry);
+        firestoreFeature.id = docRef.id;
+        await updateDoc(docRef, {
+            id: docRef.id
+        });
+        await setDoc(doc(db, 'features', docRef.id), firestoreFeature);
+    }
 };
-	...
-	\end{verbatim}
+    ...
+    \end{verbatim}
 
 Podobné implementační výzvy jsme v rámci práce s databází museli řešit i na jiných místech. Ku příkladu problematika nahráváním a odstraňování souborů na základě aktivit uživatele nebyla triviální záležitostí. Museli jsme se postarat o synchronizaci napříč názvy souborů u jednotlivých lokalit v Cloud Firestore a reálnými soubory v Cloud Storage. A zároveň se vypořádat s problémem odstraňování souborů při smazání celé lokace apod. 
 

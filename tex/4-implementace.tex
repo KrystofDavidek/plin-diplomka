@@ -196,7 +196,7 @@ V~kódu přiloženém níže se tak nejprve validují vstupní data a~posléze s
 
 V~dalším kroku je zapotřebí zjistit, zda se jedná o~vytvoření nové lokality, nebo o~úpravu již existující. V~obou případech se přepisují všechna data. V~případě, že záznam existuje, ID dokumentu s~feature se využije k~updatu existujícího záznamu.
 
-Také je zde prostřednictvím příkazů \verb|async| a~\verb|await| řízena posloupnost asynchronních operací, protože
+Také je zde prostřednictvím příkazů \verb|async| a~\verb|await| řízena posloupnost asynchronních operací, protože při komunikaci s~databází jsou informace vyměňovány standardně asynchronním způsobem.
 
 \begin{verbatim}
     ...
@@ -211,7 +211,8 @@ export const addNewEntry = async (entry: Entry) => {
             : '';
 
     feature.properties.introImage =
-        entry.location.introImage.length > 0 ? entry.location.introImage : [];
+        entry.location.introImage.length > 0 ? 
+        entry.location.introImage : [];
 
     const firestoreFeature: FirestoreFeature = serialize(feature);
     if (entry.id) {
