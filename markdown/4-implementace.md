@@ -1,6 +1,6 @@
 # Implementace
 
-V poslední části této práce se zaměříme na implementační detaily webové aplikace. Implementaci představíme ve čtyřech částech, z nichž se každá věnuje jiné obecnější oblasti nebo naopak konkrétní důležité funkcionalitě. V rozsahu této práce tak není komentovat kód jako celek, ten lze však nalézt jako přílohu přiloženou k této práci.
+V poslední části této práce se zaměříme na implementační detaily webové aplikace. Implementaci představíme ve čtyřech částech, z nichž se každá věnuje jiné buď obecnější oblasti nebo naopak konkrétnější funkcionalitě. V rozsahu této práce tak není komentovat kód jako celek – ten však lze dohledat jako přílohu přiloženou k této práci.
 
 ## Systém modulů a komponent
 
@@ -71,7 +71,7 @@ useEffect(() => {
 ...
 \end{verbatim}
 
-Po inicializaci proměnné \verb|urls| je pak její obsah vložen do stavu komponenty, která s ním posléze pracuje v JSX zápisu níže. Ten slouží pro deklaraci UI prvků a skládat se může jak z klasických HTML značek, tak v našem případě o elementy z UI knihovny Material UI\footnote{https://mui.com/}, která zajišťuje konzistentní vzhled napříč aplikací.
+Po inicializaci proměnné \verb|urls| je pak její obsah vložen do stavu komponenty, která s ním posléze pracuje v JSX (při využívání TypeScriptu TSX) zápisu níže. Ten slouží pro deklaraci UI prvků a skládat se může jak z klasických HTML značek, tak v našem případě o elementy z UI knihovny Material UI\footnote{https://mui.com/}, která zajišťuje konzistentní vzhled napříč aplikací.
 
 Na příkladu níže lze pěkně vidět deklarativní způsob zápisu – \verb|ImageGallery| (tedy jiná vložená komponenta) je vykreslena pouze v případě, pokud není aktivní proměnná \verb|loading|. Pokud aktivní je, vykreslí se komponenta načítání \verb|LoadingSpinner|, kterou jsme definovali na jiném místě aplikace.
 
@@ -106,7 +106,70 @@ return (
 	);
 \end{verbatim}
 
-## Stavy aplikace
+## Řízení stavu
+
+Komponenty si navzájem sice mohou vyměňovat libovolné množství dat, nicméně v okamžiku, kdy se stává aplikace komplexnější, je zapotřebí přistupovat k obecném stavu aplikace systematičtěji.
+
+Takovým příkladem v naší aplikaci mohou být aktivní filtry. Ty se sice nastavují na jednom konkrétním místě, jejich použití ale sahá do vícero různé zanořených komponent jako je komponenta s mapou či seznam lokalit ve vysouvacím panelu. Proto je zapotřebí mít tento stav mimo komponenty na určitém místě uložen.
+
+Pro tento účel v naší aplikaci používáme takzvaný *context*, který vychází přímo z Reactu. Před jeho použitím je ho zapotřebí definovat nastavením hodnot a jejich typů, jež má obsahovat. V tomto případě ukládáme aktivní filtry \verb|activeFilters|, funkci, která je přenastavuje \verb|setActiveFilters| a jednoduchou hodnotu znázorňující zapnuty/vypnutý stav \verb|isDisabled|.
+
+V rámci našeho contextu \verb|FilterContext| pak definujeme vlastní hook \verb|useFilter|, který má přístup do vytvořeného contextu. Ten pak právě využíváme jako vstup do daného stavu v jiných komponentách.
+
+\begin{verbatim}
+...
+type FilterContextType = {
+	activeFilters: EntryFilters;
+	setActiveFilters: Dispatch<SetStateAction<EntryFilters>>;
+	isDisabled: boolean;
+};
+
+const FilterContext = createContext<FilterContextType>(undefined as never);
+
+export const useFilter = () => useContext(FilterContext);
+...
+\end{verbatim}
+
+Vlastní tělo contextu nazýváme \verb|FilterProvider|, které drží stavy zapnutých filtrů apod. 
+
+\begin{verbatim}
+...
+export const FilterProvider = ({ children }: { children: JSX.Element }) => {
+	const [activeFilters, setActiveFilters] =
+		useState<EntryFilters>(defaultFilterState);
+	const [isDisabled, setDisabled] = useState<boolean>(true);
+
+	useEffect(() => {
+		setDisabled(isEqual(activeFilters, defaultFilterState));
+	}, [activeFilters]);
+
+	return (
+		<FilterContext.Provider
+			value={{
+				activeFilters,
+				setActiveFilters,
+				isDisabled
+			}}
+		>
+			{children}
+		</FilterContext.Provider>
+	);
+};
+\end{verbatim}
+
+Využití contextu pak může vypadat v jiné komponentě následovně.
+
+\begin{verbatim}
+...
+const FilterList = ({
+	setToggle
+}: {
+	setToggle: Dispatch<SetStateAction<boolean>>;
+}) => {
+	const { features } = useFeatures();
+	const { activeFilters, setActiveFilters } = useFilter(); 
+	...
+	\end{verbatim}
 
 ## Komunikace s databází
 
