@@ -473,3 +473,21 @@ Závěrečnou obrazovkou, jež zmíníme, je sekce *O projektu* (viz obrázek \r
 \end{figure}
 
 ### Responzivní design
+
+Jedním z nefunkčních požadavků na aplikaci je její multiplatformní povaha. To v praxi znamená, že by naše řešení mělo být funkční napříč zařízeními s různým rozlišením apod.
+
+Jelikož jsme jsme vyvíjeli webovou aplikaci, museli jsme tak brát ohled na zásady responzivního designu. Jedná se o způsob stylování HTML (primárně pomoci CSS, ale i JavaScriptu) pomocí různých flexibilních struktur (např. *grid*), jehož výsledkem má být optimální zobrazení na všech možných obrazovkách.
+
+Tento požadavek se nám povedlo naplnit (viz obrázky \ref{resA} a xxx), ačkoliv u administrace nepředpokládáme tak hojné využívání na menších zařízeních. Zároveň se u dotykových zařízení lehce mění způsob využívání některých komponent (např. mapa nebo obrázková galerie), které jsou tak uzpůsobeny na dotykovou interakci.
+
+\begin{figure}
+  \begin{subfigure}[b]{0.475\textwidth}
+    \includegraphics[width=0.95\textwidth]{res1}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.475\textwidth}
+    \includegraphics[width=0.95\textwidth]{res2}
+  \end{subfigure}
+  \caption{Responzivní zobrazení mapy a seznamu lokalit}
+  \label{resA}
+\end{figure}
