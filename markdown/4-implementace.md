@@ -160,13 +160,7 @@ export const FilterProvider = ({ children }: { children: JSX.Element }) => {
 Využití contextu pak může vypadat v jiné komponentě následovně.
 
 \begin{verbatim}
-...
-const FilterList = ({
-	setToggle
-}: {
-	setToggle: Dispatch<SetStateAction<boolean>>;
-}) => {
-	const { features } = useFeatures();
+	...
 	const { activeFilters, setActiveFilters } = useFilter(); 
 	...
 	\end{verbatim}
