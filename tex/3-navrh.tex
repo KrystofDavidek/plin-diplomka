@@ -3,7 +3,7 @@
 \hypertarget{analuxfdza-poux17eadavkux16f-na-aplikaci}{%
 \chapter{Analýza požadavků na aplikaci}\label{analuxfdza-poux17eadavkux16f-na-aplikaci}}
 
-V~praktické části této diplomové práce popisujeme výslednou webovou aplikaci\footnote{Výsledná aplikace je v~tuto chvíli plně funkční pod URL adresou https://czech-map.netlify.app.} pro geografické zmapování krajanských komunit a~jejich jazyka (dále jen aplikace). V~následujících kapitolách si ve stručnosti popíšeme související projekty, z~nichž jsme se při tvorbě více či méně inspirovali. Dále aplikaci představíme jak z~pohledu funkčních a~nefunkčních požadavků, tak z~hlediska návrhových a~implementačních částí.
+V~praktické části této diplomové práce popisujeme výslednou webovou aplikaci\footnote{Výsledná aplikace je v~tuto chvíli plně funkční pod URL adresou https://czech-map.netlify.app.} pro geografické zmapování krajanských komunit a~jejich jazyka (dále jen aplikace). V~následujících kapitolách si ve stručnosti popíšeme související projekty, z~nichž jsme se při tvorbě inspirovali. Dále aplikaci představíme jak z~pohledu funkčních a~nefunkčních požadavků, tak z~hlediska návrhových a~implementačních částí.
 
 \hypertarget{souvisejuxedcuxed-projekty}{%
 \section{Související projekty}\label{souvisejuxedcuxed-projekty}}
@@ -27,18 +27,18 @@ Tyto požadavky můžeme u~naší webové aplikace pro větší přehlednost roz
 
 Jedním z~nejdůležitějších nároků na aplikaci je vizualizace jednotlivých českých komunit po celém světě. Aplikace má tak disponovat samostatnou stránkou, v~rámci které budou dostupné mapové podklady celého světa. Na této mapě mají být pak prostřednictvím mapových vrstev vizualizovány konkrétní české enklávy. Pod mapovými vrstvami myslíme mnohoúhelníkové plochy, které mohou mít na mapě jakýkoliv tvar a~velikost podle potřeby vybrané komunity (geografická místa komunit v~aplikaci popisujeme jako lokality). Má být tak možné vizualizovat jak malé osady, tak celé regiony nebo státy -- vrstvy se též mohou jakýmkoliv způsobem překrývat.
 
-Zapotřebí je také zahrnout základní funkční požadavky, které se pojí s~obsluhou mapové aplikace. Jde o~možnosti oddalování, a~přibližování pohledu (spolu s~navráceném do výchozí pozice), navigaci na mapě pomocí posouvání kurzoru klikání myší/dotykem anebo prostřednictvím minimapy zobrazující vždy širší kontext vybraného pohledu. Další důležitou mapovou funkcí je vyhledávání lokalit na mapě. Aplikace má umožňovat přiblížení na danou mapovou vrstvu na základě výběru ve vyhledávacím poli.
+Zapotřebí je také zahrnout základní funkční požadavky, které se pojí s~obsluhou mapové aplikace. Jde o~možnosti oddalování, a~přibližování pohledu (spolu s~navráceném do výchozí pozice), navigaci na mapě pomocí posouvání kurzoru, klikání myší/dotykem anebo prostřednictvím minimapy zobrazující vždy širší kontext vybraného pohledu. Další důležitou funkcí je vyhledávání lokalit. Aplikace má umožňovat přiblížení na danou mapovou vrstvu na základě výběru ve vyhledávacím poli.
 
-Zacílení lokalit má být umožněno i~jiným způsobem, než vyhledáváním v~mapových podkladech. Z~toho důvodu má aplikace disponovat výčtem lokalit, které budou dostupné z~mapové stránky prostřednictvím levé vysouvací části obrazovky. Tato sekce má sloužit jako přehledný abecedně seřazený seznam všech dostupných krajanských komunit (spolu s~úvodním obrázkem a~sekundárních názvem), z~něhož je možné lokalitu buď zacílit na mapě, anebo rovnou zobrazit její detail.
+Zacílení lokalit má být umožněno i~jiným způsobem než vyhledáváním v~mapových podkladech. Z~toho důvodu má aplikace disponovat výčtem lokalit, které budou dostupné z~mapové stránky prostřednictvím levé vysouvací části obrazovky. Tato sekce má sloužit jako přehledný abecedně seřazený seznam všech dostupných krajanských komunit (spolu s~úvodním obrázkem a~sekundárních názvem), z~něhož je možné lokalitu buď zacílit na mapě, anebo rovnou zobrazit její detail.
 
 Posledním funkčním požadavkem souvisícím s~geografickou složkou je možnost filtrování lokalit na základě vybraných metrik (tyto metriky rozvedeme v~kapitole týkající se dat viz XXX). Tato funkce se má nacházet v~sekci se seřazenými komunitami a~po označení libovolného počtu filtrů se mají z~výběru i~z~mapových podkladů vyfiltrovat takové lokality, jež splňují danou podmínku.
 
 \hypertarget{vizualizace-detailnuxedch-informacuxed-vybranuxe9-komunity}{%
 \subsubsection{Vizualizace detailních informací vybrané komunity}\label{vizualizace-detailnuxedch-informacuxed-vybranuxe9-komunity}}
 
-Druhým významným požadavkem na naši aplikaci je uživatelky přívětivá vizualizace všech dostupných informací, které se týkají vybrané krajanské komunity. Jelikož mohou být tyto informace rozličné velikosti a~multimediální povahy (audio soubory, obrázky, videa a~textové informace) je zapotřebí, aby v~aplikaci existoval sekundární navigační systém. Tato druhotná navigace má zajistit přehlednost při průchodu vybranou lokalitou a~umožnit tak uživateli výběr konkrétní části.
+Druhým významným požadavkem na naši aplikaci je uživatelsky přívětivá vizualizace všech dostupných informací, které se týkají vybrané krajanské komunity. Jelikož mohou být tyto informace rozličné velikosti a~multimediální povahy (audio soubory, obrázky, videa a~textové informace) je zapotřebí, aby v~aplikaci existoval sekundární navigační systém. Tato druhotná navigace má zajistit přehlednost při průchodu vybranou lokalitou a~umožnit tak uživateli výběr konkrétní části.
 
-Jak bylo výše naznačeno, cílem našeho řešení je zmapovat ukázky komunikace v~češtině a~prostřednictvím audio nahrávek a~jejich transkriptů přiblížit jazyk dané české komunity. Požadavkem je tak také vhodné propojení audio souborů s~jejich přepisy.
+Jak bylo výše naznačeno, cílem našeho řešení je zmapovat ukázky komunikace v~češtině a~prostřednictvím audio nahrávek a~jejich transkriptů přiblížit jazyk dané české komunity. Požadavkem je také vhodné propojení audio souborů s~jejich přepisy.
 
 Sekundárním požadavkem v~této oblasti je možnost sdílení vybrané lokality prostřednictvím URL adresy pro případnou kolaboraci při práci s~jednou určitou českou enklávou.
 
@@ -49,14 +49,14 @@ Poslední kategorií jsou funkční požadavky spojené s~celkovou administrací
 
 Z~tohoto důvodu má aplikace obsahovat podstránky, které nebudou běžnému uživateli přístupné -- vzniká tak požadavek na autentifikaci prostřednictvím e-mailu a~hesla. Po úspěšném přihlášení by se měl celý systém přeměnit do editačního módu, respektive nabízet přihlášenému uživateli vždy kromě vstupu do jednotlivých lokalit i~možnost přesunu do administrativní části.
 
-Ta by měla sestávat ze stejných sekcí, jako u~detailu vybrané komunity. Navíc by však by měla obsahovat uživatelsky přívětivou část formuláře podle formátu dané části informací (např. pro vkládání textových informací textový editor, pro vkládání souborů speciální komponentu). Druhotným požadavkem je pak základní validace vstupních data, tedy kontrola, že má každá lokalita vyplněný alespoň hlavní název a~geografická data pro zobrazení na mapě (viz xxx).
+Ta by měla sestávat ze stejných sekcí, jako u~detailu vybrané komunity. Navíc by však by měla obsahovat uživatelsky přívětivou část formuláře podle formátu dané části informací (např. pro vkládání textových informací textový editor, pro vkládání souborů speciální komponentu). Druhotným požadavkem je základní validace vstupních data, tedy kontrola, že má každá lokalita vyplněný alespoň hlavní název a~geografická data pro zobrazení na mapě (viz xxx).
 
 S~administrací tak nutně souvisí i~požadavek na persistenci dat, tzn. potřeba ukládat data na vzdálenou databázi, aby byly informace pro všechny uživatele konzistentní a~aktualizované.
 
 \hypertarget{nefunkux10dnuxed-poux17eadavky}{%
 \subsection{Nefunkční požadavky}\label{nefunkux10dnuxed-poux17eadavky}}
 
-Pod nefunkčními požadavky si lze představit určitá omezení na design a~implementaci aplikace. Zde se jedná například o~volbu technologií, míru bezpečnosti, důraz na výkon či udržitelnost do budoucna atd. V~závěru se však vždy jedná o~určitý kompromis napříč jednotlivými faktory (např. vysoký výkon vs.~udržitelnost)~\parencite{Gorton2006}.
+Pod nefunkčními požadavky si lze představit určitá omezení na design a~implementaci aplikace. Jedná se například o~volbu technologií, míru bezpečnosti, důraz na výkon či udržitelnost do budoucna atd. V~závěru se však vždy jedná o~určitý kompromis napříč jednotlivými faktory (např. vysoký výkon vs.~udržitelnost)~\parencite{Gorton2006}.
 
 Hlavním nefunkčním požadavkem je, aby byl náš systém realizován jako webová aplikace, protože lze tak efektivně docílit k~multiplatformnímu výsledku. Z~tohoto faktu vyplývá potřeba responzivního řešení, tedy aby byla aplikace stejně funkční a~vzhledově atraktivní jak na zařízeních s~vyšším rozlišením, tak i~na menších obrazovkách. Dalším implicitním požadavkem je tím pádem i~nutnost internetového připojení.
 
@@ -83,7 +83,7 @@ I~přes to, že je svět webových technologií jednou z~nejdynamičtěji rozví
 
 Prostřednictvím značek tohoto jazyka dáváme jednotlivým částem dokumentu strukturální významy. Mohou to být například značky pro označení odstavce, odkazů nebo třeba tabulek či videí. Některé značky sice mohou vyvolat změny vzhledu dané části dokumentu, nicméně pro tyto účely HTML není primárně určeno~\parencite{htmlcss}.
 
-Abychom mohli upravit vzhled webové stránky, je zapotřebí využít druhé základní technologie, a~to CSS (Cascading Style Sheets). Jedná se o~jazyk, pomocí kterého lze konkrétním HTML značkám přiřazovat předdefinované vlastnosti, a~tak jim měnit vzhled dle potřeb. Typicky může jít o~změny barvy, velikosti, fontů, ale i~třeba o~implementaci složitějších animací, přechodů atd.~\parencite{htmlcss}.
+Abychom mohli upravit vzhled webové stránky, je zapotřebí využít druhé základní technologie, a~to CSS (Cascading Style Sheets). Jedná se o~jazyk, pomocí kterého lze konkrétním HTML značkám přiřazovat předdefinované vlastnosti, a~tak jim měnit vzhled dle potřeby. Typicky může jít o~změny barvy, velikosti, fontů, ale i~třeba o~implementaci složitějších animací, přechodů atd.~\parencite{htmlcss}.
 
 HTML a~CSS lze od sebe izolovat do dvou či více separátních souborů, což je standardní způsob jak efektivně oddělit vizuální složku od strukturální.
 
@@ -94,14 +94,14 @@ Aby JavaScript a~CSS mohly přistupovat k~jednotlivým částem HTML, dochází 
 \hypertarget{pux159uxedstupy-k-vykreslovuxe1nuxed-webovuxfdch-struxe1nek}{%
 \subsection{Přístupy k~vykreslování webových stránek}\label{pux159uxedstupy-k-vykreslovuxe1nuxed-webovuxfdch-struxe1nek}}
 
-Při výběru dalších technologií pro vývoj webové aplikace si je zapotřebí nejdříve uvědomit, jakou strategii vykreslování bude naše aplikace naplňovat.
+Při výběru dalších technologií pro vývoj webové aplikace si je zapotřebí nejdříve uvést, jakou strategii vykreslování bude naše aplikace naplňovat.
 
 \hypertarget{dynamickuxe9-webovuxe9-struxe1nky}{%
 \subsubsection{Dynamické webové stránky}\label{dynamickuxe9-webovuxe9-struxe1nky}}
 
 Jednou z~nejčastějších strategií je dynamické vykreslování stránek. Jedná se o~princip, kdy je webová stránka (tedy HTML s~CSS a~JavaScriptem) se všemi potřebnými informacemi dynamicky vytvořena na vzdáleném serveru. Prohlížeč (jinými slovy klient) tak na základě akce od uživatele pošle na server takzvaný \emph{request} a~server vygenerovanou webovou stránku obratem pošle nazpět.
 
-Výhodou toho přístupu je fakt, že klient dostane už kompletní dokument se všemi potřebnými informacemi (což je výhodné z~hlediska SEO\footnote{Search engine optimization (SEO) je proces optimalizace viditelnosti webových stránek v~rámci internetových vyhledávačů jako je např. Google. Čím lepší je SEO, tím je pravděpodobnější, že se daná webová stránka objeví na vyšších příčkách při vyhledávání.}). Neméně důležitým přínosem je pak to, že se veškerá logika děje na serveru (který je typicky výkonnější než klient, prohlížeč akorát vykresluje výsledek.
+Výhodou toho přístupu je fakt, že klient dostane už kompletní dokument se všemi potřebnými informacemi (což je výhodné z~hlediska SEO\footnote{Search engine optimization (SEO) je proces optimalizace viditelnosti webových stránek v~rámci internetových vyhledávačů jako je např. Google. Čím lepší je SEO, tím je pravděpodobnější, že se daná webová stránka objeví na vyšších příčkách při vyhledávání.}). Neméně důležitým přínosem je pak to, že se veškerá logika děje na serveru (který je typicky výkonnější než klient), prohlížeč akorát vykresluje výsledek.
 
 Na druhou stranu lze vidět i~nevýhodu primárně v~opakovaném generování každé stránky při opětovné návštěvě, což může být problém při pomalejším internetovém připojení. Komplikovanější též může být vývoj samotných aplikací, protože vývojář musí znát jak HTML, CSS a~JavaScript (souhrnně frontend), tak technologie spojené se serverovou částí (práce s~databází atd.). protože jsou na sebe obě složky na serveru nutně navázané~\parencite{spa}.
 
@@ -131,7 +131,7 @@ V~dnešní době jsou navíc populární takzvané generátory statických strá
 
 Posledním populárním přístupem jsou takzvané Single Page Applications (SPA), jejichž princip je přesně opačný od dynamických webových stránek. Klient sice také musí poslat request na server, nicméně ten vrací vždy jeden stejný HTML soubor s~velkým množství přidruženého javaScriptového kódu. JavaScript pak v~prohlížeči upravuje samotný DOM HTML souboru do výsledné podoby pro vykreslení.
 
-Díky této strategii jsou webové stránky tohoto typu vysoce uživatelsky přívětivé, protože se veškeré vizuální změny dějí na klientovi. Pokud je tedy zapotřebí například stáhnout data z~databáze, JavaScript změní DOM do určité formy vizuálně přívětivého načítání nebo umožní data stahovat v~pozadí a~uživatel se může v~aplikace dál pohybovat. V~předchozích případech případech by návštěvník webu musel čekat, až se všechny změny provedou na serverové části.
+Díky této strategii jsou webové stránky tohoto typu vysoce uživatelsky přívětivé, protože se veškeré vizuální změny dějí na klientovi. Pokud je tedy zapotřebí například stáhnout data z~databáze, JavaScript změní DOM do určité formy vizuálně přívětivého načítání nebo umožní data stahovat v~pozadí a~uživatel se může v~aplikace dál pohybovat. V~předchozích případech by návštěvník webu musel čekat, až se všechny změny provedou na serverové části.
 
 Tento přístup má dvě základní nevýhody. Zaprvé může být v~některých případech pro prohlížeč náročné zpracovat všechny javaScriptové instrukce pro vygenerování výsledného HTML (zvláště, pokud jsou SPA neefetkivně napsané nebo uživatel používá starší zařízení / má pomalejší připojení). Druhým problémem bývá již zmíněné SEO -- iniciální HTML soubor totiž obsahuje malé množství metadat a~dalších informací o~stránce (jelikož ještě neproběhlo generování JavaScriptem) a~pro prohlížeč se webová stránka nemusí jevit důvěryhodně a~přiřazuje ji tak menší váhu při vyhledávání~\parencite{spa}.
 
@@ -157,7 +157,7 @@ React je založen na deklarativním vývoji uživatelského rozhraní. Vývojá�
 
 Druhou významnou vlastností Reactu je přístup založený na komponentách. Jedná se o~opakovaně použitelné části UI (tzn. i~samotného naprogramovaného kódu), které jsou hierarchicky strukturované buď podle využití v~aplikaci (např. adresář s~komponentou pro přihlášení \emph{Login} bude obsahovat soubor podkomponenty pro tlačítko \emph{LoginButton}), nebo podle obecně sdílených funkcionalit (všechny komponenty tlačítek v~aplikaci budou ve vlastní složce \emph{Buttons}). Data, na kterých jsou závislé jednotlivé stavy, lze mezi komponentami předávám prostřednictvím objektu s~názvem \emph{props}.
 
-React namísto klasického stromové objektu DOM (viz XXX) využívá koncept virtuálního DOM (virtual Document Object Model). Jedná se o~speciální objektovou strukturu uloženou v~mezipaměti prohlížeče, která umožňuje efektivněji synchronizovat změny v~UI s~daným stavem aplikace. Zjednodušeně řečeno jde o~odlehčenou verzi DOM, s~níž je na úrovni klienta jednodušší na úrovni klienta manipulovat a~přizpůsobovat akcím od uživatele.
+React namísto klasického stromové objektu DOM (viz XXX) využívá koncept virtuálního DOM (virtual Document Object Model). Jedná se o~speciální objektovou strukturu uloženou v~mezipaměti prohlížeče, která umožňuje efektivněji synchronizovat změny v~UI s~daným stavem aplikace. Zjednodušeně řečeno jde o~odlehčenou verzi DOM, s~níž lze na úrovni klienta jednodušeji manipulovat a~přizpůsobovat akcím od uživatele.
 
 Posledním důležitým specifikem tohoto webového frameworku je využívání jazyka JSX, který je doporučován pro zápis komponent. JSX je svojí syntaxí nadstavbou JavaScriptu a~kombinuje strukturní značky, které známe z~HTML s~javaScriptovými konstrukcemi pro práci s~proměnnými a~funkcemi/metodami.
 
@@ -176,7 +176,7 @@ Hlavní součástí aplikace je vizualizace jednotlivých českých komunit po c
 \hypertarget{openstreetmap}{%
 \subsubsection{OpenStreetMap}\label{openstreetmap}}
 
-Za mapové podklady jsme vybrali volně editovatelné a~otevřené topografické mapy OpenStreetMap. Jedná se o~projekt, který vznikl v~roce 2004 jako protiváha proti tehdejším proprietárním řešením. Byl inspirován úspěchem wikipedie a~jeho cílem je distribuovat volně dostupná geografická data jak pro nekomerční, tak komerční účely~\parencite{open-street}. Z~těchto důvodu jsme OpenStreetMap vybrali i~do naší aplikace.
+Za mapové podklady jsme vybrali volně editovatelné a~otevřené topografické mapy OpenStreetMap. Jedná se o~projekt, který vznikl v~roce 2004 jako protiváha proti tehdejším proprietárním řešením. Byl inspirován úspěchem Wikipedie a~jeho cílem je distribuovat volně dostupná geografická data jak pro nekomerční, tak komerční účely~\parencite{open-street}. Z~těchto důvodu jsme OpenStreetMap vybrali i~do naší aplikace.
 
 \hypertarget{leaflet}{%
 \subsubsection{Leaflet}\label{leaflet}}
@@ -197,14 +197,14 @@ Detailní tvorba \emph{features} ve formátu GeoJSON může být v~textovém edi
 \hypertarget{firebase}{%
 \subsection{Firebase}\label{firebase}}
 
-Z~funkčních požadavků dále vyplývá potřeba ukládat data na vzdálenou databázi, aby byly informace pro všechny uživatele konzistentní a~aktualizované. Pro naplnění tohoto nároku jsme se rozhodli vybrat platformu Firebase od firmy Google, která nabízí předpřipravená cloudová řešení pro backendovou část (správa databáze a~autentifikace atd.) mobilních a~webových aplikací~\parencite{firebase}. Pro naše potřeby jsme využili tři nástroje popsané níže.
+Z~funkčních požadavků dále vyplývá potřeba ukládat data na vzdálenou databázi, aby byly informace pro všechny uživatele konzistentní a~aktualizované. Pro naplnění tohoto nároku jsme se rozhodli vybrat platformu Firebase od firmy Google, která nabízí předpřipravená cloudová řešení pro backendovou část (správa databáze a~autentifikace atd.) u~mobilních a~webových aplikací~\parencite{firebase}. Pro naše potřeby jsme využili tři nástroje popsané níže.
 
 \hypertarget{firebase-authentication}{%
 \subsubsection{Firebase Authentication}\label{firebase-authentication}}
 
-Firebase Authentication je služba, která poskytuje komplexní řešení autentifikace v~souladu se základními standardy jako jsou OAuth 2.0 and OpenID. Výhodou tohoto řešení je její integrace i~do ostatních Firebase produktů, je tedy možné např. nastavovat práva pro konkrétní přihlášené/nepřihlášené uživatele týkající se zápisu do Cloud Firestore databáze.
+Firebase Authentication je služba, která poskytuje komplexní řešení autentifikace v~souladu se základními standardy, jako jsou OAuth 2.0 and OpenID. Výhodou tohoto řešení je její integrace i~do ostatních Firebase produktů, je tedy možné např. nastavovat práva pro konkrétní přihlášené/nepřihlášené uživatele týkající se zápisu do Cloud Firestore databáze.
 
-Nástroj nabízí registraci a~přihlašování přes různé poskytovatele jako jsou Facebook, Google anebo Twitter, my ale využíváme klasického přihlášení přes e-mail a~heslo. V~této verzi aplikace nemá uživatel možnost vlastní registrace, protože administrační část je otevřena pouze ověřeným editorům krajanských komunit~\parencite{auth}.
+Nástroj nabízí registraci a~přihlašování přes různé poskytovatele, jako jsou Facebook, Google anebo Twitter, my ale využíváme klasického přihlášení přes e-mail a~heslo. V~této verzi aplikace nemá uživatel možnost vlastní registrace, protože administrační část je otevřena pouze ověřeným editorům krajanských komunit~\parencite{auth}.
 
 \hypertarget{cloud-firestore}{%
 \subsubsection{Cloud Firestore}\label{cloud-firestore}}
@@ -229,7 +229,7 @@ Zároveň platí, že všechny zmíněné složky lze v~administrativní části
 \begin{itemize}
 \tightlist
 \item
-  \textbf{Název hlavní lokality} -- jedná se o~unikátní název, bez kterého nelze lokalitu vytvořit. Podle tohoto hlavního názvu je komunit tříděna v~seznamu komunit lokalit;
+  \textbf{Název hlavní lokality} -- jedná se o~unikátní název, bez kterého nelze lokalitu vytvořit. Podle hlavního názvu je komunita tříděna v~seznamu lokalit;
 \item
   \textbf{Název sekundární lokality } -- doplňující název pro vyšší správní jednotky, tedy pro region, kraj nebo stát;
 \item
@@ -277,7 +277,7 @@ Zároveň platí, že všechny zmíněné složky lze v~administrativní části
 \begin{itemize}
 \tightlist
 \item
-  \textbf{Autor fotografií/obrázků} -- jméno a~a~případně odkaz na autora obrázků a~fotografií;
+  \textbf{Autor fotografií/obrázků} -- jméno a~případně odkaz na autora obrázků a~fotografií;
 \item
   \textbf{Obrázky} -- libovolné množství fotografií a~dalších ilustračních obrázků dané české komunity spolu s~krátkými popisky;
 \item
@@ -285,7 +285,7 @@ Zároveň platí, že všechny zmíněné složky lze v~administrativní části
 \item
   \textbf{Videa} -- libovolné množství odkazů na videa o~komunitě spolu s~popisky;
 \item
-  \textbf{Texty} -- prostor na ukázky textových materiálů jako jsou úryvky z~knih, místních časopisů atd.;
+  \textbf{Texty} -- prostor na ukázky textových materiálů, jako jsou úryvky z~knih, místních časopisů atd.;
 \item
   \textbf{Ostatní} -- sekce na doplňující informace, které se nehodily umístit nikam jinam.
 \end{itemize}
@@ -296,7 +296,7 @@ Zároveň platí, že všechny zmíněné složky lze v~administrativní části
 \begin{itemize}
 \tightlist
 \item
-  \textbf{Projekty} -- informace o~existujících projektech související s~vybranou lokalitou;
+  \textbf{Projekty} -- informace o~existujících projektech, jež souvisejí s~vybranou lokalitou;
 \item
   \textbf{Nabídky} -- vyjmenování případných nabídek spolupráce či jiných participací s~komunitou;
 \item
@@ -495,13 +495,13 @@ Zároveň platí, že všechny zmíněné složky lze v~administrativní části
 
 V~následující podkapitole si na konkrétních ukázkách z~aplikace představíme průchod uživatelským rozhraním se zřetelem na nejdůležitější interakční prvky. Návrh celého rozhraní vychází z~funkčních požadavků.
 
-Zároveň je zapotřebí dodat, jsou v~době psaní této práce v~aplikaci přítomny dva kompletní záznamy krajanských komunit (Šumice a~Kirillovka), na nichž budeme demonstrovat funkčnost aplikace.
+Zároveň je zapotřebí dodat, že jsou v~době psaní této práce v~aplikaci přítomny dva kompletní záznamy krajanských komunit (Šumice a~Kirillovka), na nichž budeme demonstrovat funkčnost aplikace.
 
-Na každé stránce aplikace je v~horní části umístěné statické navigační menu, přes které se uživatel může dostat do jednotlivých části. Respektive pokud uživatel není přihlášen, vyskytuje se na konci panelu tlačítko pro přihlášení, v~případě že přihlášen je, se může pomocí návodné ikony odhlásit.
+Na každé stránce aplikace je v~horní části umístěné statické navigační menu, přes které se uživatel může dostat do jednotlivých částí. Respektive pokud uživatel není přihlášen, vyskytuje se na konci panelu tlačítko pro přihlášení, v~případě že přihlášen je, se může pomocí návodné ikony odhlásit.
 
-Vstupní částí aplikace je stránka s~mapou (viz obrázek \ref{mapa}), na níž jsou při defaultní pozici mapy vidět bodově označené lokality. V~mapové části se je možné pohybovat standardním způsobem a~pro navrácení pozice mapy do výchozího stavu lze využít tlačítko pod tlačítkem oddálení. Taktéž je v~pravém horním rohu umístěna mini mapa pro přehlednější orientaci.
+Vstupní částí aplikace je stránka s~mapou (viz obrázek \ref{mapa}), na níž jsou při defaultní pozici mapy vidět bodově označené lokality. V~mapové části se uživatel může pohybovat standardním způsobem a~pro navrácení pozice mapy do výchozího stavu lze využít tlačítko pod tlačítkem oddálení. Taktéž je v~pravém horním rohu umístěna miniaturní verze mapy pro přehlednější orientaci.
 
-Práci s~mapou navíc usnadňuje vyhledávač, který má dvě hlavní funkce. Uživatel po jeho nakliknutí ihned uvidí všechny dostupné lokality českých komunit, nemusí je tak složitě zjišťovat ze seznamu a~vepisovat jejich jména (po výběru je pohled mapy ihned přesunut na vybranou lokalitu. Vyhledávač také umožňuje měnit výsek mapy na jakékoliv lokace, města a~regiony, které jsou v~běžných mapách dostupné (tato funkce navíc funguje napříč jazyky -- např. pohled mapy se přesune nad Paříž, pokud napíšeme do vyhledávače Paris, tak i~českou variantu Paříž).
+Práci s~mapou navíc usnadňuje vyhledávač, který má dvě hlavní funkce. Uživatel po jeho nakliknutí ihned uvidí všechny dostupné lokality českých komunit, nemusí je tak složitě zjišťovat ze seznamu a~vepisovat jejich jména (po výběru je pohled mapy ihned přesunut na vybranou lokalitu). Vyhledávač také umožňuje měnit výsek mapy na jakékoliv lokace, města a~regiony, které jsou v~běžných mapách dostupné (tato funkce navíc funguje napříč jazyky -- např. pohled mapy se přesune nad Paříž, pokud napíšeme do vyhledávače Paris, tak i~českou variantu Paříž).
 
 \begin{figure}
     \centering
@@ -510,7 +510,7 @@ Práci s~mapou navíc usnadňuje vyhledávač, který má dvě hlavní funkce. U
     \label{mapa}
 \end{figure}
 
-Výčet dostupných lokalit se zobrazuje prostřednictvím tlačítka menu na levé části navigačního panelu. Tímto způsobem se zobrazí vysouvací postranní sekce s~abecedně seřazenými lokalitami podle aplikovaných filtrů (ve výchozím stavu bez omezení) (viz obrázek \ref{mapa-2}).
+Výčet dostupných lokalit se zobrazuje prostřednictvím tlačítka menu v~levé části navigačního panelu. Tímto způsobem se zobrazí vysouvací postranní sekce s~abecedně seřazenými lokalitami podle aplikovaných filtrů (ve výchozím stavu bez omezení) (viz obrázek \ref{mapa-2}).
 
 \begin{figure}  
     \centering
@@ -537,9 +537,9 @@ Po výběru daných filtrů si uživatel může povšimnout okamžitě projeven�
     \label{filtr2}
 \end{figure}
 
-Pro přiblížení na konkrétní krajanskou komunitu na mapě lze využít buď tlačítko \emph{zobrazit na mapě} u~vybrané lokality (pokud je uživatel přihlášen, ja na tomto místě navíc umístěna ikona nastavení pro přechod na stránku s~administrací), případně kliknout na modrou značku, která je zobrazená na mapě. Po jednoduché animaci je pohled mapy zacílen na danou mapovou vrstvu (viz obrázek \ref{cil-mapa}).
+Pro přiblížení na konkrétní krajanskou komunitu na mapě lze využít buď tlačítko \emph{Zobrazit na mapě} u~vybrané lokality (pokud je uživatel přihlášen, ja na tomto místě navíc umístěna ikona nastavení pro přechod na stránku s~administrací), případně kliknout na modrou značku, která je zobrazená na mapě. Po jednoduché animaci je pohled mapy zacílen na danou mapovou vrstvu (viz obrázek \ref{cil-mapa}).
 
-Pokud by se vedle sebe nacházelo větší množství lokalit, lze je od sebe navzájem rozlišit po najetí myši na mapovou vrstvu -- vypíše se tak hlavní název komunity. Po kliknutí na mapovou vrstvu se zobrazí modální okno s~hlavním a~vedlejším názvem, případně s~úvodním obrázkem a~s~dalšími akcemi jako jsou \emph{Upravit lokalitu} (v~případě přihlášení), \emph{Zpátky} a~\emph{Přejít na lokalitu}.
+Pokud by se vedle sebe nacházelo větší množství lokalit, lze je od sebe navzájem rozlišit po najetí myši na mapovou vrstvu -- vypíše se tak hlavní název komunity. Po kliknutí na mapovou vrstvu se zobrazí modální okno s~hlavním a~vedlejším názvem, případně s~úvodním obrázkem a~s~dalšími akcemi, jako jsou \emph{Upravit lokalitu} (v~případě přihlášení), \emph{Zpátky} a~\emph{Přejít na lokalitu}.
 
 \begin{figure} 
     \centering
@@ -568,9 +568,9 @@ V~druhé sekci můžeme najít audio nahrávku a~další informace, jež s~ní s
 
 Třetí část se skládá z~multimediálního obsahu. Pro zobrazení fotografií jsme vybrali uživatelsky přívětivou podobu obrázkové galerie, která v~sobě obsahuje náhled na všechny obrázkové soubory (viz obrázek \ref{media}). Také je zde možnost zobrazení na celou obrazovku nebo přepínání obrázků pomocí šípek na klávesnici. V~této sekci se taktéž případně nachází další audio nahrávky, přiložená videa ve formě vloženého YouTube přehrávače či libovolné množství textových materiálů.
 
-Poslední oddílem je část \emph{Ostatní}, kde je prostor na jakékoliv dodatečné textové informace jakou jsou projekty, nabídky, atrakce, zajímavosti (viz obrázek \ref{ostatni}). Zároveň je zde místo pro výpis použitých zdrojů a~název autora, který tento záznam vytvořil.
+Poslední oddílem je část \emph{Ostatní}, kde je prostor na jakékoliv dodatečné textové informace, jakou jsou projekty, nabídky, atrakce, zajímavosti (viz obrázek \ref{ostatni}). Zároveň je zde místo pro výpis použitých zdrojů a~název autora, který tento záznam vytvořil.
 
-Užitečným detailem je v~tomto kontextu ještě sdílení vybrané lokality prostřednictvím jejího URL odkazu na jiné zařízení (v~tomto případě tedy např. https://czech-map.netlify.app/location/Šumice). Aplikace podle názvu v~URL odkazu rozpozná danou komunitu a~stáhne si ze vzdálené databáze všechna potřebná data.
+Užitečným detailem je v~tomto kontextu sdílení vybrané lokality prostřednictvím jejího URL odkazu na jiné zařízení (v~tomto případě tedy např. https://czech-map.netlify.app/location/Šumice). Aplikace podle názvu v~URL odkazu rozpozná danou komunitu a~stáhne si ze vzdálené databáze všechna potřebná data.
 
 \begin{figure}  
     \centering
@@ -586,7 +586,7 @@ Užitečným detailem je v~tomto kontextu ještě sdílení vybrané lokality pr
     \label{ostatni}
 \end{figure}
 
-Administraci lze otevřít až po úspěšném přihlášení, to zle provést na stránce \emph{Přihlášení} (viz obrázek \ref{login}) prostřednictvím přiřazeného e-mailu a~hesla. Uživatel v~tuto chvíli nemá možnost účet založit, pro editory krajanských komunit budou v~této fázi údaje zpřístupněny po vzájemné dohodě.
+Administraci lze otevřít až po úspěšném loginu na stránce \emph{Přihlášení} (viz obrázek \ref{login}) prostřednictvím přiřazeného e-mailu a~hesla. Uživatel v~tuto chvíli nemá možnost účet založit, pro editory krajanských komunit budou v~této fázi údaje zpřístupněny po případné domluvě.
 
 \begin{figure}
     \centering
@@ -599,7 +599,7 @@ Po přihlášení se v~navigačním menu objeví nová položka \emph{Editor}, k
 
 Stránku s~administrací lze použít dvěma základními způsoby. Buď vytvořit novou lokalitu (tedy kliknout na tlačítko v~menu), anebo použít některou z~možností pro úpravu již existujícího záznamu (např. v~seznamu lokalit, v~modálním okně či v~samotném detailu komunity). Níže představujeme administraci pro již existující komunitu.
 
-Po přepnutí do administrace si uživatel může všimnout progress baru umístěného hned pod navigačním menu, který reaguje na přepnutí napříč sekcemi (tedy na začátku je téměř prázdný, v~posledním oddíle naopak plný) (viz obrázek \ref{admin-uvod}).
+Po přepnutí do administrace si uživatel může všimnout progress baru (ukazatele průběhu) umístěného hned pod navigačním menu, který reaguje na přepnutí napříč sekcemi (tedy na začátku je téměř prázdný, v~posledním oddíle naopak plný) (viz obrázek \ref{admin-uvod}).
 
 Pod tímto indikátorem jsou názvy oddílů, které je možné v~rámci editoru vyplňovat, a~následně dvě ikony pro vstup na lokalitu a~pro odstranění celého záznamu (před smazáním se objevuje konfirmační modální okno, kde musí uživatel svoji volbu potvrdit).
 
@@ -612,7 +612,7 @@ Pod tímto indikátorem jsou názvy oddílů, které je možné v~rámci editoru
 
 Dále se pak nachází vždy obsah pro jednotlivé oddíly, kde je možné vyplňovat data pro vybrané položky. U~položek textového charakteru jsou prvky formuláře buď jednoduchého typu (umožňují vkládat text pouze bez formátování, například název atd.), anebo se jedná o~složitější textový editor pro uložení komplexnější textové informace (viz obrázek \ref{admin-nahravka}).
 
-V~textovém editoru je možné přidávat standardní značky pro formátování textu jako jsou odrážky, tučný řez písma, odkazy, nadpisy, ale i~třeba emotikony a~další prvky, které mohou být užitečné v~některých sekcích. Do aplikace tak lze jednoduše a~efektivně vkládat delší texty, které si uživatel připraví např. v~textovém procesoru typu MS Word.
+V~textovém editoru je možné přidávat standardní značky pro formátování textu, jako jsou odrážky, tučný řez písma, odkazy, nadpisy, ale i~třeba emotikony a~další prvky, které mohou být užitečné v~některých sekcích. Do aplikace tak lze jednoduše a~efektivně vkládat delší texty, které si uživatel připraví např. v~textovém procesoru typu MS Word.
 
 \begin{figure}
     \centering
@@ -652,7 +652,7 @@ Volba filtrů je vytvořena jednoduchým způsobem skrze select boxy s~vícenás
     \label{geoman}
 \end{figure}
 
-Závěrečnou obrazovkou, jež zmíníme, je sekce \emph{O~projektu} (viz obrázek \ref{about}). Ta je v~tuto chvíli spíše marginálnější povahy, protože obsahuje pouze základní informace o~celém projektu. Nicméně do budoucna může být prostorem pro další informace jako jsou například nápověda nebo odkazy na přidružené projekty.
+Závěrečnou obrazovkou, jež zmíníme, je sekce \emph{O~projektu} (viz obrázek \ref{about}). Ta je v~tuto chvíli spíše marginálnější povahy, protože obsahuje pouze základní informace o~celém projektu. Nicméně do budoucna může být prostorem pro další informace, jako jsou například nápověda nebo odkazy na přidružené projekty.
 
 \begin{figure}
     \centering
