@@ -24,13 +24,17 @@ Jelikož je naše aplikace založena na webovém frameworku React, drželi jsme 
 .2 utils.
 }
 
-Při tvorbě komponent jsme se snažili o~co největší modularitu z~hlediska funkcionalit jednotlivých částí. Níže je příklad komponenty \verb|Gallery|, která obsahuje logiku a~UI obrázkové galerie. S~komponentami pracujeme de facto jako s~javaScriptovými funkcemi
+Při tvorbě komponent jsme se snažili o~co největší modularitu z~hlediska funkcionalit jednotlivých částí. Níže uvádíme příklad komponenty \verb|Gallery|, která obsahuje logiku a~UI pro obrázkovou galerii.
+
+Komponentu definujeme jako javaScriptovou funkci a~za vstupní parametr (objekt \emph{props}) vkládáme danou část dostupných dat typu \verb|GalleryProps| (jde o~seznam názvů souborů a~jejich případných popisků).
+
+Na začátku probíhá inicializace vstupních dat, jimž předchází validace a~další procedury. V~příkladu si navíc můžeme všimnout využití takzvaných \emph{hooks} (reactí funkce, které začínají slovem \emph{use}, například tedy \verb|useState|), které typicky spravují stav komponenty.
 
 \begin{verbatim}
 const Gallery = ({ dropZone }: GalleryProps) => {
     const { urls, setNames } = useAsyncFiles();
     const [loading, setLoading] = useState<boolean>(true);
-
+    
     const [images, setImages] = useState<
         {
             original: string | undefined;
@@ -38,28 +42,33 @@ const Gallery = ({ dropZone }: GalleryProps) => {
             description: string | undefined;
         }[]
     >([]);
+    
+if (!dropZone.files[0]) return  <></>;
+    ...
+\end{verbatim}
 
-    // eslint-disable-next-line react/jsx-no-useless-fragment
-    if (!dropZone.files[0]) return <></>;
+Jelikož je komponenta \verb|Gallery| závislá na datech z~externí databáze, musí nejprve proběhnout stáhnutí požadovaných souborů. To probíhá prostřednictvím jiného \emph{hooku} \verb|useEffect|, který se vždy spouští při změně hodnoty proměnné, která je definovaná na konci funkce v~takzvaném \emph{dependency array}. Takto si komponenta na základě vstupních dat zavolá asynchronní funkci, z~předchozí ukázky \verb|setNames| z~hooku \verb|useAsyncFiles|, která izolovaně komunikuje s~databází a~přiřazuje výsledné URL adresy souborů do proměnné \verb|urls|. Výhodou tohoto principu je nezávislost komponent na aktuálně používaném řešení pro stahování dat.
 
-    useEffect(() => {
-        if (urls?.[0]) {
-            const newImages = urls.map((url, i) => ({
-                original: url,
-                thumbnail: url,
-                description: dropZone.names[i]?.name
-            }));
-            setImages(newImages);
-            setLoading(false);
-        }
-    }, [urls]);
+\begin{verbatim}
+...
+useEffect(() => {
+  if (urls?.[0]) {
+    const newImages = urls.map((url, i) => ({
+      original: url,
+      thumbnail: url,
+      description: dropZone.names[i] ? .name
+    }));
+    setImages(newImages);
+    setLoading(false);
+  }
+}, [urls]);
 
-    useEffect(() => {
-        if (dropZone.files[0]) {
-            setNames(dropZone.files);
-        }
-    }, [dropZone]);
-};
+useEffect(() => {
+  if (dropZone.files[0]) {
+    setNames(dropZone.files);
+  }
+}, [dropZone]);
+...
 \end{verbatim}
 
 \hypertarget{stavy-aplikace}{%
