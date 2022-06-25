@@ -106,13 +106,13 @@ return (
 	);
 \end{verbatim}
 
-## Řízení stavu
+## Řízení globálního stavu
 
-Komponenty si navzájem sice mohou vyměňovat libovolné množství dat, nicméně v okamžiku, kdy se stává aplikace komplexnější, je zapotřebí přistupovat k obecném stavu aplikace systematičtěji.
+Komponenty si navzájem sice mohou vyměňovat libovolné množství dat, nicméně v okamžiku, kdy se stává aplikace komplexnější, je zapotřebí přistupovat k jednotlivým stavům systematičtěji prostřednictvím globálních stavů.
 
 Takovým příkladem v naší aplikaci mohou být aktivní filtry. Ty se sice nastavují na jednom konkrétním místě, jejich použití ale sahá do vícero různé zanořených komponent jako je komponenta s mapou či seznam lokalit ve vysouvacím panelu. Proto je zapotřebí mít tento stav mimo komponenty na určitém místě uložen.
 
-Pro tento účel v naší aplikaci používáme takzvaný *context*, který vychází přímo z Reactu. Před jeho použitím je ho zapotřebí definovat nastavením hodnot a jejich typů, jež má obsahovat. V tomto případě ukládáme aktivní filtry \verb|activeFilters|, funkci, která je přenastavuje \verb|setActiveFilters| a jednoduchou hodnotu znázorňující zapnuty/vypnutý stav \verb|isDisabled|.
+Pro tento účel v naší aplikaci používáme takzvaný *context*, který vychází přímo z Reactu. Před jeho použitím ho je zapotřebí definovat, a to spolu s hodnotami a jejich typy, jež má obsahovat. V tomto případě ukládáme proměnnou s aktivními filtry \verb|activeFilters|, funkci, která je nastavuje \verb|setActiveFilters| a jednoduchou hodnotu znázorňující zapnutý/vypnutý stav \verb|isDisabled|.
 
 V rámci našeho contextu \verb|FilterContext| pak definujeme vlastní hook \verb|useFilter|, který má přístup do vytvořeného contextu. Ten pak právě využíváme jako vstup do daného stavu v jiných komponentách.
 
@@ -167,5 +167,65 @@ Využití contextu pak může vypadat v jiné komponentě následovně.
 
 ## Komunikace s databází
 
+Pro komunikaci s platformou Firebase využíváme jejich stejnojmennou javaScriptovou knihovnu, která v sobě obsahuje všechny základní funkce.
+
+V rámci databáze Cloud Firestore jsou dokumenty uloženy v takzvaných kolekcí, níže uvádíme příklad přístupu k jedné krajanské lokalitě prostřednictvím ID. I zde můžeme všimnout typové kontroly TypeScriptu, který je navázán na jednotlivé položky uložené v databázi. 
+
+\begin{verbatim}
+	...
+	export const getEntryById = async (id: string) => {
+	const snapshot = (await getDoc(
+		doc(db, 'entries', id)
+	)) as DocumentSnapshot<Entry>;
+	if (snapshot.exists()) {
+		return snapshot.data();
+	} else {
+		return Promise.reject(Error(`No such document: ${id}`));
+	}
+};
+	...
+	\end{verbatim}
+
+Složitěji se však muselo přistupovat k vytváření nových lokalit, protože v databázi máme komunity a jejich geografické informace (*features*) uložené v odlišných kolekcí. Rozhodli jsme se tak, protože v globálním stavu musí být uloženy vždy všechny geografické informace komunit pro jejich zobrazení na mapě a ve výčtu komunit, nicméně je už zbytečné držet si neustále všechna přidružená data, jež jsou s nimi spjatá. Informace ke konkrétní komunitě se tedy stahují až po zobrazení detailu lokality (ty geografická data také obsahují).
+
+V kódu přiloženém níže se tak nejprve validují vstupní data a posléze se abstrahují informace týkající se konkrétní *feature*. Geografická data je zapotřebí před nahráním do databáze poupravit (funkce \verb|serialize(feature);|), protože Cloud Firestore v tuto chvíli nepodporuje tento formát dat (stejným způsobem musí dojít i deserializaci, když feature naopak stahujeme).
+
+V dalším kroku je zapotřebí zjistit, zda se jedná o vytvoření nové lokality, nebo se upravuje již existující. V obou případech se přepisují všechna data, v případě, že záznam existuje, ID dokumentu s feature se využije k updatu existujícího záznamu.
+
+\begin{verbatim}
+	...
+export const addNewEntry = async (entry: Entry) => {
+	const feature: Feature = JSON.parse(entry.feature) as Feature;
+	feature.properties.mainLocation = entry.location.mainLocation;
+	feature.properties.filters = entry.location.filters;
+
+	feature.properties.secondaryLocation =
+		entry.location.secondaryLocation.length > 0
+			? entry.location.secondaryLocation
+			: '';
+
+	feature.properties.introImage =
+		entry.location.introImage.length > 0 ? entry.location.introImage : [];
+
+	const firestoreFeature: FirestoreFeature = serialize(feature);
+	if (entry.id) {
+		firestoreFeature.id = entry.id;
+		await setDoc(doc(db, 'entries', entry.id), entry);
+		await setDoc(doc(db, 'features', entry.id), firestoreFeature);
+	} else {
+		const docRef = await addDoc(collection(db, 'entries'), entry);
+		firestoreFeature.id = docRef.id;
+		await updateDoc(docRef, {
+			id: docRef.id
+		});
+		await setDoc(doc(db, 'features', docRef.id), firestoreFeature);
+	}
+};
+	...
+	\end{verbatim}
+
+Podobné implementační výzvy jsme v rámci práce s databází museli řešit i na jiných místech. Ku příkladu problematika nahráváním a odstraňování souborů na základě aktivit uživatele nebyla triviální záležitostí. Museli jsme se postarat o synchronizaci napříč názvy souborů u jednotlivých lokalit v Cloud Firestore a reálnými soubory v Cloud Storage. A zároveň se vypořádat s problémem odstraňování souborů při smazání celé lokace atd. 
+
 ## Mapa
 
+Poslední 
