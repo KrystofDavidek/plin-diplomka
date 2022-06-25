@@ -6,26 +6,34 @@ Tohle je \verb{createMultiCircle} protože...
 
 \begin{verbatim}
 ...
-const useGeocode = (initialLocation?: string) => {
-	const [location, setLocation] = useState<LatLng>(latLng(0, 0));
-	const [address, setAddress] = useState<string>(
-		initialLocation ? initialLocation : ''
-	);
+const useAsyncFiles = (isSingle ? : boolean) => {
+  const [urls, setUrls] = useState < (string | undefined)[] | undefined > ([]);
+  const [names, setNames] = useState < string[] > ([]);
 
-	const { data } = useSWR(
-		address ? `json?q=${address}&key=${process.env.REACT_APP_API_KEY}` : null,
-		fetcher,
-		{
-			shouldRetryOnError: false,
-			revalidateOnFocus: false
-		}
-	);
+  useEffect(() => {
+    const fetchFiles = async () => {
+      if (names.length > 0) {
+        const pathPromise: (Promise < string > | undefined)[] = [];
+        if (isSingle) {
+          pathPromise.push(getFilePath(names[0]));
+        } else {
+          names.forEach(name => pathPromise.push(getFilePath(name)));
+        }
+        return Promise.all(pathPromise);
+      }
+    };
 
-	useEffect(() => {
-		if (data && data.results.length > 1) setLocation(data.results[0].geometry);
-	}, [data]);
+    const loadFiles = async () => {
+      const urls = await fetchFiles();
+      setUrls(urls);
+    };
+    loadFiles();
+  }, [names]);
 
-	return { location, setAddress };
+  return {
+    urls,
+    setNames
+  };
 };
 ...
 \end{verbatim}
