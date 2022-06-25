@@ -22,16 +22,7 @@ Jelikož je naše aplikace založena na webovém frameworku React, drželi jsme 
 .2 utils.
 }
 
-Při tvorbě komponent jsme se snažili o co největší modularitu z hlediska funkcionalit jednotlivých částí. Níže je příklad komponenty \verb|Gallery|, která obsahuje logiku a UI obrázkové galerie.
-
-\begin{verbatim}
-...
-...
-\end{verbatim}
-
-## Stavy aplikace
-
-## Komunikace s databází
+Při tvorbě komponent jsme se snažili o co největší modularitu z hlediska funkcionalit jednotlivých částí. Níže je příklad komponenty \verb|Gallery|, která obsahuje logiku a UI obrázkové galerie. S komponentami pracujeme de facto jako s javaScriptovými funkcemi
 
 \begin{verbatim}
 const Gallery = ({ dropZone }: GalleryProps) => {
@@ -66,34 +57,12 @@ const Gallery = ({ dropZone }: GalleryProps) => {
 			setNames(dropZone.files);
 		}
 	}, [dropZone]);
-
-	return (
-		<>
-			<Text variant="h3" component="h1" text="Obrázky" />
-			{loading ? (
-				<LoadingSpinner
-					boxWidth="100%"
-					height="5rem"
-					width="5rem"
-					textAlign="center"
-					pt="2rem"
-					pb="10rem"
-				/>
-			) : (
-				<Box sx={{ mt: '3rem !important' }}>
-					<ImageGallery
-						lazyLoad
-						showPlayButton={false}
-						items={images as ReactImageGalleryItem[]}
-					/>
-				</Box>
-			)}
-
-			<Divider />
-		</>
-	);
 };
 \end{verbatim}
+
+## Stavy aplikace
+
+## Komunikace s databází
 
 ## Mapa
 
