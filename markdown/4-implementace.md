@@ -71,7 +71,11 @@ useEffect(() => {
 ...
 \end{verbatim}
 
-Po inicializaci proměnné \verb|urls| je pak její obsah vložen do stavu komponenty, která jej posléze vykreslí prostřednictvím příkazu \verb|return|.  
+Po inicializaci proměnné \verb|urls| je pak její obsah vložen do stavu komponenty, která s ním posléze pracuje v JSX zápisu níže. Ten slouží pro deklaraci UI prvků a skládat se může jak z klasických HTML značek, tak v našem případě o elementy z UI knihovny Material UI\footnote{https://mui.com/}, která zajišťuje konzistentní vzhled napříč aplikací.
+
+Na příkladu níže lze pěkně vidět deklarativní způsob zápisu – \verb|ImageGallery| (tedy jiná vložená komponenta) je vykreslena pouze v případě, pokud není aktivní proměnná \verb|loading|. Pokud aktivní je, vykreslí se komponenta načítání \verb|LoadingSpinner|, kterou jsme definovali na jiném místě aplikace.
+
+Na této bázi jsou v obecnosti postavené všechny námi vytvořené komponenty a je tak zřejmé, že v případě potřeby lze změnit zdrojový kód na jednom místě a změny se projeví všude, kde je daná komponenta použita.
 
 \begin{verbatim}
 ...
