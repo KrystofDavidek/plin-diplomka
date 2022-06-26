@@ -481,23 +481,23 @@ Jelikož jsme vyvíjeli webovou aplikaci, museli jsme tak brát ohled na zásady
 Tento požadavek se nám povedlo naplnit (viz obrázky \ref{resA} a \ref{resB}), ačkoliv u administrace nepředpokládáme tak hojné využívání na menších zařízeních. Zároveň se u dotykových zařízení lehce mění způsob využívání některých komponent (např. mapa nebo obrázková galerie), které jsou tak uzpůsobeny na dotykovou interakci.
 
 \begin{figure}
-  \begin{subfigure}[b]{0.4\textwidth}
+  \begin{subfigure}[b]{0.425\textwidth}
     \includegraphics[width=1\textwidth]{res1}
   \end{subfigure}
   \hfill
-  \begin{subfigure}[b]{0.4\textwidth}
+  \begin{subfigure}[b]{0.425\textwidth}
     \includegraphics[width=1\textwidth]{res2}
   \end{subfigure}
-  \caption{Responzivní zobrazení mapy a seznamu lokalit}
+  \caption{Responzivní zobrazení mapy a~seznamu lokalit}
   \label{resA}
 \end{figure}
 
 \begin{figure}
-  \begin{subfigure}[b]{0.4\textwidth}
+  \begin{subfigure}[b]{0.425\textwidth}
     \includegraphics[width=1\textwidth]{res3}
   \end{subfigure}
   \hfill
-  \begin{subfigure}[b]{0.4\textwidth}
+  \begin{subfigure}[b]{0.425\textwidth}
     \includegraphics[width=1\textwidth]{res4}
   \end{subfigure}
   \caption{Responzivní zobrazení obrázkové galerie a~administrace}
