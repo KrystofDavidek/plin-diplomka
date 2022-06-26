@@ -317,7 +317,7 @@ Zároveň platí, že všechny zmíněné složky lze v~administrativní části
 \item
   \textbf{GeoJSON} -- pole pro vkládání jedné mapové vrstvy ve formátu GeoJSON. Na tomto místě je také příložen odkaz na službu Geoman.io, prostřednictvím které lze jednoduše kreslit jednotlivé mapové objekty a~generovat tak GeoJSON soubor;
 \item
-  \textbf{Podmínky pro třídění na mapě} -- všechny níže uvedené podmínky jsou ve formě polí výběru (selection box), u~nichž lze vybírat libovolné množství hodnot (níže je vždy vedle názvu filtru vypisujeme). Podle těchto vybraných hodnot je pak možné lokality filtrovat na mapě a~v~bočním seznamu;
+  \textbf{Podmínky pro třídění na mapě} -- všechny níže uvedené podmínky jsou ve formě polí výběru (\emph{selection box}), u~nichž lze vybírat libovolné množství hodnot (níže je vždy vedle názvu filtru vypisujeme). Podle těchto vybraných hodnot je pak možné lokality filtrovat na mapě a~v~bočním seznamu;
 
   \begin{itemize}
   \tightlist
@@ -570,7 +570,7 @@ Třetí část se skládá z~multimediálního obsahu. Pro zobrazení fotografi�
 
 Poslední oddílem je část \emph{Ostatní}, kde je prostor na jakékoliv dodatečné textové informace, jakou jsou projekty, nabídky, atrakce, zajímavosti (viz obrázek \ref{ostatni}). Zároveň je zde místo pro výpis použitých zdrojů a~název autora, který tento záznam vytvořil.
 
-Užitečným detailem je v~tomto kontextu sdílení vybrané lokality prostřednictvím jejího URL odkazu na jiné zařízení (v~tomto případě tedy např. https://czech-map.netlify.app/location/Šumice). Aplikace podle názvu v~URL odkazu rozpozná danou komunitu a~stáhne si ze vzdálené databáze všechna potřebná data.
+Užitečným detailem je v~tomto kontextu sdílení vybrané lokality prostřednictvím jejího URL odkazu na jiné zařízení\footnote{Například https://czech-map.netlify.app/location/Šumice.}. Aplikace podle názvu v~URL odkazu rozpozná danou komunitu a~stáhne si ze vzdálené databáze všechna potřebná data.
 
 \begin{figure}  
     \centering
@@ -599,7 +599,7 @@ Po přihlášení se v~navigačním menu objeví nová položka \emph{Editor}, k
 
 Stránku s~administrací lze použít dvěma základními způsoby. Buď vytvořit novou lokalitu (tedy kliknout na tlačítko v~menu), anebo použít některou z~možností pro úpravu již existujícího záznamu (např. v~seznamu lokalit, v~modálním okně či v~samotném detailu komunity). Níže představujeme administraci pro již existující komunitu.
 
-Po přepnutí do administrace si uživatel může všimnout progress baru (ukazatele průběhu) umístěného hned pod navigačním menu, který reaguje na přepnutí napříč sekcemi (tedy na začátku je téměř prázdný, v~posledním oddíle naopak plný) (viz obrázek \ref{admin-uvod}).
+Po přepnutí do administrace si uživatel může všimnout \emph{progress baru} (ukazatele průběhu) umístěného hned pod navigačním menu, který reaguje na přepnutí napříč sekcemi (tedy na začátku je téměř prázdný, v~posledním oddíle naopak plný) (viz obrázek \ref{admin-uvod}).
 
 Pod tímto indikátorem jsou názvy oddílů, které je možné v~rámci editoru vyplňovat, a~následně dvě ikony pro vstup na lokalitu a~pro odstranění celého záznamu (před smazáním se objevuje konfirmační modální okno, kde musí uživatel svoji volbu potvrdit).
 
@@ -630,13 +630,13 @@ Pro vkládání souborů (obrázky a~audio) do systému pak slouží speciální
     \label{admin-obrazky}
 \end{figure}
 
-Poslední důležitou složkou administrace je správa geografických dat a~nastavování filtrů (viz obrázek \ref{admin-ge}). Jak bylo v~předchozí podkapitole zmíněno, geografická data aplikace zpracovává ve formátu GeoJSON. Proto využíváme speciálně upravený textový editor, který dokáže validovat správný formát vstupního textu (GeoJSON je i~přes svoje specifika v~principu stále textový řetězec).
+Poslední důležitou složkou administrace je správa geografických dat a~nastavování filtrů (viz obrázek \ref{admin-geo}). Jak bylo v~předchozí podkapitole zmíněno, geografická data aplikace zpracovává ve formátu GeoJSON. Proto využíváme speciálně upravený textový editor, který dokáže validovat správný formát vstupního textu (GeoJSON je i~přes svoje specifika v~principu stále textový řetězec).
 
-Pravděpodobnost chyby se navíc snažíme eliminovat tím způsobem, že uživatele nutíme měnit obsah pole pouze prostřednictvím zkopírování textu. Takto chceme editora motivovat k~využití přiložené služby Geoman.io, kde si může jednoduchým způsobem nakreslit potřebnou mapovou vrstvu, a~vygenerovat si tak GeoJSON kód (viz obrázek \ref{geoman}). Ten pak stačí celý zkopírovat a~rovnou vložit do naší aplikace, která jej pak automaticky zpracuje a~vybere z~něj potřebné hodnoty pro zakreslení do mapy.
+Pravděpodobnost chyby se navíc snažíme eliminovat tím způsobem, že uživatele nutíme měnit obsah pole pouze prostřednictvím zkopírování textu. Takto chceme editora motivovat k~využití přiložené služby Geoman.io, kde si může jednoduchým způsobem nakreslit potřebnou mapovou vrstvu a~vygenerovat si tak GeoJSON kód (viz obrázek \ref{geoman}). Ten pak stačí celý zkopírovat a~rovnou vložit do naší aplikace, která jej pak automaticky zpracuje a~vybere z~něj potřebné hodnoty pro zakreslení do mapy.
 
 Věříme, že tento způsob je v~této fázi aplikace uživatelsky nejpřívětivější a~efektivní zároveň. Jedinými nevýhodami tohoto přístupu jsou prozatímní závislost na externím nástroji a~nutnost při úpravě existující lokality znovu vygenerovat celý GeoJSON kód.
 
-Volba filtrů je vytvořena jednoduchým způsobem skrze select boxy s~vícenásobným výběrem. V~závěru je zapotřebí data z~celé administrativní části odeslat pomocí výrazného tlačítka umístěného na konci stránky. Až pak se propíší do databáze a~zároveň do dalších částí aplikace. Je tedy zřejmé, že uživatel nesmí při editace ztratit připojení nebo jakýmkoliv jiným způsobem přerušit spojení s~editorem (např. refresh stránky atd.). I~z~tohoto důvodu je přidáno konfirmační modální okno po kliknutí na ikony oka, jež slouží pro zobrazení lokality ve standardním módu.
+Volba filtrů je vytvořena jednoduchým způsobem skrze \emph{selection boxy} s~vícenásobným výběrem. V~závěru je zapotřebí data z~celé administrativní části odeslat pomocí výrazného tlačítka umístěného na konci stránky. Až pak se propíší do databáze a~zároveň do dalších částí aplikace. Je tedy zřejmé, že uživatel nesmí při editace ztratit připojení nebo jakýmkoliv jiným způsobem přerušit spojení s~editorem (např. aktualizace stránky atd.). I~z~tohoto důvodu je přidáno konfirmační modální okno po kliknutí na ikony oka, jež slouží pro zobrazení lokality ve standardním módu.
 
 \begin{figure}
     \centering
@@ -664,9 +664,9 @@ Závěrečnou obrazovkou, jež zmíníme, je sekce \emph{O~projektu} (viz obráz
 \hypertarget{responzivnuxed-design}{%
 \subsection{Responzivní design}\label{responzivnuxed-design}}
 
-Jedním z~nefunkčních požadavků na aplikaci je její multiplatformní povaha. To v~praxi znamená, že by naše řešení mělo být funkční napříč zařízeními s~různým rozlišením apod.
+Jedním z~nefunkčních požadavků na aplikaci je její multiplatformní povaha. To v~praxi znamená, že by naše řešení mělo být použitelné napříč zařízeními s~různým rozlišením apod.
 
-Jelikož jsme jsme vyvíjeli webovou aplikaci, museli jsme tak brát ohled na zásady responzivního designu. Jedná se o~způsob stylování HTML (primárně pomoci CSS, ale i~JavaScriptu) pomocí různých flexibilních struktur, jehož výsledkem má být optimální zobrazení na všech možných obrazovkách.
+Jelikož jsme vyvíjeli webovou aplikaci, museli jsme tak brát ohled na zásady responzivního designu. Jedná se o~způsob stylování HTML (prostřednictvím pomocí CSS, ale i~JavaScriptu) pomocí různých flexibilních struktur, jehož výsledkem má být optimální zobrazení na všech možných obrazovkách.
 
 Tento požadavek se nám povedlo naplnit (viz obrázky \ref{resA} a~\ref{resB}), ačkoliv u~administrace nepředpokládáme tak hojné využívání na menších zařízeních. Zároveň se u~dotykových zařízení lehce mění způsob využívání některých komponent (např. mapa nebo obrázková galerie), které jsou tak uzpůsobeny na dotykovou interakci.
 

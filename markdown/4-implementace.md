@@ -1,10 +1,10 @@
 # Implementace
 
-V poslední části této práce se zaměříme na implementační detaily webové aplikace. Implementaci představíme ve čtyřech částech, z nichž se každá věnuje jiné buď obecnější oblasti nebo naopak konkrétnější funkcionalitě. V rozsahu této práce tak není komentovat kód jako celek – ten však lze dohledat jako přílohu přiloženou k této práci.
+V poslední části této práce se zaměříme na implementační detaily webové aplikace. Implementaci představíme ve čtyřech částech, z nichž se každá věnuje jiné buď obecnější oblasti nebo naopak konkrétnější funkcionalitě. V rozsahu této práce tak není komentovat kód jako celek, ten je v případě potřeby k práci přiložen jako samostatný soubor.
 
 ## Systém modulů a komponent
 
-Jelikož je naše aplikace založena na webovém frameworku React, drželi jsme se při tvorbě všech souborů standardní adresářové struktury. Jednotlivé reactí komponenty jsou umístěny v adresáři \verb|components|, zde je jsou tedy soubory týkající se primárně UI konkrétních částí aplikace. Zbytek komponent je pak ve složce \verb|pages|, kde jsou izolovány stránky aplikace.
+Jelikož je naše aplikace založena na webovém frameworku React, drželi jsme se při tvorbě všech souborů standardní adresářové struktury. Jednotlivé reactí komponenty jsou umístěny v adresáři \verb|components|, zde je jsou tedy soubory týkající se primárně UI konkrétních částí aplikace. Zbytek komponent je ve složce \verb|pages|, kde jsou uloženy stránky aplikace (ty obsahují komplexnější logiku týkající se správy dat apod.).
 
 \dirtree{%
 .1 src.
@@ -26,7 +26,7 @@ Při tvorbě komponent jsme se snažili o co největší izolovanost z hlediska 
 
 Komponentu definujeme jako javaScriptovou funkci a za vstupní parametr (objekt *props*) vkládáme danou část dostupných dat typu \verb|GalleryProps| (jde o seznam názvů souborů a jejich případných popisků).
 
-Na začátku probíhá inicializace vstupních dat, jimž předchází validace a další procedury. V příkladu si navíc můžeme všimnout využití takzvaných *hooks* (reactí funkce, které začínají slovem *use*, například tedy \verb|useState|), které typicky spravují stav komponenty.
+Na začátku probíhá inicializace, validace vstupních dat a další nutné procedury. V příkladu si navíc můžeme všimnout využití takzvaných *hooks* (označení pro specifický typ funkcí v Reactu, začínají slovem *use*, například tedy \verb|useState|), které typicky spravují stav komponenty.
 
 \begin{verbatim}
 const Gallery = ({ dropZone }: GalleryProps) => {
@@ -45,9 +45,9 @@ if (!dropZone.files[0]) return  <></>;
 	...
 \end{verbatim}
 
-Jelikož je komponenta \verb|Gallery| závislá na datech z externí databáze, musí nejprve proběhnout stáhnutí požadovaných souborů. To probíhá prostřednictvím \verb|useEffect|, který se vždy spouští při změně hodnoty proměnné, která je definovaná na konci funkce v takzvaném *dependency array*.
+Jelikož je komponenta \verb|Gallery| závislá na datech z externí databáze, musí nejprve proběhnout stáhnutí požadovaných souborů. To probíhá prostřednictvím hooku \verb|useEffect|, který se vždy spouští při změně hodnoty proměnné, která je definovaná na konci funkce v takzvaném *dependency array*.
 
-Takto si komponenta na základě vstupních dat zavolá asynchronní funkci \verb|setNames| z hooku \verb|useAsyncFiles| (ten je definován v předchozí ukázce), která izolovaně komunikuje s databází a přiřazuje výsledné URL adresy souborů do proměnné \verb|urls|. Výhodou tohoto principu je nezávislost komponent na aktuálně používaném řešení pro stahování dat.
+Takto komponenta na základě vstupních dat spustí asynchronní funkci \verb|setNames| z hooku \verb|useAsyncFiles| (ten je definován v předchozí ukázce), která izolovaně komunikuje s databází a přiřazuje výsledné URL adresy souborů do proměnné \verb|urls|. Výhodou tohoto principu je nezávislost komponent na aktuálně používaném řešení pro stahování dat.
 
 \begin{verbatim}
 ...
@@ -73,9 +73,9 @@ useEffect(() => {
 
 Po inicializaci proměnné \verb|urls| je pak její obsah vložen do stavu komponenty, která s ním posléze pracuje v JSX (při využívání TypeScriptu TSX) zápisu níže. Ten slouží pro deklaraci UI prvků a skládat se může jak z klasických HTML značek, tak v našem případě o elementy z UI knihovny Material UI\footnote{https://mui.com/}, která zajišťuje konzistentní vzhled napříč aplikací.
 
-Na příkladu níže lze pěkně vidět deklarativní způsob zápisu – \verb|ImageGallery| (tedy jiná vložená komponenta) je vykreslena pouze v případě, pokud není aktivní proměnná \verb|loading|. Pokud aktivní je, vykreslí se komponenta načítání \verb|LoadingSpinner|, kterou jsme definovali na jiném místě aplikace.
+Na příkladu níže lze vidět deklarativní způsob zápisu – \verb|ImageGallery| (tedy jiná vložená komponenta) je vykreslena pouze v případě, pokud není aktivní proměnná \verb|loading|. Jestliže aktivní je, vykreslí se komponenta pro načítání \verb|LoadingSpinner|, kterou jsme definovali na jiném místě aplikace.
 
-Na této bázi jsou v obecnosti postavené všechny námi vytvořené komponenty a je tak zřejmé, že v případě potřeby lze změnit zdrojový kód na jednom místě a změny se projeví všude, kde je daná komponenta použita.
+Na této bázi jsou v obecnosti postavené všechny námi vytvořené komponenty, a je tak zřejmé, že v případě potřeby lze změnit zdrojový kód na jednom místě a změny se projeví všude, kde je daná komponenta použita.
 
 \begin{verbatim}
 ...
@@ -109,11 +109,11 @@ return (
 
 Komponenty si navzájem sice mohou vyměňovat libovolné množství dat, nicméně v okamžiku, kdy se stává aplikace komplexnější, je zapotřebí přistupovat k jednotlivým stavům systematičtěji prostřednictvím globálních stavů.
 
-Takovým příkladem v naší aplikaci mohou být aktivní filtry. Ty se sice nastavují na jednom konkrétním místě, jejich použití ale sahá do vícero různé zanořených komponent jako je komponenta s mapou či seznam lokalit ve vysouvacím panelu. Proto je zapotřebí mít tento stav mimo komponenty na určitém místě uložen.
+Takovým příkladem v naší aplikaci mohou být aktivní filtry. Ty se sice nastavují na jednom konkrétním místě, jejich použití ale sahá do vícero různě zanořených komponent, jako je komponenta s mapou či seznam lokalit ve vysouvacím panelu. Proto je zapotřebí mít tento stav mimo komponenty na určitém místě uložen.
 
-Pro tento účel v naší aplikaci používáme takzvaný *context*, který vychází přímo z Reactu. Před jeho použitím ho je zapotřebí definovat, a to spolu s hodnotami a jejich typy, jež má obsahovat. V tomto případě ukládáme proměnnou s aktivními filtry \verb|activeFilters|, funkci, která je nastavuje \verb|setActiveFilters| a jednoduchou hodnotu znázorňující zapnutý/vypnutý stav \verb|isDisabled|.
+Pro tento účel v naší aplikaci používáme takzvaný *context* (dále kontext), který vychází přímo z Reactu. Před jeho použitím ho je zapotřebí definovat, a to spolu s hodnotami a jejich typy, jež má obsahovat. V tomto případě ukládáme proměnnou s aktivními filtry \verb|activeFilters|, funkci, která je nastavuje, \verb|setActiveFilters| a jednoduchou hodnotu znázorňující zapnutý/vypnutý stav \verb|isDisabled|.
 
-V rámci našeho contextu \verb|FilterContext| pak definujeme vlastní hook \verb|useFilter|, který má přístup do vytvořeného contextu. Ten pak právě využíváme jako vstup do daného stavu v jiných komponentách.
+V rámci našeho kontextu \verb|FilterContext| pak definujeme vlastní hook \verb|useFilter|, který má přístup do vytvořeného kontextu. Ten využíváme právě jako vstup do daného stavu v jiných komponentách.
 
 \begin{verbatim}
 ...
@@ -129,7 +129,7 @@ export const useFilter = () => useContext(FilterContext);
 ...
 \end{verbatim}
 
-Vlastní tělo contextu nazýváme \verb|FilterProvider|, které drží stavy zapnutých filtrů apod. 
+Vlastní tělo kontextu nazýváme \verb|FilterProvider|, které drží stavy zapnutých filtrů apod. 
 
 \begin{verbatim}
 ...
@@ -156,7 +156,7 @@ export const FilterProvider = ({ children }: { children: JSX.Element }) => {
 };
 \end{verbatim}
 
-Využití contextu pak může vypadat v jiné komponentě následovně.
+Využití kontextu pak vypadá v jiné komponentě následovně.
 
 \begin{verbatim}
 	...
@@ -166,9 +166,9 @@ Využití contextu pak může vypadat v jiné komponentě následovně.
 
 ## Komunikace s databází
 
-Pro komunikaci s platformou Firebase využíváme jejich stejnojmennou javaScriptovou knihovnu, která v sobě obsahuje všechny základní funkce.
+Pro komunikaci s platformou Firebase využíváme stejnojmennou javaScriptovou knihovnu, která v sobě obsahuje všechny základní funkce.
 
-V rámci databáze Cloud Firestore jsou dokumenty uloženy v takzvaných kolekcí, níže uvádíme příklad přístupu k jedné krajanské lokalitě prostřednictvím ID. I zde můžeme všimnout typové kontroly TypeScriptu, který je navázán na jednotlivé položky uložené v databázi. 
+V rámci databáze Cloud Firestore jsou dokumenty uloženy v takzvaných kolekcí, níže uvádíme příklad přístupu k jedné krajanské lokalitě prostřednictvím ID. I zde si můžeme všimnout typové kontroly TypeScriptu, který je navázán na jednotlivé položky uložené v databázi. 
 
 \begin{verbatim}
 	...
@@ -185,11 +185,11 @@ V rámci databáze Cloud Firestore jsou dokumenty uloženy v takzvaných kolekc�
 	...
 	\end{verbatim}
 
-Složitěji se však muselo přistupovat k vytváření nových lokalit, protože v databázi máme komunity a jejich geografické informace (*features*) uložené v odlišných kolekcí. Rozhodli jsme se tak, protože v globálním stavu musí být uloženy vždy všechny geografické informace komunit pro jejich zobrazení na mapě a ve výčtu komunit, nicméně je už zbytečné držet si neustále všechna přidružená data, jež jsou s nimi spjatá. Informace ke konkrétní komunitě se tedy stahují až po zobrazení detailu lokality (ty geografická data také obsahují).
+Složitěji se však muselo přistupovat k vytváření nových lokalit, protože v databázi máme komunity a jejich geografické informace (*features*) uložené v odlišných kolekcí. Rozhodli jsme se tak, protože v globálním stavu musí být uloženy vždy všechny geografické informace komunit pro jejich zobrazení na mapě a ve výčtu komunit. Nicméně je už zbytečné držet si neustále všechna přidružená data, jež jsou s nimi spjatá. Informace ke konkrétní komunitě se tedy stahují až po zobrazení detailu lokality (ty geografická data také obsahují).
 
-V kódu přiloženém níže se tak nejprve validují vstupní data a posléze se abstrahují informace týkající se konkrétní *feature*. Geografická data je zapotřebí před nahráním do databáze poupravit (funkce \verb|serialize(feature);|), protože Cloud Firestore v tuto chvíli nepodporuje tento formát dat (stejným způsobem musí dojít i deserializaci, když feature naopak stahujeme).
+V kódu přiloženém níže se tak nejprve validují vstupní data a posléze se abstrahují informace týkající se konkrétní *feature*. Geografická data je zapotřebí před nahráním do databáze poupravit (funkce \verb|serialize(feature)|), protože Cloud Firestore v tuto chvíli nepodporuje tento formát dat (stejným způsobem musí dojít i deserializaci, když feature naopak stahujeme).
 
-V dalším kroku je zapotřebí zjistit, zda se jedná o vytvoření nové lokality, nebo o úpravu již existující. V obou případech se přepisují všechna data. V případě, že záznam existuje, ID dokumentu s feature se využije k updatu existujícího záznamu.
+V dalším kroku je zapotřebí zjistit, zda se jedná o vytvoření nové lokality, nebo o úpravu již existující. V obou případech se přepisují všechna data. V případě, že záznam existuje, ID dokumentu s feature se využije k aktualizaci existujícího záznamu.
 
 Také je zde prostřednictvím příkazů \verb|async| a \verb|await| řízena posloupnost asynchronních operací, protože při komunikaci s databází jsou informace vyměňovány standardně asynchronním způsobem.
 
@@ -226,11 +226,11 @@ export const addNewEntry = async (entry: Entry) => {
     ...
     \end{verbatim}
 
-Podobné implementační výzvy jsme v rámci práce s databází museli řešit i na jiných místech. Ku příkladu problematika nahráváním a odstraňování souborů na základě aktivit uživatele nebyla triviální záležitostí. Museli jsme se postarat o synchronizaci napříč názvy souborů u jednotlivých lokalit v Cloud Firestore a reálnými soubory v Cloud Storage. A zároveň se vypořádat s problémem odstraňování souborů při smazání celé lokace apod. 
+Podobné implementační výzvy jsme v rámci práce s databází museli řešit i na jiných místech. Ku příkladu problematika nahrávání a odstraňování souborů na základě aktivit uživatele nebyla triviální záležitostí. Museli jsme se postarat o synchronizaci napříč názvy souborů u jednotlivých lokalit v Cloud Firestore a reálnými soubory v Cloud Storage. A zároveň se vypořádat s problémem odstraňování souborů při smazání celé lokace apod. 
 
 ## Mapová komponenta
 
-Mapová část byla implementována na základě komponenty \verb|MapContainer| z knihovny React Leaflet, jež se skládá z několika dílčích komponent. Pro využití OpenStreetMap byla využita část \verb|TileLayer| (taktéž z knihovny React Leaflet), zbytek podkomponent jsme implementovali vlastní cestou.
+Mapová část byla implementována na základě komponenty \verb|MapContainer| z knihovny React Leaflet, která se skládá z několika dílčích komponent. Pro nahrání mapových podkladů OpenStreetMap byla využita část \verb|TileLayer| (taktéž z knihovny React Leaflet), zbytek podkomponent jsme implementovali vlastním způsobem.
 
 \begin{verbatim}
     ...
@@ -260,7 +260,7 @@ const MapWrapper = () => {
     ...
     \end{verbatim}
 
-Nejdůležitější je komponenta \verb|Features|, která při svém počátečním načtení stahuje všechna geografická data lokalit z databáze a na základě aktivních filtrů je posléze přetváří do podoby mapových vrstev. Níže je viditelný TSX kód, v němž se přes všechna data prochází a transformují se do komponent \verb|FeatureGroup| a \verb|FeatureShape|. První z nich zajišťuje interaktivitu s uživatelem a nastavení barev mapové vrstvy pomocí javaScriptových událostí (\verb|click|, \verb|mouseover| a  \verb|mouseout| a druhá pak zpracovává konkrétní souřadnice a vykresluje z nich požadovaný tvar.
+Nejdůležitější je komponenta \verb|Features|, která při svém počátečním načtení stahuje všechna geografická data lokalit z databáze a na základě aktivních filtrů je posléze přetváří do podoby mapových vrstev. Níže je viditelný TSX kód, v němž se přes všechna data prochází a transformují se do komponent \verb|FeatureGroup| a \verb|FeatureShape|. První z nich zajišťuje interaktivitu s uživatelem a nastavení barev mapové vrstvy pomocí javaScriptových událostí (\verb|click|, \verb|mouseover| a  \verb|mouseout|) a druhá pak zpracovává konkrétní souřadnice a vykresluje z nich požadovaný tvar.
 
 \begin{verbatim}
 ...
