@@ -1,6 +1,6 @@
 # Významné krajanské komunity ve světě 
 
-V následující kapitole si představíme několik význačných krajanských komunit ve světě, jejichž historický vývoj a aktuální stav je již literaturou alespoň do jisté míry popsán. Jedná se tedy o takové jazykové enklávy, u nichž lze významněji reflektovat asimilační vývoj jazyka a jsou tak dobrými ukázkami využití naší webové aplikace v praxi. V rozsahu této diplomové práce každopádně není vložit všechny informace vypsané níže do digitálního formátu, ale spíše vybrat určité části (ať už jednotlivé osady nebo celé lokality), které demonstrují možnosti a funkce vytvořené webové aplikace viz XXX.
+V následující kapitole si představíme několik význačných krajanských komunit ve světě, jejichž historický vývoj a aktuální stav je již literaturou alespoň do jisté míry popsán. Jedná se tedy o takové jazykové enklávy, u nichž lze významněji reflektovat asimilační vývoj jazyka a jsou tak dobrými ukázkami využití naší webové aplikace v praxi. V rozsahu této diplomové práce každopádně není vložit všechny informace vypsané níže do digitálního formátu, ale spíše vybrat určité části (ať už jednotlivé osady nebo celé lokality), které demonstrují možnosti a funkce vytvořené webové aplikace.
 
 ## Banát
 

@@ -41,7 +41,7 @@ Zapotřebí je také zahrnout základní funkční požadavky, které se pojí s
 
 Zacílení lokalit má být umožněno i~jiným způsobem než vyhledáváním v~mapových podkladech. Z~toho důvodu má aplikace disponovat výčtem lokalit, které budou dostupné z~mapové stránky prostřednictvím levé vysouvací části obrazovky. Tato sekce má sloužit jako přehledný abecedně seřazený seznam všech dostupných krajanských komunit (spolu s~úvodním obrázkem a~sekundárních názvem), z~něhož je možné lokalitu buď zacílit na mapě, anebo rovnou zobrazit její detail.
 
-Posledním funkčním požadavkem souvisícím s~geografickou složkou je možnost filtrování lokalit na základě vybraných metrik (tyto metriky rozvedeme v~kapitole týkající se dat viz XXX). Tato funkce se má nacházet v~sekci se seřazenými komunitami a~po označení libovolného počtu filtrů se mají z~výběru i~z~mapových podkladů vyfiltrovat takové lokality, jež splňují danou podmínku.
+Posledním funkčním požadavkem souvisícím s~geografickou složkou je možnost filtrování lokalit na základě vybraných metrik (tyto metriky rozvedeme v~kapitole týkající se dat viz \ref{data-o-krajanskuxfdch-komunituxe1ch}). Tato funkce se má nacházet v~sekci se seřazenými komunitami a~po označení libovolného počtu filtrů se mají z~výběru i~z~mapových podkladů vyfiltrovat takové lokality, jež splňují danou podmínku.
 
 \hypertarget{vizualizace-detailnuxedch-informacuxed-vybranuxe9-komunity}{%
 \subsubsection{Vizualizace detailních informací vybrané komunity}\label{vizualizace-detailnuxedch-informacuxed-vybranuxe9-komunity}}
@@ -59,7 +59,7 @@ Poslední kategorií jsou funkční požadavky spojené s~celkovou administrací
 
 Z~tohoto důvodu má aplikace obsahovat podstránky, které nebudou běžnému uživateli přístupné -- vzniká tak požadavek na autentifikaci prostřednictvím e-mailu a~hesla. Po úspěšném přihlášení by se měl celý systém přeměnit do editačního módu, respektive nabízet přihlášenému uživateli vždy kromě vstupu do jednotlivých lokalit i~možnost přesunu do administrativní části.
 
-Ta by měla sestávat ze stejných sekcí, jako u~detailu vybrané komunity. Navíc by však by měla obsahovat uživatelsky přívětivou část formuláře podle formátu dané části informací (např. pro vkládání textových informací textový editor, pro vkládání souborů speciální komponentu). Druhotným požadavkem je základní validace vstupních data, tedy kontrola, že má každá lokalita vyplněný alespoň hlavní název a~geografická data pro zobrazení na mapě (viz xxx).
+Ta by měla sestávat ze stejných sekcí, jako u~detailu vybrané komunity. Navíc by však by měla obsahovat uživatelsky přívětivou část formuláře podle formátu dané části informací (např. pro vkládání textových informací textový editor, pro vkládání souborů speciální komponentu). Druhotným požadavkem je základní validace vstupních dat, tedy kontrola, že má každá lokalita vyplněný alespoň hlavní název a~geografická data pro zobrazení na mapě.
 
 S~administrací tak nutně souvisí i~požadavek na persistenci dat, tzn. potřeba ukládat data na vzdálenou databázi, aby byly informace pro všechny uživatele konzistentní a~aktualizované.
 
@@ -84,7 +84,7 @@ Hlavní součástí této kapitoly pak bude představení uživatelského rozhra
 \hypertarget{pouux17eituxe9-technologie}{%
 \section{Použité technologie}\label{pouux17eituxe9-technologie}}
 
-Jelikož je naše navrhované řešení webová aplikace, budeme se níže zabývat výhradně nástroji, knihovnami a~frameworky, které se primárně týkají webových technologií. Konkrétní příklady kódu budeme rozebírat v~kapitole týkající se vlastní implementace (viz xxx).
+Jelikož je naše navrhované řešení webová aplikace, budeme se níže zabývat výhradně nástroji, knihovnami a~frameworky, které se primárně týkají webových technologií. Konkrétní příklady kódu budeme rozebírat v~kapitole týkající se vlastní implementace (viz \ref{implementace}).
 
 \hypertarget{zuxe1kladnuxed-webovuxe9-technologie}{%
 \subsection{Základní webové technologie}\label{zuxe1kladnuxed-webovuxe9-technologie}}
@@ -167,7 +167,7 @@ React je založen na deklarativním vývoji uživatelského rozhraní. Vývojá�
 
 Druhou významnou vlastností Reactu je přístup založený na komponentách. Jedná se o~opakovaně použitelné části UI (tzn. i~samotného naprogramovaného kódu), které jsou hierarchicky strukturované buď podle využití v~aplikaci (např. adresář s~komponentou pro přihlášení \emph{Login} bude obsahovat soubor podkomponenty pro tlačítko \emph{LoginButton}), nebo podle obecně sdílených funkcionalit (všechny komponenty tlačítek v~aplikaci budou ve vlastní složce \emph{Buttons}). Data, na kterých jsou závislé jednotlivé stavy, lze mezi komponentami předávám prostřednictvím objektu s~názvem \emph{props}.
 
-React namísto klasického stromové objektu DOM (viz XXX) využívá koncept virtuálního DOM (virtual Document Object Model). Jedná se o~speciální objektovou strukturu uloženou v~mezipaměti prohlížeče, která umožňuje efektivněji synchronizovat změny v~UI s~daným stavem aplikace. Zjednodušeně řečeno jde o~odlehčenou verzi DOM, s~níž lze na úrovni klienta jednodušeji manipulovat a~přizpůsobovat akcím od uživatele.
+React namísto klasického stromové objektu DOM (viz \ref{zuxe1kladnuxed-webovuxe9-technologie}) využívá koncept virtuálního DOM (virtual Document Object Model). Jedná se o~speciální objektovou strukturu uloženou v~mezipaměti prohlížeče, která umožňuje efektivněji synchronizovat změny v~UI s~daným stavem aplikace. Zjednodušeně řečeno jde o~odlehčenou verzi DOM, s~níž lze na úrovni klienta jednodušeji manipulovat a~přizpůsobovat akcím od uživatele.
 
 Posledním důležitým specifikem tohoto webového frameworku je využívání jazyka JSX, který je doporučován pro zápis komponent. JSX je svojí syntaxí nadstavbou JavaScriptu a~kombinuje strukturní značky, které známe z~HTML s~javaScriptovými konstrukcemi pro práci s~proměnnými a~funkcemi/metodami.
 
@@ -245,7 +245,7 @@ Zároveň platí, že všechny zmíněné složky lze v~administrativní části
 \item
   \textbf{Úvodní obrázek} -- náhledový obrázek, kterým je lokalita znázorněna ve vedlejším seznamu, anebo při rozkliku mapové vrstvy;
 \item
-  \textbf{Demografické údaje} -- základní údaje, týkající se především demografie komunity. Taktéž jsou zde pro větší přehlednost vypsány hodnoty, podle kterých mohou být aplikovány filtry (viz xxx).
+  \textbf{Demografické údaje} -- základní údaje, týkající se především demografie komunity. Taktéž jsou zde pro větší přehlednost vypsány hodnoty, podle kterých mohou být aplikovány filtry (viz \ref{geografickuxe1-data}).
 \end{itemize}
 
 \hypertarget{detailnuxed-informace}{%
