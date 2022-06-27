@@ -6,7 +6,7 @@ V praktické části této diplomové práce popisujeme výslednou webovou aplik
 
 ## Související projekty
 
-Před tvorbou samotné webové aplikace jsme provedli krátkou rešerši souvisejících projektů. Chtěli jsme takto identifikovat konkrétní funkcionality, které nejsou v jiných řešení zastoupené a demonstrovaly by tak význam naší aplikace.
+Před tvorbou samotné webové aplikace jsme provedli krátkou rešerši souvisejících projektů. Chtěli jsme takto identifikovat konkrétní funkcionality, které nejsou v jiných řešení zastoupené a případně se inspirovat funkčními prvky jiných řešení.
 
 Prvním vybraným projektem je *Mapa Čechů v zahraničí* – jedná se o geografické zpracování krajanských spolků na mapě světa \parencite{mapa1}. Na první pohled webová stránka obsahuje velké množství jednotlivých záznamů, nicméně samotné body v mapě slouží pouze jako reference na případné webové stránky daného krajanského spolu (nebývá výjimkou, že v detailu záznamu není odkaz ani přiložen). Aplikace je tak vhodná pro výchozí orientaci, ale chybí v ní další informace o krajanských komunitách, čímž se její využití značně omezuje.
 
