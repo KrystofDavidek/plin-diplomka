@@ -61,12 +61,30 @@ Rumunský vliv je každopádně patrný i na ostatních úrovních jazykového p
 
 Tvarosloví je pak charakteristické například používáním koncovek *-ove* (*holubove*), *-úch*, *-ích* nebo přípona *-ojc* u příjmení (*Kalinojc*) a na syntaktické rovině se můžeme setkat s používáním analytických větných konstrukcí (*říkáme tadi jít do mlíkárna*) a se změnou významu některých předložek (*vyčisťit Brno z Ňemcúch*) \parencite{Skulina1976}.
 
-## Volyň
+## Volyňská gubernie
 
 ### Historický vývoj
 
+Počátky organizované české emigrace do oblasti Volyně se datují na rok 1867, kdy byl tento, v současné době ukrajinský region součástí carského Ruska. Důvod pro přistěhování byl převedším hospodářské povahy, protože v roce 1861 došlo v tehdejším rusku k zrušení poddanství selského lidu. To zapříčinilo výrazný nedostatek pracovní síly u velkostatkářů a došlo tak k zlevnění prodejné půdy, jež mělo motivovat jednak obyvatele carského ruska k vnitrostátní kolonizaci, tak i cizince k přistěhování ze zahraničí \parencite{Auerhan1920}.
+
+Druhým sekundárním důvodem k hromadné emigraci z českých zemí byl jednodušší způsob přepravy. V té době mělo Rakousko-Uhersko s carských Ruskem společné hranice a narozdíl od cesty do zámořské Ameriky (která měla navíc v důsledku tamější občanské války zpřísněnou emigrační politiku) se dalo využít komfortnější cesty vlakem, případě koňského spřežení \parencite{Hofman2020}. 
+
+Rakousko-Uhersko nemělo velký zájem na vystěhování části svého obyvatelstva, proto v Čechách probíhala cílená agitace na podporu emigrace do Volyně. Hlavní osobností, kdo s myšlenkou vystěhování přišel, byl historik a politik František Palacký (ten se v roce 1867 zúčastnil delegace do Moskvy, kde jednal s tamější vládou o možnostech emigrace), hlavními organizátory pak František Přibyl s Josefem Oličem \parencite{Hofman2020}.
+
+Prvních skupina českých vystěhovalců čítala na 15 000 osob a šlo převážně o zemědělce, kteří měli na danou dobu vysokou úroveň gramotnosti. Díky dostupnosti doporučení českých a ruských textů pozvedli technickou úroveň zemědělských technik a stali se v této oblasti zakladateli chmelařství \parencite{Vaculik2009b}.
+
+Nicméně přes všechny počáteční úspěchy nebyly pro české kolonisty podmínky ve všech ohledech zcela příznivé. Přistěhovalci se dostali do cizí země, jejíž jazyk zpočátku neovládali, a navíc se místní zemědělci spolu s ruskými úřady stavěli k novým hospodářských procesům nedůvěřivě. Postupem času se ale úřady začali k Čechům chovat s větší ochotou a v roce 1870 tak byl vydán zvláštní zákon o úpravě občanských poměrů českých přistěhovalců, díky němuž se stali rovni místnímu obyvatelstvu \parencite{Auerhan1920}.
+
+V této době bylo tak ve Volyňské oblasti založeno 14 českých vesnic, jež byli členěny 3 do správních celků, takzvaných českých *volostí*. Jmenovitě šlo o Hlinskou, Dubenskou a Luckou volost, později v roce 1872 byla ještě vytvořena volost Kupičevská. Zřízením českých volostí byla emigrantům do jisté míry poskytnuta národnostní samospráva \parencite{Auerhan1920}. Při prvním sčítání lidu v roce 1897 žilo ve Volyňské gubernii 27 000 Čechů \parencite{Vaculik2009a}.
+
+V rámci první světové války bojovalo v československých legií celkem 1 445 volyňských Čechů a přibližně 10 % českých vesnic západní Volyně bylo válkou zasaženo (rakouská armáda obsadila část Volyně až po Dubenskou a Luckou volost).
+Po válce vznikly určité snahy k reemigraci do nově vzniklého československého státu, nicméně z hospodářských důvodů nebylo možné organizovaný transport zajistit. V roce 1921 byla Volyňská oblast rozdělena v důsledku stanovení nových hranic mezi Ruskem a Polskem – čtvrtina českých emigrantů tak žila odděleně v SSSR \parencite{Hofman2020}.
+
+Náročným obdobím pro volyňské Čechy byla druhá světová válka, kdy vystěhovalci zažili příkoří jak ze strany Rudé armády (např. násilná kolektivizace zemědělství), tak z důvodu nacistické invaze (např. vypálení Českého Malína s celkovými obětmi 374 osob). Po těchto událostech bylo téma reemigrace znovu aktuální, nicméně tentokrát s konkrétními výsledky. V roce 1946 byla v Moskvě na žádost Dr. E. Beneše podepsána dohoda o reemigraci a už v roce 1947 vyjel z Dubna první transport. Za pouhých 109 dnů byla většina Čechů z Volyňské gubernie úspěšně dopravena do Československa, kde měli být usídleni do  oblasti Podbořanska a Žatecka (z důvodu navázání na zkušenosti s pěstováním chmele). Tyto snahy vládních činitelů nakonec nebyly zcela realizovány a volyňští Češi byli víceméně rovnoměrně rozmístění po území Čech, čímž došlo k jejich rychlejší integraci do vlasti \parencite{Hofman2020}.
+
 ### Jazyk
+
+##  Texas
 
 ## Kavkaz
 
-##  Texas
