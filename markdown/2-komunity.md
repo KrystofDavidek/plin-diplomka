@@ -61,7 +61,7 @@ Rumunský vliv je každopádně patrný i na ostatních úrovních jazykového p
 
 Tvarosloví je pak charakteristické například používáním koncovek *-ove* (*holubove*), *-úch*, *-ích* nebo přípona *-ojc* u příjmení (*Kalinojc*) a na syntaktické rovině se můžeme setkat s používáním analytických větných konstrukcí (*říkáme tadi jít do mlíkárna*) a se změnou významu některých předložek (*vyčisťit Brno z Ňemcúch*) \parencite{Skulina1976}.
 
-## Volyň
+## Volyňská gubernie
 
 ### Historický vývoj
 
@@ -82,9 +82,20 @@ Po válce vznikly určité snahy k reemigraci do nově vzniklého československ
 
 Náročným obdobím pro volyňské Čechy byla druhá světová válka, kdy vystěhovalci zažili příkoří jak ze strany Rudé armády (např. násilná kolektivizace zemědělství), tak z důvodu nacistické invaze (např. vypálení Českého Malína s celkovými obětmi 374 osob). Po těchto událostech bylo téma reemigrace znovu aktuální, nicméně tentokrát s konkrétními výsledky. V roce 1946 byla v Moskvě na žádost Dr. E. Beneše podepsána dohoda o reemigraci a už v roce 1947 vyjel z Dubna první transport. Za pouhých 109 dnů byla většina Čechů z Volyňské gubernie úspěšně dopravena do Československa, kde měli být usídleni do  oblasti Podbořanska a Žatecka (z důvodu navázání na zkušenosti s pěstováním chmele). Tyto snahy vládních činitelů nakonec nebyly zcela realizovány a volyňští Češi byli víceméně rovnoměrně rozmístění po území Čech, čímž došlo k jejich rychlejší integraci do vlasti \parencite{Hofman2020}.
 
+Tato reemigrační vlna však nepostihla všechny krajany. České vesnice Malá Zubovština a Malinovka sice úzce sousedily s Volyňskou oblastí, nicméně spadali pod Kyjevskou gubernii, a tak nebyl Čechům pocházejících z těchto osad umožněn návrat do Československa. Tyto vesnice i přes tuhý režim Sovětského svazu vydržely a do určité míry i prosperovaly, avšak v letech 1991–1993 museli emigranti po vypuknutí černobylské havárie požádat o pomoc tehdejší Českou a Slovenskou Federativní Republiku. Zejména česká vládala se o krajany dobře postarala a zajistila jim tak hmotnou pomoc při reemigraci \parencite{Hofman2020}.
+
 ### Jazyk
+
+I přes to, že se všichni volyňští Češi v roce 1993 vrátili nazpět do vlasti, studium jejich jazyka přineslo po jejich návratu zajímavé poznatky ohledně působení cizího jazykového prostředí na tehdejší české dialekty.
+
+Největším vlivem na mluvu volyňských krajanů měla ukrajinština a docházelo tak k takzvaným *ukrajinismům*. V rovině lexikální dochází k mnoho přejímkám, které jsou primárně dvou typů. Šlo jednak o přímé lexikální výpůjčky (*turma* nebo *mizinec*), tak i o původní české výrazy, jež se více či méně adaptovaly na hláskoslovný a slovotvorný systém ukrajinštiny (*bjelek* nebo *pčela*) \parencite{Balhar2005}.
+
+Z hlediska nejvýraznějších hláskových změn došlo k záměně hlásky *h* za *g* (např. *postavili mahazín*) nebo k náhradě *šť* za ukrajinskou skupinu *šč* (*ešče* nebo *ščáva*). Zároveň ještě vlivem ukrajinštiny docházelo k zkracování nepřízvučných koncových slabik (*takova velika louka*) \parencite{Jancakova2004}.
+
+Na morfologické rovině k tolika ukrajinismům nedocházelo, resp. největším vlivem ukrajinštiny bylo častější používání plurálových koncovek *-ám*, *-ách* a *-ama* a změna v tvarech v řadových číslovkách (*f třicet sedmim roce ho vzali*)  \parencite{Jancakova2004}.
+
+Významným vlivům naopak podleha syntaktická složka. Jedná s například o používání slučovací spojky *i* (*uválelo se to i složilo se to*), příčinné spojky *bo*, přípustkové spojky *choť* nebo vylučovací spojky *abo* (*po ukrajinski abo po ruski*). Změny se týkají i využití předložky *za* podobně jako spojku *nežli* (*je starší nežli já / vona je starší za nás*) \parencite{Balhar2005}.
 
 ##  Texas
 
 ## Kavkaz
-
