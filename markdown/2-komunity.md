@@ -61,7 +61,7 @@ Rumunský vliv je každopádně patrný i na ostatních úrovních jazykového p
 
 Tvarosloví je pak charakteristické například používáním koncovek *-ove* (*holubove*), *-úch*, *-ích* nebo přípona *-ojc* u příjmení (*Kalinojc*) a na syntaktické rovině se můžeme setkat s používáním analytických větných konstrukcí (*říkáme tadi jít do mlíkárna*) a se změnou významu některých předložek (*vyčisťit Brno z Ňemcúch*) \parencite{Skulina1976}.
 
-## Volyňská gubernie
+## Volyň
 
 ### Historický vývoj
 
