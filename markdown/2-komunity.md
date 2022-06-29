@@ -116,4 +116,12 @@ I přes to, že lze najít pouze pozůstatky z původních českých osad, ident
 
 ### Jazyk
 
+Čeští přistěhovalci do Texasu si na české národnosti dlouhodobě zakládali a vnímali tak českou kulturu nadřazeně nad kulturou americkou. Velký podíl měl tomto jevu český jazyk, který prosperoval díky tradicím týkající se náboženských a zemědělských zvyklostí. Velkou zásluhu měly na dlouhodobější stabilizaci rodného jazyka národní krajanské spolky, jež některé měly dokonce přímo ve stanovách zakořeněnou péči o jazyk. Nicméně po ustálení emigrací z ČSR a etablování angličtiny jako hlavního vyučovacího jazyka v roce 1924 se pod vlivem všeobecné amerikanizace začal český jazyk pomalu podléhat angličtině. \parencite{amerika2017}.
+
+Prvním výrazným ústupkem angličtině je v rámci doložených psaných textů úprava vlastních jmen spolu s úpravou typografie. Dále se postupem doby upouštělo od skloňování, pravidelného používání diakritiky a gramatické shody ve jmenných i slovesných vazbách (*Zde spinka Emilek Krhovjak Na shledanou synačku naš*). Významným ukazatelem vlivu angličtiny je pak fonetický pravopis, jímž je demonstrována postupná ztráta představy o psané podobně češtiny (*Budiš ji země lechkou*) \parencite{Eckertová97}.
+
+Po lexikální stránce docházelo k přejímání anglické sémantiky do českých morfému (*kára*) anebo rovnou k celkovým lexikálním přejímkám (*shop*). Ovlivněna byla i sémanticko-syntaktická spojení, kdy česká věta po obou stránkách přesně odpovídala anglickému spojení (*Děkujte své mouce za své štěstí*).
+
+Častým jevem byly taktéž anglické kalky, tedy určitá slova nebo fráze, které vznikaly doslovným překladem anglických jazykových konstrukcí (*rozkošná práce*, *dostali jsme velikou zimu* nebo *čerstvý téhož dne*). Další lexikální strukturální změny se týkaly např. interpretace hromadných jmen jako plurál (*úrody* nebo *mouky*), nerozlišování funkčních morfémů (*zdravotní chléb*) a předpon (*dostali jsme velkou zimu*) \parencite{amerika2017}.
+
 ## Chorvatsko
