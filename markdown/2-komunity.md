@@ -98,4 +98,14 @@ Významným vlivům naopak podleha syntaktická složka. Jedná s například o 
 
 ##  Texas
 
-## Kavkaz
+Česká emigrace do Spojených států amerických byla jednou z největších a zároveň nejvýznamnějších vystěhovaleckých vln. I přes to, že se do zámoří určitá část českých obyvatel dostala ještě před 50. lety 19. století, za hlavní masovou emigraci se považují migrační pohyby, jež probíhaly v letech 1848–1914. Z obecného hlediska byly hlavní příčinou opět důvody ekonomické, i když je do jisté míry paradoxní, že si cestu do USA mohly dovolit převážně majetnější obyvatelé (nechyběly ani politické či náboženské důvody, ty byly ale spíše marginálnější povahy). V tomto období se tak vystěhovalo na 350 000 osob \parencite{Vaculik2009a}.
+
+První generace vystěhovalců si za cílovou destinaci zvolila Texas, a to primárně z důvodu příznivého podnebí a levné půdy. Nicméně šlo spíše o náhodu nežli plánovaný záměr. Až právě dopisy a informace o úspěšně realizovaném podniku od těchto krajanů vzbudily větší zájem a rozšířil tak povědomí o vhodnosti Texasu jako cíl emigrace. Nicméně ne všechny tyto informace byly pravdivé povahy a Čechům přepravujícím se k emigraci vytvářelo spíše idealizovaný pohled na věc.  \parencite{Eckertova2004}
+
+Velký příliv krajanů do této oblasti probíhal po skončení Americké občanské válce, kdy se v Texas nacházel v obtížné hospodářské situaci z důvodu kolapsu ekonomiky (ta byla založena na bavlníkových plantážích využívající otroky). Stát tak potřeboval novou pracovní sílu, a proto lákal přistěhovalce ke správě těchto nevyužitých plantáží a také obdělání půdy rozlehlých prérií.
+
+### Historický vývoj
+
+### Jazyk
+
+## Chorvatsko
