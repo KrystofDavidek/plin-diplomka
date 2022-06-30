@@ -6,7 +6,7 @@ V~poslední části této práce se zaměříme na implementační detaily webov
 \hypertarget{systuxe9m-modulux16f-a-komponent}{%
 \section{Systém modulů a~komponent}\label{systuxe9m-modulux16f-a-komponent}}
 
-Jelikož je naše aplikace založena na webovém frameworku React, drželi jsme se při tvorbě všech souborů standardní adresářové struktury. Jednotlivé reactí komponenty jsou umístěny v~adresáři \verb|components|, zde je jsou tedy soubory týkající se primárně UI konkrétních částí aplikace. Zbytek komponent je ve složce \verb|pages|, kde jsou uloženy stránky aplikace (ty obsahují komplexnější logiku týkající se správy dat apod.).
+Jelikož je naše aplikace založena na webovém frameworku React, drželi jsme se při tvorbě všech souborů standardní adresářové struktury. Jednotlivé reactí komponenty jsou umístěny v~adresáři \verb|components|, zde jsou tedy soubory týkající se primárně UI konkrétních částí aplikace. Zbytek komponent je ve složce \verb|pages|, kde jsou uloženy stránky aplikace (ty obsahují komplexnější logiku týkající se správy dat apod.).
 
 \dirtree{%
 .1 src.
@@ -189,7 +189,7 @@ V~rámci databáze Cloud Firestore jsou dokumenty uloženy v~takzvaných kolekc�
     ...
     \end{verbatim}
 
-Složitěji se však muselo přistupovat k~vytváření nových lokalit, protože v~databázi máme komunity a~jejich geografické informace (\emph{features}) uložené v~odlišných kolekcí. Rozhodli jsme se tak, protože v~globálním stavu musí být uloženy vždy všechny geografické informace komunit pro jejich zobrazení na mapě a~ve výčtu komunit. Nicméně je už zbytečné držet si neustále všechna přidružená data, jež jsou s~nimi spjatá. Informace ke konkrétní komunitě se tedy stahují až po zobrazení detailu lokality (ty geografická data také obsahují).
+Složitěji se však muselo přistupovat k~vytváření nových lokalit, protože v~databázi máme komunity a~jejich geografické informace (\emph{features}) uložené v~odlišných kolekcích. Rozhodli jsme se tak, protože v~globálním stavu musí být uloženy vždy všechny geografické informace komunit pro jejich zobrazení na mapě a~ve výčtu komunit. Nicméně je už zbytečné držet si neustále všechna přidružená data, jež jsou s~nimi spjatá. Informace ke konkrétní komunitě se tedy stahují až po zobrazení detailu lokality (ty geografická data také obsahují).
 
 V~kódu přiloženém níže se tak nejprve validují vstupní data a~posléze se abstrahují informace týkající se konkrétní \emph{feature}. Geografická data je zapotřebí před nahráním do databáze poupravit (funkce \verb|serialize(feature)|), protože Cloud Firestore v~tuto chvíli nepodporuje tento formát dat (stejným způsobem musí dojít i~deserializaci, když feature naopak stahujeme).
 

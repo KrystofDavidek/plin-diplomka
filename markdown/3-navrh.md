@@ -12,7 +12,7 @@ Prvním vybraným projektem je *Mapa Čechů v zahraničí* – jedná se o geog
 
 Druhá vybraná mapová aplikace z dílny Radio Prague International má obdobný cíl jako první zmíněný projekt – a to přehledným způsobem vizualizovat krajanské spolky na mapě světa \parencite{mapa2}. Vizuální stránka tohoto řešení je na kvalitnější úrovni, a to zejména z toho důvodu, že uživatelsky přívětivým způsobem seskupuje jednotlivé spolky napříč státy. Uživatel má v aplikaci možnost prozkoumat detaily vybrané lokality, které se primárně skládají ze základních informací jako jsou *země*, *adresa*, *kontakt* apod. Význam této mapy je znovu především ve zprostředkování spojení se zastoupením zvoleného spolku, než-li o poskytnutí ucelených informací o krajanské komunitě.
 
-Další vybraný projekt *Čeští krajané* problematiku českých krajanů zpracovává z odlišeného hlediska. Jedná se o výzkum podpořen Technologickou agenturou ČR a Grantovou agenturou ČR, který se souhrnně zaměřuje na studium především novodobé české zahraniční migrace \parencite{cesti-krajane}. Projekt je stále aktivní, nicméně již přinesl dílčí výsledky ve formě odpovědí komplexního dotazníku 944 krajanů. Tyto informace se týkají například zájmu o politický život, vztahu k ČR apod. a mohou tak být zajímavým kontextem, který by v budoucnu mohl být určitým způsobem navázán na naši aplikaci. 
+Další vybraný projekt *Čeští krajané* problematiku českých krajanů zpracovává z odlišeného hlediska. Jedná se o výzkum podpořen Technologickou agenturou ČR a Grantovou agenturou ČR, který se souhrnně zaměřuje na studium především novodobé české zahraniční migrace \parencite{cesti-krajane}. Projekt je stále aktivní, nicméně již přinesl dílčí výsledky ve formě odpovědí komplexního dotazníku 944 krajanů. Tyto informace se týkají například zájmu o politický život, vztahu k ČR apod., a mohou tak být zajímavým kontextem, který by v budoucnu mohl být určitým způsobem navázán na naši aplikaci. 
 
 Poslední vybraná webová stránka *krajane.net* je v tuto chvíli digitální archiv obsahující velké množství materiálů, které se týkají krajanské problematiky \parencite{krajane-archiv}. I přes to, že se jedná o archiv, jež není v tuto chvíli aktualizován, najdeme na webu mnoho užitečných informací o jednotlivých krajanských spolcích, ale také o krajanských médií rozčleněných podle států. Některé části webu jsou provázané z aktualizovanými stránkami Radio Prague International, které obsahují již zmíněnou mapovou aplikaci.
 
@@ -32,15 +32,15 @@ Tyto požadavky můžeme u naší webové aplikace pro větší přehlednost roz
 
 Jedním z nejdůležitějších nároků na aplikaci je vizualizace jednotlivých českých komunit po celém světě. Aplikace má tak disponovat samostatnou stránkou, v rámci které budou dostupné mapové podklady celého světa. Na této mapě mají být pak prostřednictvím mapových vrstev vizualizovány konkrétní české enklávy. Pod mapovými vrstvami myslíme mnohoúhelníkové plochy, které mohou mít na mapě jakýkoliv tvar a velikost podle potřeby vybrané komunity (geografická místa komunit v aplikaci popisujeme jako lokality). Má být tak možné vizualizovat jak malé osady, tak celé regiony nebo státy – vrstvy se též mohou jakýmkoliv způsobem překrývat.
 
-Zapotřebí je také zahrnout základní funkční požadavky, které se pojí s obsluhou mapové aplikace. Jde o možnosti oddalování, a přibližování pohledu (spolu s navráceném do výchozí pozice), navigaci na mapě pomocí posouvání kurzoru, klikání myší/dotykem anebo prostřednictvím minimapy zobrazující vždy širší kontext vybraného pohledu. Další důležitou funkcí je vyhledávání lokalit. Aplikace má umožňovat přiblížení na danou mapovou vrstvu na základě výběru ve vyhledávacím poli.
+Zapotřebí je také zahrnout základní funkční požadavky, které se pojí s obsluhou mapové aplikace. Jde o možnosti oddalování, a přibližování pohledu (spolu s navráceném do výchozí pozice), navigací na mapě pomocí posouvání kurzoru, klikání myší/dotykem anebo prostřednictvím minimapy zobrazující vždy širší kontext vybraného pohledu. Další důležitou funkcí je vyhledávání lokalit. Aplikace má umožňovat přiblížení na danou mapovou vrstvu na základě výběru ve vyhledávacím poli.
 
-Zacílení lokalit má být umožněno i jiným způsobem než vyhledáváním v mapových podkladech. Z toho důvodu má aplikace disponovat výčtem lokalit, které budou dostupné z mapové stránky prostřednictvím levé vysouvací části obrazovky. Tato sekce má sloužit jako přehledný abecedně seřazený seznam všech dostupných krajanských komunit (spolu s úvodním obrázkem a sekundárních názvem), z něhož je možné lokalitu buď zacílit na mapě, anebo rovnou zobrazit její detail.
+Zacílení lokalit má být umožněno i jiným způsobem než vyhledáváním v mapových podkladech. Z toho důvodu má aplikace disponovat výčtem lokalit, které budou dostupné z mapové stránky prostřednictvím levé vysouvací části obrazovky. Tato sekce má sloužit jako přehledný abecedně seřazený seznam všech dostupných krajanských komunit (spolu s úvodním obrázkem a sekundárních názvem), z něhož je možné lokalitu buď zacílit na mapě anebo rovnou zobrazit její detail.
 
-Posledním funkčním požadavkem souvisícím s geografickou složkou je možnost filtrování lokalit na základě vybraných metrik (tyto metriky rozvedeme v kapitole týkající se dat viz \ref{data-o-krajanskuxfdch-komunituxe1ch}). Tato funkce se má nacházet v sekci se seřazenými komunitami a po označení libovolného počtu filtrů se mají z výběru i z mapových podkladů vyfiltrovat takové lokality, jež splňují danou podmínku. 
+Posledním funkčním požadavkem souvisejícím s geografickou složkou je možnost filtrování lokalit na základě vybraných metrik (tyto metriky rozvedeme v kapitole týkající se dat viz \ref{data-o-krajanskuxfdch-komunituxe1ch}). Tato funkce se má nacházet v sekci se seřazenými komunitami a po označení libovolného počtu filtrů se mají z výběru i z mapových podkladů vyfiltrovat takové lokality, jež splňují danou podmínku. 
 
 #### Vizualizace detailních informací vybrané komunity
 
-Druhým významným požadavkem na naši aplikaci je uživatelsky přívětivá vizualizace všech dostupných informací, které se týkají vybrané krajanské komunity. Jelikož mohou být tyto informace rozličné velikosti a multimediální povahy (audio soubory, obrázky, videa a textové informace) je zapotřebí, aby v aplikaci existoval sekundární navigační systém. Tato druhotná navigace má zajistit přehlednost při průchodu vybranou lokalitou a umožnit tak uživateli výběr konkrétní části.
+Druhým významným požadavkem na naši aplikaci je uživatelsky přívětivá vizualizace všech dostupných informací, které se týkají vybrané krajanské komunity. Jelikož mohou být tyto informace rozličné velikosti a multimediální povahy (audio soubory, obrázky, videa a textové informace) je zapotřebí, aby v aplikaci existoval sekundární navigační systém. Tato druhotná navigace má zajistit přehlednost při průchodu vybranou lokalitou, a umožnit tak uživateli výběr konkrétní části.
 
 Jak bylo výše naznačeno, cílem našeho řešení je zmapovat ukázky komunikace v češtině a prostřednictvím audio nahrávek a jejich transkriptů přiblížit jazyk dané české komunity. Požadavkem je také vhodné propojení audio souborů s jejich přepisy.
 
@@ -52,7 +52,7 @@ Poslední kategorií jsou funkční požadavky spojené s celkovou administrací
 
 Z tohoto důvodu má aplikace obsahovat podstránky, které nebudou běžnému uživateli přístupné – vzniká tak požadavek na autentifikaci prostřednictvím e-mailu a hesla. Po úspěšném přihlášení by se měl celý systém přeměnit do editačního módu, respektive nabízet přihlášenému uživateli vždy kromě vstupu do jednotlivých lokalit i možnost přesunu do administrativní části.
 
-Ta by měla sestávat ze stejných sekcí, jako u detailu vybrané komunity. Navíc by však by měla obsahovat uživatelsky přívětivou část formuláře podle formátu dané části informací (např. pro vkládání textových informací textový editor, pro vkládání souborů speciální komponentu). Druhotným požadavkem je základní validace vstupních dat, tedy kontrola, že má každá lokalita vyplněný alespoň hlavní název a geografická data pro zobrazení na mapě.
+Ta by měla sestávat ze stejných sekcí, jako u detailu vybrané komunity. Navíc by však měla obsahovat uživatelsky přívětivou část formuláře podle formátu dané části informací (např. pro vkládání textových informací textový editor, pro vkládání souborů speciální komponentu). Druhotným požadavkem je základní validace vstupních dat, tedy kontrola, že má každá lokalita vyplněný alespoň hlavní název a geografická data pro zobrazení na mapě.
 
 S administrací tak nutně souvisí i požadavek na persistenci dat, tzn. potřeba ukládat data na vzdálenou databázi, aby byly informace pro všechny uživatele konzistentní a aktualizované.
 
@@ -74,7 +74,7 @@ Hlavní součástí této kapitoly pak bude představení uživatelského rozhra
 
 ## Použité technologie
 
-Jelikož je naše navrhované řešení webová aplikace, budeme se níže zabývat výhradně nástroji, knihovnami a frameworky, které se primárně týkají webových technologií. Konkrétní příklady kódu budeme rozebírat v kapitole týkající se vlastní implementace (viz \ref{implementace}).
+Jelikož je naše navrhované řešení webová aplikace, budeme se níže zabývat výhradně nástroji, knihovnami a frameworky, které se primárně týkají webových technologií. Konkrétní příklady kódu budeme rozebírat v kapitole týkající se vlastní implementace (viz \ref{implementace-aplikace}).
 
 ### Základní webové technologie
 
@@ -100,7 +100,7 @@ Jednou z nejčastějších strategií je dynamické vykreslování stránek. Jed
 
 Výhodou toho přístupu je fakt, že klient dostane už kompletní dokument se všemi potřebnými informacemi (což je výhodné z hlediska SEO\footnote{Search engine optimization (SEO) je proces optimalizace viditelnosti webových stránek v rámci internetových vyhledávačů jako je např. Google. Čím lepší je SEO, tím je pravděpodobnější, že se daná webová stránka objeví na vyšších příčkách při vyhledávání.}). Neméně důležitým přínosem je pak to, že se veškerá logika děje na serveru (který je typicky výkonnější než klient), prohlížeč akorát vykresluje výsledek.
 
-Na druhou stranu lze vidět i nevýhodu primárně v opakovaném generování každé stránky při opětovné návštěvě, což může být problém při pomalejším internetovém připojení. Komplikovanější též může být vývoj samotných aplikací, protože vývojář musí znát jak  HTML, CSS a JavaScript (souhrnně frontend), tak technologie spojené se serverovou částí (práce s databází atd.). protože jsou na sebe obě složky na serveru nutně navázané \parencite{spa}. 
+Na druhou stranu lze vidět i nevýhodu primárně v opakovaném generování každé stránky při opětovné návštěvě, což může být problém při pomalejším internetovém připojení. Komplikovanější též může být vývoj samotných aplikací, protože vývojář musí znát jak  HTML, CSS a JavaScript (souhrnně frontend), tak technologie spojené se serverovou částí (práce s databází atd.), protože jsou na sebe obě složky na serveru nutně navázané \parencite{spa}. 
 
 \begin{figure}[ht]   
     \centering
@@ -149,7 +149,7 @@ Jedná se o open-source software\footnote{https://github.com/facebook/react} vyt
 
 React je založen na deklarativním vývoji uživatelského rozhraní. Vývojář tedy vytváří vzhled pro všechny stavy aplikace, které se pak vykreslují na základě změny v datech (např. u přihlášeného uživatele není zapotřebí zobrazovat tlačítko přihlášení a naopak). Kód je tak pochopitelnější a jednodušší na ladění chyb (debugging).
 
-Druhou významnou vlastností Reactu je přístup založený na komponentách. Jedná se o opakovaně použitelné části UI (tzn. i samotného naprogramovaného kódu), které jsou hierarchicky strukturované buď podle využití v aplikaci (např. adresář s komponentou pro přihlášení *Login* bude obsahovat soubor podkomponenty pro tlačítko *LoginButton*), nebo podle obecně sdílených funkcionalit (všechny komponenty tlačítek v aplikaci budou ve vlastní složce *Buttons*). Data, na kterých jsou závislé jednotlivé stavy, lze mezi komponentami předávám prostřednictvím objektu s názvem *props*.
+Druhou významnou vlastností Reactu je přístup založený na komponentách. Jedná se o opakovaně použitelné části UI (tzn. i samotného naprogramovaného kódu), které jsou hierarchicky strukturované buď podle využití v aplikaci (např. adresář s komponentou pro přihlášení *Login* bude obsahovat soubor podkomponenty pro tlačítko *LoginButton*), nebo podle obecně sdílených funkcionalit (všechny komponenty tlačítek v aplikaci budou ve vlastní složce *Buttons*). Data, na kterých jsou závislé jednotlivé stavy, lze mezi komponentami předávat prostřednictvím objektu s názvem *props*.
 
 React namísto klasického stromové objektu DOM (viz \ref{zuxe1kladnuxed-webovuxe9-technologie}) využívá koncept virtuálního DOM (virtual Document Object Model). Jedná se o speciální objektovou strukturu uloženou v mezipaměti prohlížeče, která umožňuje efektivněji synchronizovat změny v UI s daným stavem aplikace. Zjednodušeně řečeno jde o odlehčenou verzi DOM, s níž lze na úrovni klienta jednodušeji manipulovat a přizpůsobovat akcím od uživatele.
 
@@ -195,11 +195,11 @@ Nástroj nabízí registraci a přihlašování přes různé poskytovatele, jak
 
 #### Cloud Firestore
  
-Druhým využitým nástrojem je Cloud Firestore – databázové řešení, v němž ukládáme všechna data textové povahy. Jedná se flexibilní a škálovatelnou dokumentovou databázi, která ukládá data do kolekcí a izolovaných JSON dokumentů (tzn. uložená data jsou až na pár detailů velmi podobná formátu, který využíváme v naší aplikaci). Tuto databázi využíváme jako hlavní uložiště pro jednotlivé lokality \parencite{firestore}. 
+Druhým využitým nástrojem je Cloud Firestore – databázové řešení, v němž ukládáme všechna data textové povahy. Jedná se  o flexibilní a škálovatelnou dokumentovou databázi, která ukládá data do kolekcí a izolovaných JSON dokumentů (tzn. uložená data jsou až na pár detailů velmi podobná formátu, který využíváme v naší aplikaci). Tuto databázi využíváme jako hlavní uložiště pro jednotlivé lokality \parencite{firestore}. 
 
 #### Cloud Storage
 
-Poslední zvolenou službou je Cloud Storage. Jde o jednoduché a cenově výhodné cloudové uložiště, které je uzpůsobeno k ukládání netextových souborů jako jsou obrázky, audio soubory či videa. Tento nástroj umožňuje efektivní stahování a nahrávání větších souborů spolu s jejich validací a kontrolou existence. Taktéž je navázán na Firebase Authentication a lze tak regulovat přístup k některým souborům. Výhodou tohoto řešení je vysoká míra škálovatelnosti, kterou je zapotřebí řešit při větším počtu aktivních uživatelů \parencite{storage}.
+Poslední zvolenou službou je Cloud Storage. Jde o jednoduché a cenově výhodné cloudové uložiště, které je uzpůsobeno k ukládání netextových souborů jako jsou obrázky, audio soubory či videa. Tento nástroj umožňuje efektivní stahování a nahrávání větších souborů spolu s jejich validací a kontrolou existence. Taktéž je navázán na Firebase Authentication, a lze tak regulovat přístup k některým souborům. Výhodou tohoto řešení je vysoká míra škálovatelnosti, kterou je zapotřebí řešit při větším počtu aktivních uživatelů \parencite{storage}.
 
 ## Data o krajanských komunitách
 
@@ -211,8 +211,8 @@ Zároveň platí, že všechny zmíněné složky lze v administrativní části
 
  - **Název hlavní lokality** – jedná se o unikátní název, bez kterého nelze lokalitu vytvořit. Podle hlavního názvu je komunita tříděna v seznamu lokalit;
  - **Název sekundární lokality ** – doplňující název pro vyšší správní jednotky, tedy pro region, kraj nebo stát;
- - **Úvodní obrázek** – náhledový obrázek, kterým je lokalita znázorněna ve vedlejším seznamu, anebo při rozkliku mapové vrstvy;
- - **Demografické údaje** – základní údaje, týkající se především demografie komunity. Taktéž jsou zde pro větší přehlednost vypsány hodnoty, podle kterých mohou být aplikovány filtry (viz \ref{geografickuxe1-data}).
+ - **Úvodní obrázek** – náhledový obrázek, kterým je lokalita znázorněna ve vedlejším seznamu anebo při rozkliku mapové vrstvy;
+ - **Demografické údaje** – základní údaje týkající se především demografie komunity. Taktéž jsou zde pro větší přehlednost vypsány hodnoty, podle kterých mohou být aplikovány filtry (viz \ref{geografickuxe1-data}).
 
 ### Detailní informace
 
