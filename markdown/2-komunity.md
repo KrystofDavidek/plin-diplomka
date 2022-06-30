@@ -1,6 +1,8 @@
-# Významné krajanské komunity ve světě 
+# Významné krajanské komunity 
 
-V následující kapitole si představíme několik význačných krajanských komunit ve světě, jejichž historický vývoj a aktuální stav je již literaturou alespoň do jisté míry popsán. Jedná se tedy o takové jazykové enklávy, u nichž lze významněji reflektovat asimilační vývoj jazyka a jsou tak dobrými ukázkami využití naší webové aplikace v praxi. V rozsahu této diplomové práce každopádně není vložit všechny informace vypsané níže do digitálního formátu, ale spíše vybrat určité části (ať už jednotlivé osady nebo celé lokality), které demonstrují možnosti a funkce vytvořené webové aplikace.
+V následující kapitole si představíme několik význačných krajanských komunit, jejichž historický vývoj (a případný současný stav) je již literaturou do jisté míry popsán. Jedná se tedy o takové jazykové enklávy, u nichž lze významněji reflektovat asimilační vývoj jazyka a mohou tak být dobrými ukázkami využití naší webové aplikace v praxi.
+
+V rozsahu této diplomové práce každopádně není vyčerpávajícím způsobem popsat všechny aspekty jednotlivých komunit (ať už jde o jednotlivé osady nebo celé regiony), ale spíše se obecně vyjádřit k příčinám jejich vzniku a historickému vývoji. Na závěr vždy ve stručnosti charakterizujeme základní jazykové změny u daných krajanů.
 
 ## Banát
 
@@ -8,9 +10,9 @@ V následující kapitole si představíme několik význačných krajanských k
 
 Rumunský Banát se nachází na jihozápadě Rumunska a do roku 1552 byl součástí uherské říše, než byl dobyt Turky. Po vyhnání tureckých sil v roce 1718 se z oblasti stala zpustošená krajina, jejíž jižní část zůstala z velké části neobydlena. Právě tohle území se stalo pro české emigranty cílovou destinací, jelikož nabízelo zlepšení tehdejších životních podmínek. Kolonizátorům byla od majitele pozemků nabídnuta půda, dřevo na stavbu domů spolu s nářadím a dalšími nutnostmi k založení osad \parencite{Secka1995}. 
 
-Do Banátu se první čeští vystěhovalci dostali v letech 1820–1821. Šlo přibližně o 80 rodin, jež byly tvořeny převážně drobnými řemeslníky, zemědělci, ale i vysloužilími vojáky. Byly to především obyvatelé z Plzeňska, Domažlicka, Klatovska, Kladenská a Čáslavská a založili na rumunském území dvě osady – Elisabethfeld a Svatou Helenu (Češi katolického původu se usídlili do Elisabethfeldu, evangeličtí emigranti pak založili druhou zmíněnou osadu) \parencite{Gecse2013}.
+Do Banátu se první čeští vystěhovalci dostali v letech 1820–1821. Šlo přibližně o 80 rodin, jež byly tvořeny převážně drobnými řemeslníky, zemědělci, ale i vysloužilými vojáky. Byly to především obyvatelé z Plzeňska, Domažlicka, Klatovska, Kladenská a Čáslavská a založili na rumunském území dvě osady – Elisabethfeld a Svatou Helenu (Češi katolického původu se usídlili do Elisabethfeldu, evangeličtí emigranti pak založili druhou zmíněnou osadu) \parencite{Gecse2013}.
 
-Zpočátku byl pro české exulanty pobyt na novém území velmi náročný. Potřebovali se vypořádat s odlišnými přírodními podmínkami, jako byl kopcovitý terén a nepřístupné lesy, ale i kruté zimy či nebezpečná divoká zvířata. Problémem též byly počáteční neshody s nájemníkem pozemků, jež se měl o vystěhovalce starat, nicméně v roce 1826 i s majetkem odjel a nechal kolonisty napospas. I tak se podařilo díky začlenění do tehdejší Vojenské hranice kolonie založit a vytvořit tak podhoubí pro další migrační pohyby na území Banátu \parencite{Secka1995}.
+Zpočátku byl pro české exulanty pobyt na novém území velmi náročný. Potřebovali se vypořádat s odlišnými přírodními podmínkami, jako byly kopcovitý terén a nepřístupné lesy, ale i kruté zimy či nebezpečná divoká zvířata. Problémem též byly počáteční neshody s nájemníkem pozemků, jenž se měl o vystěhovalce starat, nicméně v roce 1826 i s majetkem odjel a nechal kolonisty napospas. I tak se podařilo díky začlenění do tehdejší Vojenské hranice kolonie založit a vytvořit tak podhoubí pro další migrační pohyby na území Banátu \parencite{Secka1995}.
 
 Druhá emigrační vlna se konala v letech 1826–1828. Ta již byla pod správou rakouských vojenských úřadů, protože vojenská správa byla spokojena se zapojením emigrantů do Vojenské hranice a chtěla tak navýšit stavy na strategickém území hranice habsburského státu. Tato nabídka se setkala se zájmem, jelikož v tu dobu probíhala na českém území hospodářská krize – tuto výzvu proto vyslyšelo přes 1800 rodin \parencite{Frnochova2012}.  
 
@@ -26,13 +28,13 @@ Díky těžko přístupnému terénu a nepříliš úrodné půdě byly české 
 
 Český jazyk se nadále v komunitách udržel, protože po roce 1945 do Rumunska přicházeli učitele z Československa. Dokonce byla v roce 1972 v nedalekém městě Nadlaku otevřena přípravka pro budoucí slovenské a české učitele, kteří už v roce 1976 nastupovali do škol v jednotlivých vesnicích. Dalším činitelem, který významně přispěl k zachování českého jazyka a české kultury obecně, byly pravidelné duchovní akce v nedělní škole, díky kterým se i mladá generace učila české kultuře a historii  \parencite{Vaculik2009b}.
 
-Po roce 1989 se o etnické menšiny v celém rumunském Banátu začaly víc zabývat jejich mateřské země, Československo a pozdější České republika nevyjímaje. Český zastupitelský úřad v Bukurešti často za spolupráce rumunských úřadů realizoval systematickou podporu vesnic formou humanitární pomoci (od roku 1995 začal tuto činnost koordinovat nadace Člověk v tísní). Snahou tak bylo stabilizovat českou populaci v jižním Banátu, nicméně demografický vývoj českých vesnic má do dnešního dne spíše klesající tendenci viz srov. populace u jednotlivých českých vesnic za roky 1991 a 2009 \parencite{Gecse2013}.
+Po roce 1989 se o etnické menšiny v celém rumunském Banátu začaly víc zabývat jejich mateřské země, v našem případě tedy Československo a později Česká republika. Český zastupitelský úřad v Bukurešti často za spolupráce rumunských úřadů realizoval systematickou podporu vesnic formou humanitární pomoci (od roku 1995 začala tuto činnost koordinovat nadace Člověk v tísní). Snahou tak bylo stabilizovat českou populaci v jižním Banátu, nicméně demografický vývoj českých vesnic má do dnešního dne spíše klesající tendenci viz srov. populace u jednotlivých českých vesnic za roky 1991 a 2009 \parencite{Gecse2013}.
 
 \begin{table}[h!]
 \centering
 \begin{tabular}{||l c c||} 
  \hline
-  Česká vesnice & 1991 & 2009 \\ [0.5ex] 
+   & 1991 & 2009 \\ [0.5ex] 
  \hline\hline
  Svatá Helena & 800 & 357 \\ 
  \hline
@@ -44,10 +46,10 @@ Po roce 1989 se o etnické menšiny v celém rumunském Banátu začaly víc zab
  \hline
  Šumice & 205 & 104  \\ [1ex] 
  \hline
-  Eibenthal (a Ujbánye) & 3110 & 1525 \\ [1ex] 
+  Eibenthal (a~Ujbánye) & 3110 & 1525 \\ [1ex] 
  \hline
 \end{tabular}
-\caption*{Demografický vývoj českých vesnic v Banátu za roky 1991–2009}
+\caption*{Demografický vývoj českých vesnic v~Banátu za roky 1991–2009}
 \label{table:1}
 \end{table}
 

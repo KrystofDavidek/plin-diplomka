@@ -1,4 +1,4 @@
-# Implementace
+# Implementace aplikace
 
 V poslední části této práce se zaměříme na implementační detaily webové aplikace. Implementaci představíme ve čtyřech částech, z nichž se každá věnuje jiné buď obecnější oblasti nebo naopak konkrétnější funkcionalitě. V rozsahu této práce tak není komentovat kód jako celek, ten je v případě potřeby k práci přiložen jako samostatný soubor.
 
